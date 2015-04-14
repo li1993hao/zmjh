@@ -1,0 +1,19 @@
+---
+企业管理:
+  - title: 通过审核企业
+    url: Index/index
+  - title: 待审核企业
+    url: Index/dai
+  - title: 未通过审核企业
+    url: Index/wei
+  - title: 新增企业
+    url: Index/add
+企业录用信息:
+  - title: 录用信息查看
+    url: LuYong/index
+
+
+
+
+
+

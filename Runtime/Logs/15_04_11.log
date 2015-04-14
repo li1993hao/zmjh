@@ -1,0 +1,64 @@
+[ 2015-04-11T12:17:37+08:00 ] 192.168.99.31 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1428725857&_hash=1fe899789f712af3f325ba6678bce1a20ddf6630
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001606s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000118s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.001749s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1428725857 AND ( deadline <= 0 OR deadline > 1428725857 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000150s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 42 行.
+
+[ 2015-04-11T12:17:45+08:00 ] 192.168.99.31 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1428725865&_hash=cb84394a31d5203c1ae9b33a3ea6ae04aae3dde7
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001598s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000113s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.001581s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1428725865 AND ( deadline <= 0 OR deadline > 1428725865 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000207s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 42 行.
+
+[ 2015-04-11T12:18:48+08:00 ] 192.168.99.31 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1428725928&_hash=1e34d0650a4b229c9fea9aba51d7a10c88015a48
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001728s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000121s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.005973s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1428725928 AND ( deadline <= 0 OR deadline > 1428725928 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000268s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 42 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/tiptimes/Desktop/www/zmjh/Application/Common/Controller/BaseController.class.php:20) /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Mode/Api/Controller.class.php 第 60 行.
+
+[ 2015-04-11T12:19:39+08:00 ] 192.168.99.31 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1428725979&_hash=662134234c86cd20b81a4a03bd5e2170e0dd4876
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001597s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.006390s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1428725979 AND ( deadline <= 0 OR deadline > 1428725979 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000152s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 42 行.
+
+[ 2015-04-11T12:19:54+08:00 ] 192.168.99.31 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1428725994&_hash=ac5170f8a2de312108de947758863be5057c8b4f
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001688s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000114s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.006022s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1428725994 AND ( deadline <= 0 OR deadline > 1428725994 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000160s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 42 行.
+
+[ 2015-04-11T12:21:15+08:00 ] 192.168.99.31 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1428726075&_hash=5480d1421d008e3f66b11762873d46a769641959
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001823s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.006530s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1428726075 AND ( deadline <= 0 OR deadline > 1428726075 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000164s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 42 行.
+
+[ 2015-04-11T12:22:37+08:00 ] ::1 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1428726157&_hash=18e406a4b61f2e400c9c42c20ad48b3e0de86054
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001808s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000113s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.006702s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1428726157 AND ( deadline <= 0 OR deadline > 1428726157 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000568s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 42 行.
+

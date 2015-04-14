@@ -1,0 +1,1144 @@
+[ 2015-04-08T10:30:37+08:00 ] ::1 /jdicms/index.php/Home/index/category/cate/tskc/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.019092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032012s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.046859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.046972s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.001211s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.001290s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.008016s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.025527s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.273952s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428460236 AND ( deadline <= 0 OR deadline > 1428460236 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.012542s ]
+SQL: SHOW COLUMNS FROM `jdi_picture` [ RunTime:0.011800s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.012711s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.000182s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 7 LIMIT 1   [ RunTime:0.000167s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 6 LIMIT 1   [ RunTime:0.000110s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 5 LIMIT 1   [ RunTime:0.000099s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000089s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428460236 AND ( deadline <= 0 OR deadline > 1428460236 ) LIMIT 1   [ RunTime:0.000162s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/394ca46ada227a535bea67931415f56a.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.022496s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000511s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000146s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000121s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000109s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000107s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.014953s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.014267s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428373836 LIMIT 1   [ RunTime:0.014852s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425868236 LIMIT 1   [ RunTime:0.000200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000069s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.097535s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008542s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000157s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.108623s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001993s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.009166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002663s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002658s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002696s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002176s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.009166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002842s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.051120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.051216s ]
+
+[ 2015-04-08T10:30:38+08:00 ] ::1 /jdicms/index.php/Home/Index/category/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001190s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.002276s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000194s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001328s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1428460237,'http://localhost/jdicms/index.php/Home/index/category/cate/tskc/p/1.html','未知','未知') [ RunTime:0.010225s ]
+
+[ 2015-04-08T10:30:39+08:00 ] ::1 /jdicms/index.php/Home/Index/content/cate/tskc/id/9.htmll
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000295s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001894s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000114s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001592s ]
+SQL: SELECT * FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428460239 AND ( deadline <= 0 OR deadline > 1428460239 ) AND `id` = 9 LIMIT 1   [ RunTime:0.000182s ]
+SQL: UPDATE `jdi_article` SET `view`=view+1 WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428460239 AND ( deadline <= 0 OR deadline > 1428460239 ) AND `id` = 9 [ RunTime:0.000185s ]
+SQL: SHOW COLUMNS FROM `jdi_picture` [ RunTime:0.001126s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.000121s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001507s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000194s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000127s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000109s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000155s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000102s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+NOTIC: [8] Use of undefined constant title_color - assumed 'title_color' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+SQL: SHOW COLUMNS FROM `jdi_member` [ RunTime:0.009176s ]
+SQL: SELECT * FROM `jdi_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001464s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialShare' LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialButton' LIMIT 1   [ RunTime:0.000113s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000098s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` > '9' AND `category_id` = 12 AND `status` = 1 AND `create_time` < 1428460239 AND ( deadline <= 0 OR deadline > 1428460239 ) ORDER BY `id` asc LIMIT 1   [ RunTime:0.000193s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000088s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` < '9' AND `category_id` = 12 AND `status` = 1 AND `create_time` < 1428460239 AND ( deadline <= 0 OR deadline > 1428460239 ) ORDER BY `id` Desc LIMIT 1   [ RunTime:0.000152s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.000095s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000102s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001226s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428373839 LIMIT 1   [ RunTime:0.000167s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425868239 LIMIT 1   [ RunTime:0.000146s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000061s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.061948s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001351s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000108s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.064438s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001997s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002543s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002546s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002582s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002188s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002720s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2015-04-08T10:30:39+08:00 ] ::1 /jdicms/index.php/Home/Index/content/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001176s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001751s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000165s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001748s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1428460239,'http://localhost/jdicms/index.php/Home/Index/content/cate/tskc/id/9.htmll','未知','未知') [ RunTime:0.000168s ]
+
+[ 2015-04-08T10:31:38+08:00 ] ::1 /jdicms/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001646s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000327s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000385s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+NOTIC: [8] Undefined variable: rootNav /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/c50d1b4cd417a3f9d3d63abb8c3e1fab.php 第 74 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001845s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000128s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000101s ]
+SQL: SHOW COLUMNS FROM `jdi_link` [ RunTime:0.020161s ]
+SQL: SELECT * FROM `jdi_link` WHERE `status` = 1 AND `group` = 'p-1' ORDER BY sort asc,id asc  [ RunTime:0.016671s ]
+SQL: SHOW COLUMNS FROM `jdi_picture` [ RunTime:0.001603s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 13 LIMIT 1   [ RunTime:0.000122s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 12 LIMIT 1   [ RunTime:0.000102s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 11 LIMIT 1   [ RunTime:0.000097s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 10 LIMIT 1   [ RunTime:0.000094s ]
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001441s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000103s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001600s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428460298 AND ( deadline <= 0 OR deadline > 1428460298 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000180s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000094s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 14 AND `create_time` < 1428460298 AND ( deadline <= 0 OR deadline > 1428460298 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000162s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000088s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428460298 AND ( deadline <= 0 OR deadline > 1428460298 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,20   [ RunTime:0.000167s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.000192s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.000098s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 7 LIMIT 1   [ RunTime:0.000092s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 6 LIMIT 1   [ RunTime:0.000092s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 5 LIMIT 1   [ RunTime:0.000092s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001186s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428373898 LIMIT 1   [ RunTime:0.000164s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425868298 LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000093s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.092199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000128s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.094577s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001661s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002249s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002252s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002290s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001864s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002448s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2015-04-08T10:31:39+08:00 ] ::1 /jdicms/index.php/Home/Index/index/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001227s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.238052s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001906s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1428460298,'http://localhost/jdicms/index.php/','未知','未知') [ RunTime:0.000114s ]
+
+[ 2015-04-08T10:31:39+08:00 ] ::1 /jdicms/index.php/Home/Index/category/cate/kcly/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000295s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001919s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 32 LIMIT 1   [ RunTime:0.000153s ]
+SQL: SHOW COLUMNS FROM `jdi_article_picture` [ RunTime:0.093700s ]
+SQL: SELECT * FROM `jdi_article_picture` WHERE `status` = 1 AND `category_id` = 13 AND `create_time` < 1428460299 AND ( deadline <= 0 OR deadline > 1428460299 ) LIMIT 1   [ RunTime:0.009024s ]
+SQL: UPDATE `jdi_article_picture` SET `view`=view+1 WHERE `status` = 1 AND `category_id` = 13 AND `create_time` < 1428460299 AND ( deadline <= 0 OR deadline > 1428460299 ) [ RunTime:0.000169s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/jdicms/Application/Common/Common/function.php 第 1604 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/jdicms/Application/Common/Common/function.php 第 1606 行.
+SQL: SHOW COLUMNS FROM `jdi_picture` [ RunTime:0.001237s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 14 LIMIT 1   [ RunTime:0.000118s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/jdicms/Application/Common/Common/function.php 第 1617 行.
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 15 LIMIT 1   [ RunTime:0.000095s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/jdicms/Application/Common/Common/function.php 第 1617 行.
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 16 LIMIT 1   [ RunTime:0.000100s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/jdicms/Application/Common/Common/function.php 第 1617 行.
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 17 LIMIT 1   [ RunTime:0.000091s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 18 LIMIT 1   [ RunTime:0.000141s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 19 LIMIT 1   [ RunTime:0.000144s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.000113s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 21 LIMIT 1   [ RunTime:0.000110s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 22 LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 23 LIMIT 1   [ RunTime:0.000112s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 23 LIMIT 1   [ RunTime:0.000104s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/ae168ed382d76b2d68a8f37878b3f042.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001601s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000183s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000167s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000112s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000103s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/ae168ed382d76b2d68a8f37878b3f042.php 第 122 行.
+NOTIC: [8] Use of undefined constant title_color - assumed 'title_color' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/ae168ed382d76b2d68a8f37878b3f042.php 第 122 行.
+SQL: SHOW COLUMNS FROM `jdi_member` [ RunTime:0.001388s ]
+SQL: SELECT * FROM `jdi_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001191s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428373899 LIMIT 1   [ RunTime:0.000159s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425868299 LIMIT 1   [ RunTime:0.000144s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000061s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.016299s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001420s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000104s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018653s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001822s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002343s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002346s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002383s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002002s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2015-04-08T10:31:40+08:00 ] ::1 /jdicms/index.php/Home/Index/category/cate/tskc/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000321s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000374s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.197588s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001618s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428460300 AND ( deadline <= 0 OR deadline > 1428460300 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `jdi_picture` [ RunTime:0.001129s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.000152s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.000135s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 7 LIMIT 1   [ RunTime:0.000102s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 6 LIMIT 1   [ RunTime:0.000105s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 5 LIMIT 1   [ RunTime:0.000131s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428460300 AND ( deadline <= 0 OR deadline > 1428460300 ) LIMIT 1   [ RunTime:0.000159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/394ca46ada227a535bea67931415f56a.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001507s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000224s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000155s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000144s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000140s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001147s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000146s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.000993s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428373900 LIMIT 1   [ RunTime:0.000620s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425868300 LIMIT 1   [ RunTime:0.000317s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000092s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.015249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.017802s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001916s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000745s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002549s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002555s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002594s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002118s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000745s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002742s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000528s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000589s ]
+
+[ 2015-04-08T10:31:43+08:00 ] ::1 /jdicms/index.php/Home/Index/category/cate/wo/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001395s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000295s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001850s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001548s ]
+SQL: SELECT * FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428460303 AND ( deadline <= 0 OR deadline > 1428460303 ) LIMIT 1   [ RunTime:0.000174s ]
+SQL: UPDATE `jdi_article` SET `view`=view+1 WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428460303 AND ( deadline <= 0 OR deadline > 1428460303 ) [ RunTime:0.000174s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001515s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000121s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000216s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000126s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+NOTIC: [8] Use of undefined constant title_color - assumed 'title_color' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+SQL: SHOW COLUMNS FROM `jdi_member` [ RunTime:0.001344s ]
+SQL: SELECT * FROM `jdi_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000122s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001499s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialShare' LIMIT 1   [ RunTime:0.000125s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialButton' LIMIT 1   [ RunTime:0.000104s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000094s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` > '4' AND `category_id` = 3 AND `status` = 1 AND `create_time` < 1428460303 AND ( deadline <= 0 OR deadline > 1428460303 ) ORDER BY `id` asc LIMIT 1   [ RunTime:0.000184s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000084s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` < '4' AND `category_id` = 3 AND `status` = 1 AND `create_time` < 1428460303 AND ( deadline <= 0 OR deadline > 1428460303 ) ORDER BY `id` Desc LIMIT 1   [ RunTime:0.000150s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000100s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428373903 LIMIT 1   [ RunTime:0.000163s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425868303 LIMIT 1   [ RunTime:0.000145s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019721s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001662s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022425s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001707s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002412s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002404s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002441s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001896s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002590s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2015-04-08T10:36:21+08:00 ] ::1 /jdicms/index.php/Home/Index/category/cate/wo/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001125s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000298s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001655s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000163s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001746s ]
+SQL: SELECT * FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428460581 AND ( deadline <= 0 OR deadline > 1428460581 ) LIMIT 1   [ RunTime:0.000164s ]
+SQL: UPDATE `jdi_article` SET `view`=view+1 WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428460581 AND ( deadline <= 0 OR deadline > 1428460581 ) [ RunTime:0.000167s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001459s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000197s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000129s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000138s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000102s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+NOTIC: [8] Use of undefined constant title_color - assumed 'title_color' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+SQL: SHOW COLUMNS FROM `jdi_member` [ RunTime:0.001529s ]
+SQL: SELECT * FROM `jdi_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000136s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001245s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialShare' LIMIT 1   [ RunTime:0.000121s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialButton' LIMIT 1   [ RunTime:0.000098s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000090s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` > '4' AND `category_id` = 3 AND `status` = 1 AND `create_time` < 1428460581 AND ( deadline <= 0 OR deadline > 1428460581 ) ORDER BY `id` asc LIMIT 1   [ RunTime:0.000179s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000083s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` < '4' AND `category_id` = 3 AND `status` = 1 AND `create_time` < 1428460581 AND ( deadline <= 0 OR deadline > 1428460581 ) ORDER BY `id` Desc LIMIT 1   [ RunTime:0.000146s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001076s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428374181 LIMIT 1   [ RunTime:0.000161s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425868581 LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019483s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001405s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021818s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001717s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002236s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002244s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002280s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001900s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000627s ]
+
+[ 2015-04-08T10:36:22+08:00 ] ::1 /jdicms/index.php/Home/Index/category/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001304s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001687s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000136s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001779s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1428460582,'http://localhost/jdicms/index.php/Home/Index/category/cate/wo/p/1.html','未知','未知') [ RunTime:0.000128s ]
+
+[ 2015-04-08T10:37:02+08:00 ] ::1 /jdicms/index.php/Home/Index/category/cate/wo/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001127s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000301s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001609s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.005405s ]
+SQL: SELECT * FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428460622 AND ( deadline <= 0 OR deadline > 1428460622 ) LIMIT 1   [ RunTime:0.000156s ]
+SQL: UPDATE `jdi_article` SET `view`=view+1 WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428460622 AND ( deadline <= 0 OR deadline > 1428460622 ) [ RunTime:0.000235s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001494s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000192s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000139s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000192s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000111s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+NOTIC: [8] Use of undefined constant title_color - assumed 'title_color' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+SQL: SHOW COLUMNS FROM `jdi_member` [ RunTime:0.001457s ]
+SQL: SELECT * FROM `jdi_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001277s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialShare' LIMIT 1   [ RunTime:0.000109s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialButton' LIMIT 1   [ RunTime:0.000099s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000091s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` > '4' AND `category_id` = 3 AND `status` = 1 AND `create_time` < 1428460622 AND ( deadline <= 0 OR deadline > 1428460622 ) ORDER BY `id` asc LIMIT 1   [ RunTime:0.000178s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000085s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` < '4' AND `category_id` = 3 AND `status` = 1 AND `create_time` < 1428460622 AND ( deadline <= 0 OR deadline > 1428460622 ) ORDER BY `id` Desc LIMIT 1   [ RunTime:0.000148s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001233s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428374222 LIMIT 1   [ RunTime:0.000158s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425868622 LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019607s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000101s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021901s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001671s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000630s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002189s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002196s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001851s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000630s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000742s ]
+
+[ 2015-04-08T10:37:03+08:00 ] ::1 /jdicms/index.php/Home/Index/category/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001741s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001534s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001624s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1428460623,'http://localhost/jdicms/index.php/Home/Index/category/cate/wo/p/1.html','未知','未知') [ RunTime:0.000116s ]
+
+[ 2015-04-08T10:40:12+08:00 ] ::1 /jdicms/index.php/Home/Index/category/cate/wo/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001293s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000326s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000382s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001682s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000118s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.005277s ]
+SQL: SELECT * FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428460812 AND ( deadline <= 0 OR deadline > 1428460812 ) LIMIT 1   [ RunTime:0.000181s ]
+SQL: UPDATE `jdi_article` SET `view`=view+1 WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428460812 AND ( deadline <= 0 OR deadline > 1428460812 ) [ RunTime:0.000168s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001593s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000189s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000115s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000100s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+NOTIC: [8] Use of undefined constant title_color - assumed 'title_color' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+SQL: SHOW COLUMNS FROM `jdi_member` [ RunTime:0.001490s ]
+SQL: SELECT * FROM `jdi_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000125s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001250s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialShare' LIMIT 1   [ RunTime:0.000144s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialButton' LIMIT 1   [ RunTime:0.000097s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000093s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` > '4' AND `category_id` = 3 AND `status` = 1 AND `create_time` < 1428460812 AND ( deadline <= 0 OR deadline > 1428460812 ) ORDER BY `id` asc LIMIT 1   [ RunTime:0.000181s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000084s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` < '4' AND `category_id` = 3 AND `status` = 1 AND `create_time` < 1428460812 AND ( deadline <= 0 OR deadline > 1428460812 ) ORDER BY `id` Desc LIMIT 1   [ RunTime:0.000147s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000098s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428374412 LIMIT 1   [ RunTime:0.000160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425868812 LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000061s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019949s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000105s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001651s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002187s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002194s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002230s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001835s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2015-04-08T10:40:12+08:00 ] ::1 /jdicms/index.php/Home/Index/category/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000183s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001488s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001747s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000187s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001817s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1428460812,'http://localhost/jdicms/index.php/Home/Index/category/cate/wo/p/1.html','未知','未知') [ RunTime:0.000111s ]
+
+[ 2015-04-08T10:43:52+08:00 ] ::1 /jdicms/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001110s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000319s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000369s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Undefined variable: rootNav /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/c50d1b4cd417a3f9d3d63abb8c3e1fab.php 第 74 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.018980s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000248s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000137s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000155s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000149s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000147s ]
+SQL: SHOW COLUMNS FROM `jdi_link` [ RunTime:0.001089s ]
+SQL: SELECT * FROM `jdi_link` WHERE `status` = 1 AND `group` = 'p-1' ORDER BY sort asc,id asc  [ RunTime:0.000152s ]
+SQL: SHOW COLUMNS FROM `jdi_picture` [ RunTime:0.001074s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 13 LIMIT 1   [ RunTime:0.000141s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 12 LIMIT 1   [ RunTime:0.000117s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 11 LIMIT 1   [ RunTime:0.000116s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 10 LIMIT 1   [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001543s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001570s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428461032 AND ( deadline <= 0 OR deadline > 1428461032 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000184s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000092s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 14 AND `create_time` < 1428461032 AND ( deadline <= 0 OR deadline > 1428461032 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000159s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000136s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428461032 AND ( deadline <= 0 OR deadline > 1428461032 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,20   [ RunTime:0.000166s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.000094s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.000134s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 7 LIMIT 1   [ RunTime:0.000157s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 6 LIMIT 1   [ RunTime:0.000129s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 5 LIMIT 1   [ RunTime:0.000261s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001225s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000134s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.000993s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428374632 LIMIT 1   [ RunTime:0.000189s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425869032 LIMIT 1   [ RunTime:0.000180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000072s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.055717s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.058294s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001807s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002417s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002416s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002455s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002006s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002608s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012599s ]
+
+[ 2015-04-08T10:43:53+08:00 ] ::1 /jdicms/index.php/Home/Index/index/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001162s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001649s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000265s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001392s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1428461032,'http://localhost/jdicms/index.php/Home/Index/index.html','未知','未知') [ RunTime:0.000116s ]
+
+[ 2015-04-08T10:43:55+08:00 ] ::1 /jdicms/index.php/Home/Index/category/cate/tskc/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001126s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000296s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001639s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000116s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.006191s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428461034 AND ( deadline <= 0 OR deadline > 1428461034 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `jdi_picture` [ RunTime:0.001180s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.000135s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.000096s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 7 LIMIT 1   [ RunTime:0.000093s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 6 LIMIT 1   [ RunTime:0.000092s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 5 LIMIT 1   [ RunTime:0.000091s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000085s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428461034 AND ( deadline <= 0 OR deadline > 1428461034 ) LIMIT 1   [ RunTime:0.000124s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/394ca46ada227a535bea67931415f56a.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001563s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000121s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000100s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001238s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001409s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428374634 LIMIT 1   [ RunTime:0.000169s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425869034 LIMIT 1   [ RunTime:0.000146s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014394s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001495s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000116s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.016725s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001666s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002210s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002220s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001849s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002391s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2015-04-08T10:43:56+08:00 ] ::1 /jdicms/index.php/Home/Index/content/cate/tskc/id/9.htmll
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000295s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001636s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000115s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.005302s ]
+SQL: SELECT * FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428461036 AND ( deadline <= 0 OR deadline > 1428461036 ) AND `id` = 9 LIMIT 1   [ RunTime:0.000180s ]
+SQL: UPDATE `jdi_article` SET `view`=view+1 WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428461036 AND ( deadline <= 0 OR deadline > 1428461036 ) AND `id` = 9 [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `jdi_picture` [ RunTime:0.001169s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.000127s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001453s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000189s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000127s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000100s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+NOTIC: [8] Use of undefined constant title_color - assumed 'title_color' /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/949c268ee4285e5223f913c11fcb640f.php 第 125 行.
+SQL: SHOW COLUMNS FROM `jdi_member` [ RunTime:0.001300s ]
+SQL: SELECT * FROM `jdi_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000116s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001282s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialShare' LIMIT 1   [ RunTime:0.000123s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialButton' LIMIT 1   [ RunTime:0.000102s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000093s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` > '9' AND `category_id` = 12 AND `status` = 1 AND `create_time` < 1428461036 AND ( deadline <= 0 OR deadline > 1428461036 ) ORDER BY `id` asc LIMIT 1   [ RunTime:0.000169s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000086s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` < '9' AND `category_id` = 12 AND `status` = 1 AND `create_time` < 1428461036 AND ( deadline <= 0 OR deadline > 1428461036 ) ORDER BY `id` Desc LIMIT 1   [ RunTime:0.000196s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.000184s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000116s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001581s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428374636 LIMIT 1   [ RunTime:0.000214s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425869036 LIMIT 1   [ RunTime:0.000165s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020546s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000104s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022813s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001724s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002252s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002255s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002290s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001911s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002425s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2015-04-08T11:06:11+08:00 ] ::1 /jdicms/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001113s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.000299s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.000350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+NOTIC: [8] Undefined variable: rootNav /Users/tiptimes/Desktop/www/jdicms/Runtime/Cache/Home/c50d1b4cd417a3f9d3d63abb8c3e1fab.php 第 74 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.013304s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000258s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 17 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000162s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 12 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000149s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 13 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000146s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 15 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000147s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 9 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000144s ]
+SQL: SHOW COLUMNS FROM `jdi_link` [ RunTime:0.001181s ]
+SQL: SELECT * FROM `jdi_link` WHERE `status` = 1 AND `group` = 'p-1' ORDER BY sort asc,id asc  [ RunTime:0.000170s ]
+SQL: SHOW COLUMNS FROM `jdi_picture` [ RunTime:0.001066s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 13 LIMIT 1   [ RunTime:0.000150s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 12 LIMIT 1   [ RunTime:0.000138s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 11 LIMIT 1   [ RunTime:0.000133s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 10 LIMIT 1   [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001400s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000100s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001707s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428462371 AND ( deadline <= 0 OR deadline > 1428462371 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000171s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000089s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 14 AND `create_time` < 1428462371 AND ( deadline <= 0 OR deadline > 1428462371 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000159s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000088s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 12 AND `create_time` < 1428462371 AND ( deadline <= 0 OR deadline > 1428462371 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,20   [ RunTime:0.000165s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.000095s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.000094s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 7 LIMIT 1   [ RunTime:0.000093s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 6 LIMIT 1   [ RunTime:0.000092s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 5 LIMIT 1   [ RunTime:0.000092s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001300s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428375971 LIMIT 1   [ RunTime:0.000165s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1425870371 LIMIT 1   [ RunTime:0.000147s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.047860s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000107s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.050191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001663s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000655s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002192s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002194s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002230s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001860s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000655s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002392s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2015-04-08T11:06:12+08:00 ] ::1 /jdicms/index.php/Home/Index/index/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001254s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/jdicms/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001862s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000172s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001758s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1428462371,'http://localhost/jdicms/index.php/Home/Index/index.html','未知','未知') [ RunTime:0.000112s ]
+

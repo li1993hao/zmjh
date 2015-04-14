@@ -1,0 +1,12 @@
+[ 2015-04-10T12:59:56+08:00 ] 192.168.99.27 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1428641997&_hash=0ef562a46389f87def5ce3d44f3b499a9bf1fe01
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001885s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000118s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.001420s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1428641996 AND ( deadline <= 0 OR deadline > 1428641996 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000143s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/function.php 第 1562 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/function.php 第 1564 行.
+
+[ 2015-04-10T13:36:45+08:00 ] 192.168.99.44 /zmjh/api.php?category=1
+NOTIC: [8] Undefined index: _M /Users/tiptimes/Desktop/www/zmjh/Application/Api/Controller/ApiController.class.php 第 14 行.
+

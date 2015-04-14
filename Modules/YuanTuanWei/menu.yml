@@ -1,0 +1,14 @@
+---
+学生信息审核:
+  - title: 待审核学生
+    url: Index/index
+  - title: 已审核学生
+    url: Index/yishen
+  - title: 未通过审核学生
+    url: Index/wei
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+<!--footer-->
+<footer id="footer">
+    <!--footer testimonail-->
+    <section class="testimonial">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span9">
+                    <blockquote>
+                        <p>
+                            "让我们来帮助您，帮助您的孩子，选择成林，欢迎致电
+                            <span class="tel">13264167086</span>
+                            "
+                        </p>
+                        <small class="pull-right">杜老师</small>
+                    </blockquote>
+                </div>
+                <div class="span3 mugshot" style="text-align: center">
+                    <img src="__THEME__/img/content/client_mug2.png" alt="client" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footerMain">
+        <div class="container">
+            <div class="row-fluid">
+
+                <!--footer main columns-->
+
+                <div class="span3">
+
+                    <!--newsletter widget-->
+
+                    <div class="widget widget_newsletter">
+                        <h3>给我们留言</h3>
+                        <p>
+                            欢迎给我们留言，我们将会即使的对您提出的问题进行回复。
+                        </p>
+                        <a href="<c:cat who='16' field='url'/>" target="_blank" class="btn btn-success">我要留言</a>
+                    </div>
+                    <!--end widget-->
+
+                </div>
+
+                <div class="span6">
+
+                    <!--recent posts widget-->
+
+                    <div class="widget widget_recent_entries">
+                        <h3>
+                            校区地址
+                            <a href="<c:cat who='17' field='url'/>" target="_blank">
+                                <span class="label">地图</span>
+                            </a>
+                        </h3>
+                        <ul>
+                            <li>
+                                <a class="title" href="#">别墅校区</a>
+                                <p>
+                                    盛世郦园别墅区62-6（泉达路和振华西道交口，彤德莱火锅店后）
+                                </p>
+                            </li>
+
+                            <li class="last">
+                                    <a class="title" href="#">一中校区</a>
+                                    <p>
+                                        蒲瑞馨园底商三层（杨村一中对面）
+                                    </p>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!--end widget-->
+
+                </div>
+
+                <div class="span3 last">
+                    <!--footer logo-->
+                    <a href="index.html" class="logo-foot" title="Home">
+                        <img src="__THEME__/img/content/weixin.jpg" alt="mentor logo" />
+                    </a>
+                    {:plugin('IPlistener')}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer lower-->
+    <section class="footerLower">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12 copyright">
+                    <h3 style="text-align: center">
+                        &copy; 时代科技
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</footer>
+<!--back to top button-->
+<a href="#top" id="peBackToTop" class="label btt disabled">
+    <span class="icon-chevron-up icon-white"></span>
+</a>
+<script type="text/javascript">
+    (function(){
+        var ThinkPHP = window.Think = {
+            "ROOT"   : "__ROOT__", //当前网站地址
+            "APP"    : "__APP__", //当前项目地址
+            "PUBLIC" : "__PUBLIC__", //项目公共目录地址
+            "DEEP"   : "{:C('URL_PATHINFO_DEPR')}", //PATHINFO分割符
+            "MODEL"  : ["{:C('URL_MODEL')}", "{:C('URL_CASE_INSENSITIVE')}", "{:C('URL_HTML_SUFFIX')}"],
+            "VAR"    : ["{:C('VAR_MODULE')}", "{:C('VAR_CONTROLLER')}", "{:C('VAR_ACTION')}"]
+        }
+    })();
+</script>
+<script type="text/javascript" src="__VENDOR__/think.js"></script>
+<!-- import minified javascript -->
+<script type="text/javascript" src="__THEME__/js/mentor.min.js"></script>
+<script type="text/javascript" src="__THEME__/js/common.js"></script>

@@ -1,0 +1,583 @@
+[ 2015-04-13T09:16:40+08:00 ] ::1 /zmjh/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003968s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.004029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+NOTIC: [8] Undefined variable: rootNav /Users/tiptimes/Desktop/www/zmjh/Runtime/Cache/Home/c50d1b4cd417a3f9d3d63abb8c3e1fab.php 第 74 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001580s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000182s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000139s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000099s ]
+SQL: SHOW COLUMNS FROM `jdi_link` [ RunTime:0.040142s ]
+SQL: SELECT * FROM `jdi_link` WHERE `status` = 1 AND `group` = 'p-1' ORDER BY sort asc,id asc  [ RunTime:0.000149s ]
+NOTIC: [2] array_slice() expects parameter 1 to be array, string given /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 299 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001572s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000107s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001633s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428887800 AND ( deadline <= 0 OR deadline > 1428887800 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000134s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000116s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000263s ]
+NOTIC: [2] Illegal string offset 'model_id' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000115s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000109s ]
+NOTIC: [2] Illegal string offset 'name' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000091s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000088s ]
+NOTIC: [2] Illegal string offset 'model_id' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000090s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000110s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001212s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428801400 LIMIT 1   [ RunTime:0.000104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426295800 LIMIT 1   [ RunTime:0.000086s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.120039s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.122740s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001948s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002565s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002563s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002603s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002122s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002731s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000667s ]
+
+[ 2015-04-13T09:16:40+08:00 ] ::1 /zmjh/index.php/Home/Index/index/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001302s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001551s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000164s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.002096s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1428887800,'http://localhost/zmjh/index.php/','未知','未知') [ RunTime:0.000121s ]
+
+[ 2015-04-13T09:16:42+08:00 ] ::1 /zmjh/index.php/Home/Index/category/cate/shixixinxi/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003839s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003893s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001842s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000116s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.018593s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1428887802 AND ( deadline <= 0 OR deadline > 1428887802 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000183s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 42 行.
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000098s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1428887802 AND ( deadline <= 0 OR deadline > 1428887802 ) LIMIT 1   [ RunTime:0.000107s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/zmjh/Runtime/Cache/Home/394ca46ada227a535bea67931415f56a.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001540s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000176s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000112s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000101s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000099s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000092s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.004634s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000116s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428801402 LIMIT 1   [ RunTime:0.000106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426295802 LIMIT 1   [ RunTime:0.000086s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000061s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.017461s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000118s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020036s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001813s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000669s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002363s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002366s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002402s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001990s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000669s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002534s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2015-04-13T09:16:43+08:00 ] ::1 /zmjh/index.php/Home/Index/category/cate/qiuzhizhidao/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001186s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001589s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003886s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003944s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.318476s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000137s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.052824s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 2 AND `create_time` < 1428887802 AND ( deadline <= 0 OR deadline > 1428887802 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000228s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000172s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 2 AND `create_time` < 1428887802 AND ( deadline <= 0 OR deadline > 1428887802 ) LIMIT 1   [ RunTime:0.000185s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/zmjh/Runtime/Cache/Home/394ca46ada227a535bea67931415f56a.php 第 71 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001541s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000212s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000123s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000096s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000096s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000093s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001666s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000126s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428801402 LIMIT 1   [ RunTime:0.000114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426295802 LIMIT 1   [ RunTime:0.000087s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000126s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.016638s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001765s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002326s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002326s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002362s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001939s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000705s ]
+
+[ 2015-04-13T09:16:44+08:00 ] ::1 /zmjh/index.php/Home/Index/category/cate/jieyezhengce/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003840s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003894s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001938s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `symbol` = 'jieyezhengce' LIMIT 1   [ RunTime:0.000148s ]
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001381s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001711s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428887803 AND ( deadline <= 0 OR deadline > 1428887803 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000137s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000090s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428887803 AND ( deadline <= 0 OR deadline > 1428887803 ) LIMIT 1   [ RunTime:0.000137s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/zmjh/Runtime/Cache/Home/394ca46ada227a535bea67931415f56a.php 第 71 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000231s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000161s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000096s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000096s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000112s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001190s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000121s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.000979s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428801403 LIMIT 1   [ RunTime:0.000105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426295803 LIMIT 1   [ RunTime:0.000087s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000061s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011459s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001325s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001382s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014294s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001980s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002832s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002779s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002847s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002160s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000670s ]
+
+[ 2015-04-13T09:16:46+08:00 ] ::1 /zmjh/index.php/Home/Index/category/cate/xiazai/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003861s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003915s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001565s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `symbol` = 'xiazai' LIMIT 1   [ RunTime:0.000148s ]
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001866s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.000178s ]
+SQL: SHOW COLUMNS FROM `jdi_download` [ RunTime:0.038308s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`file`,`weight`,`is_up` FROM `jdi_download` WHERE `status` = 1 AND `category_id` = 4 AND `create_time` < 1428887806 AND ( deadline <= 0 OR deadline > 1428887806 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000153s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.000098s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `jdi_download` WHERE `status` = 1 AND `category_id` = 4 AND `create_time` < 1428887806 AND ( deadline <= 0 OR deadline > 1428887806 ) LIMIT 1   [ RunTime:0.000089s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+NOTIC: [8] Undefined variable: index_style /Users/tiptimes/Desktop/www/zmjh/Runtime/Cache/Home/394ca46ada227a535bea67931415f56a.php 第 71 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000226s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000113s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000098s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000097s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000093s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001285s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001131s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428801406 LIMIT 1   [ RunTime:0.000188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426295806 LIMIT 1   [ RunTime:0.000136s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000109s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000167s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014721s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001684s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002315s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002315s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002350s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001859s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2015-04-13T09:16:47+08:00 ] ::1 /zmjh/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003880s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003934s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined variable: rootNav /Users/tiptimes/Desktop/www/zmjh/Runtime/Cache/Home/c50d1b4cd417a3f9d3d63abb8c3e1fab.php 第 74 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.001346s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000165s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000187s ]
+SQL: SHOW COLUMNS FROM `jdi_link` [ RunTime:0.001163s ]
+SQL: SELECT * FROM `jdi_link` WHERE `status` = 1 AND `group` = 'p-1' ORDER BY sort asc,id asc  [ RunTime:0.000144s ]
+NOTIC: [2] array_slice() expects parameter 1 to be array, string given /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 299 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001425s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000106s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001521s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428887807 AND ( deadline <= 0 OR deadline > 1428887807 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000144s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000104s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000093s ]
+NOTIC: [2] Illegal string offset 'model_id' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000092s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000091s ]
+NOTIC: [2] Illegal string offset 'name' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000091s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000089s ]
+NOTIC: [2] Illegal string offset 'model_id' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000110s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000090s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001296s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000114s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.000988s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428801407 LIMIT 1   [ RunTime:0.000111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426295807 LIMIT 1   [ RunTime:0.000086s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.029457s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001718s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000189s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000152s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.032271s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001717s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002399s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002384s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002425s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001891s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002565s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000603s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2015-04-13T12:48:49+08:00 ] 192.168.99.22 /zmjh/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001304s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003818s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003874s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+NOTIC: [8] Undefined variable: rootNav /Users/tiptimes/Desktop/www/zmjh/Runtime/Cache/Home/c50d1b4cd417a3f9d3d63abb8c3e1fab.php 第 74 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.010118s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000213s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000178s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000146s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.004264s ]
+SQL: SHOW COLUMNS FROM `jdi_link` [ RunTime:0.001259s ]
+SQL: SELECT * FROM `jdi_link` WHERE `status` = 1 AND `group` = 'p-1' ORDER BY sort asc,id asc  [ RunTime:0.000155s ]
+NOTIC: [2] array_slice() expects parameter 1 to be array, string given /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 299 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001601s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000160s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001903s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428900529 AND ( deadline <= 0 OR deadline > 1428900529 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000184s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000155s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000153s ]
+NOTIC: [2] Illegal string offset 'model_id' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000138s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000139s ]
+NOTIC: [2] Illegal string offset 'name' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000135s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000134s ]
+NOTIC: [2] Illegal string offset 'model_id' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 67 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000133s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000156s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001193s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000164s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001277s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428814129 LIMIT 1   [ RunTime:0.000158s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426308529 LIMIT 1   [ RunTime:0.000131s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000105s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.048434s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001411s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000157s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.051055s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001792s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000814s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002466s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002477s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002522s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001998s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000814s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002663s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2015-04-13T12:48:50+08:00 ] 192.168.99.22 /zmjh/index.php/Home/Index/index/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001109s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001307s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000165s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001451s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('192.168.99.22',1428900530,'http://192.168.99.31/zmjh/','未分配或者内网IP','') [ RunTime:0.000110s ]
+

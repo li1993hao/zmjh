@@ -1,0 +1,107 @@
+[ 2015-03-24T09:29:24+08:00 ] ::1 /xuegaobang/api.php?_R=Modules&_M=Person&_C=Person&_A=getCompanyFields&_time=1427160564&_hash=3d47a315b782d58bd4196e50e1a6b1abe3efc17e
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/haoli/Desktop/www/xuegaobang/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001645s ]
+SQL: SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1   [ RunTime:0.000115s ]
+ERR: 1054:Unknown column 'extend' in 'field list'
+ [ SQL语句 ] : SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1  
+SQL: SHOW COLUMNS FROM `jdi_attribute` [ RunTime:0.001480s ]
+SQL: SELECT * FROM `jdi_attribute` WHERE `model_id` = 34  [ RunTime:0.000638s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/haoli/Desktop/www/xuegaobang/Modules/Person/Api/PersonApi.class.php:53) /Users/haoli/Desktop/www/xuegaobang/ThinkPHP/Mode/Api/Controller.class.php 第 60 行.
+
+[ 2015-03-24T09:33:35+08:00 ] ::1 /xuegaobang/api.php?_R=Modules&_M=Person&_C=Person&_A=getCompanyFields&_time=1427160815&_hash=b54430c3df7e62f2f9c6f59eff4cf605b9b7b854
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/haoli/Desktop/www/xuegaobang/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001981s ]
+SQL: SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1   [ RunTime:0.000114s ]
+ERR: 1054:Unknown column 'extend' in 'field list'
+ [ SQL语句 ] : SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1  
+SQL: SHOW COLUMNS FROM `jdi_attribute` [ RunTime:0.001402s ]
+SQL: SELECT * FROM `jdi_attribute` WHERE `model_id` = 34  [ RunTime:0.000243s ]
+
+[ 2015-03-24T09:34:30+08:00 ] ::1 /xuegaobang/api.php?_R=Modules&_M=Person&_C=Person&_A=getCompanyFields&_time=1427160870&_hash=2400003e6ffbfa80ede3fedccaaa3b2c70244a58
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/haoli/Desktop/www/xuegaobang/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001891s ]
+SQL: SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1   [ RunTime:0.000130s ]
+ERR: 1054:Unknown column 'extend' in 'field list'
+ [ SQL语句 ] : SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1  
+SQL: SHOW COLUMNS FROM `jdi_attribute` [ RunTime:0.001872s ]
+SQL: SELECT * FROM `jdi_attribute` WHERE `model_id` = 34  [ RunTime:0.000852s ]
+
+[ 2015-03-24T09:34:30+08:00 ] 192.168.0.109 /xuegaobang/api.php?_R=Modules&_M=Person&_C=Person&_A=companyLists&_time=1427160871&_hash=2d42fed3b71049513c068353f5cc8fa0bc1aa0fd
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/haoli/Desktop/www/xuegaobang/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_company` [ RunTime:0.005223s ]
+SQL: SELECT `id`,`picture`,`name`,`telephone`,`uid`,`introduce`,`status`,`category`,`point`,`place`,`create_time`,`update_time`,`comment_num`,`collect_num`,`detail_banner`,`is_top` FROM `jdi_company` WHERE `status` = 1 LIMIT 0,10   [ RunTime:0.000511s ]
+SQL: SHOW COLUMNS FROM `jdi_picture` [ RunTime:0.002722s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 170 LIMIT 1   [ RunTime:0.000561s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 171 LIMIT 1   [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `jdi_user_staff` [ RunTime:0.004777s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_user_staff` WHERE `topic_table` = 'company' AND `topic_id` = 9 AND `action` = 'collect' AND `uid` = 1 LIMIT 1   [ RunTime:0.000827s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 208 LIMIT 1   [ RunTime:0.000812s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 209 LIMIT 1   [ RunTime:0.000332s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_user_staff` WHERE `topic_table` = 'company' AND `topic_id` = 7 AND `action` = 'collect' AND `uid` = 1 LIMIT 1   [ RunTime:0.000197s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 169 LIMIT 1   [ RunTime:0.000562s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 168 LIMIT 1   [ RunTime:0.000451s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_user_staff` WHERE `topic_table` = 'company' AND `topic_id` = 8 AND `action` = 'collect' AND `uid` = 1 LIMIT 1   [ RunTime:0.000423s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 178 LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 179 LIMIT 1   [ RunTime:0.000105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_user_staff` WHERE `topic_table` = 'company' AND `topic_id` = 10 AND `action` = 'collect' AND `uid` = 1 LIMIT 1   [ RunTime:0.000156s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 184 LIMIT 1   [ RunTime:0.000115s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 185 LIMIT 1   [ RunTime:0.000107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_user_staff` WHERE `topic_table` = 'company' AND `topic_id` = 11 AND `action` = 'collect' AND `uid` = 1 LIMIT 1   [ RunTime:0.000112s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 189 LIMIT 1   [ RunTime:0.000090s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 191 LIMIT 1   [ RunTime:0.000088s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_user_staff` WHERE `topic_table` = 'company' AND `topic_id` = 12 AND `action` = 'collect' AND `uid` = 1 LIMIT 1   [ RunTime:0.000129s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 198 LIMIT 1   [ RunTime:0.000133s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 199 LIMIT 1   [ RunTime:0.000103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_user_staff` WHERE `topic_table` = 'company' AND `topic_id` = 13 AND `action` = 'collect' AND `uid` = 1 LIMIT 1   [ RunTime:0.000129s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 196 LIMIT 1   [ RunTime:0.000098s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 197 LIMIT 1   [ RunTime:0.000096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_user_staff` WHERE `topic_table` = 'company' AND `topic_id` = 14 AND `action` = 'collect' AND `uid` = 1 LIMIT 1   [ RunTime:0.000121s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 202 LIMIT 1   [ RunTime:0.000097s ]
+SQL: SELECT * FROM `jdi_picture` WHERE `status` = 1 AND `id` = 199 LIMIT 1   [ RunTime:0.000094s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_user_staff` WHERE `topic_table` = 'company' AND `topic_id` = 15 AND `action` = 'collect' AND `uid` = 1 LIMIT 1   [ RunTime:0.000121s ]
+
+[ 2015-03-24T09:34:33+08:00 ] ::1 /xuegaobang/api.php?_R=Modules&_M=Person&_C=Person&_A=getCompanyFields&_time=1427160872&_hash=f2e546c9c52ef34307528e2b9870b512a87e9186
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/haoli/Desktop/www/xuegaobang/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001991s ]
+SQL: SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1   [ RunTime:0.000125s ]
+ERR: 1054:Unknown column 'extend' in 'field list'
+ [ SQL语句 ] : SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1  
+SQL: SHOW COLUMNS FROM `jdi_attribute` [ RunTime:0.001292s ]
+SQL: SELECT * FROM `jdi_attribute` WHERE `model_id` = 34  [ RunTime:0.000253s ]
+
+[ 2015-03-24T09:34:47+08:00 ] ::1 /xuegaobang/api.php?_R=Modules&_M=Person&_C=Person&_A=getCompanyFields&_time=1427160887&_hash=1938a8fdd28427086f4fd6754ef30386b2d56734
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/haoli/Desktop/www/xuegaobang/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001869s ]
+SQL: SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1   [ RunTime:0.000111s ]
+ERR: 1054:Unknown column 'extend' in 'field list'
+ [ SQL语句 ] : SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1  
+SQL: SHOW COLUMNS FROM `jdi_attribute` [ RunTime:0.001397s ]
+SQL: SELECT * FROM `jdi_attribute` WHERE `model_id` = 34  [ RunTime:0.000257s ]
+
+[ 2015-03-24T09:34:54+08:00 ] ::1 /xuegaobang/api.php?_R=Modules&_M=Person&_C=Person&_A=getCompanyFields&_time=1427160894&_hash=bb6d85d04e9c3f20680390cb021aa4b0b2545f25
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/haoli/Desktop/www/xuegaobang/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.002068s ]
+SQL: SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1   [ RunTime:0.000124s ]
+ERR: 1054:Unknown column 'extend' in 'field list'
+ [ SQL语句 ] : SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1  
+SQL: SHOW COLUMNS FROM `jdi_attribute` [ RunTime:0.001422s ]
+SQL: SELECT * FROM `jdi_attribute` WHERE `model_id` = 34  [ RunTime:0.000238s ]
+
+[ 2015-03-24T09:34:57+08:00 ] 192.168.0.109 /xuegaobang/api.php?_R=Modules&_M=Person&_C=Person&_A=getCompanyFields&_time=1427160898&_hash=e40a7c2524125fc5897ee2af2b21b57597c65574
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/haoli/Desktop/www/xuegaobang/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.002131s ]
+SQL: SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1   [ RunTime:0.000107s ]
+ERR: 1054:Unknown column 'extend' in 'field list'
+ [ SQL语句 ] : SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1  
+SQL: SHOW COLUMNS FROM `jdi_attribute` [ RunTime:0.001288s ]
+SQL: SELECT * FROM `jdi_attribute` WHERE `model_id` = 34  [ RunTime:0.000239s ]
+
+[ 2015-03-24T11:04:59+08:00 ] 192.168.0.109 /xuegaobang/api.php?_R=Modules&_M=Person&_C=Person&_A=getCompanyFields&_time=1427166299&_hash=0a2b2b1f00ac041048f7a85fc4833e186b87322d
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/haoli/Desktop/www/xuegaobang/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001367s ]
+SQL: SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1   [ RunTime:0.000153s ]
+ERR: 1054:Unknown column 'extend' in 'field list'
+ [ SQL语句 ] : SELECT `extend` FROM `jdi_model` WHERE `id` = 34 LIMIT 1  
+SQL: SHOW COLUMNS FROM `jdi_attribute` [ RunTime:0.001391s ]
+SQL: SELECT * FROM `jdi_attribute` WHERE `model_id` = 34  [ RunTime:0.000310s ]
+

@@ -1,0 +1,64 @@
+<extend name="public/base"/>
+<block name="content">
+
+
+    <!--main tagline area-->
+    <section class="taglineWrap">
+        <div class="container">
+            <div class="row-fluid  tagline">
+                <div class="breadcrumbs">
+                    <div class="container" style="font-size: 16px;">
+                        <volist name="nav" id="av">
+                            <if condition="$i eq count($nav)">
+                                {$av.name}
+                                <else/>
+                                <a href="{$av.url}" style="color: #49afcd">{$av.name}</a>/
+                            </if>
+                        </volist>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /container -->
+    </section>
+    <section class="mainContentWrap">
+        <div class="container mainContent">
+            <div class="row-fluid">
+
+                <!--main content-->
+
+                <div class="span12">
+                    <div class="row-fluid">
+                        <div class="row-fluid pageTitle">
+                                <if condition="info.title_color eq '#555' ">
+                                    <h1  style="margin-bottom:10;text-align: center">{$info.title}</h1>
+                                    <else/>
+                                    <h1 class="text-center" style="margin-bottom:10px;text-align: center;color:{$info.title_color}">{$info.title}</h1>
+                                </if>
+                            <div style="margin-bottom: 10px">
+                                <span><i class="icon-calendar"></i>{$info.create_time|date='Y-m-d H:i',###}</span>&nbsp;
+                                <span><i class="icon-pencil"></i>{:get_nickname($info['uid'])}</span>&nbsp;
+                                <span><i class="icon-eye-open"></i> {$info.view}</span>&nbsp;
+                                <notempty name="info.keyword">
+                                    <span>
+                                        <i class="icon-tags"></i>
+                                        <span>{$info.keyword}</span>
+                                    </span>
+                                </notempty>
+                                {:plugin('SocialShare')}
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <section>{$info.content|htmlspecialchars_decode}</section>
+                            {:plugin('SocialButton')}
+                            <include file="block/content_prev_next"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</block>
+
+
+

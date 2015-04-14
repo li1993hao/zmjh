@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--[if IE 7 ]>
+<html class="ie7 no-js" lang="en">
+<![endif]-->
+<!--[if IE 8 ]>
+<html class="ie8 no-js" lang="en">
+<![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9 no-js" lang="en">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]>
+<!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <include file="public/head"/>
+    <block name="style">
+    </block>
+</head>
+<body>
+<!-- 头部 -->
+<include file="public/header"/>
+<!-- /头部 -->
+
+<!-- 主体 -->
+<include file="public/body"/>
+<!-- /主体 -->
+
+<!-- 底部 -->
+<include file="public/footer"/>
+<block name="js">
+</block>
+{:hook('pageFooter')}
+</body>
+</html>

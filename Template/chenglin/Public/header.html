@@ -1,0 +1,50 @@
+<!--header and menu-->
+<!--[if lt IE 8]>
+<div class="alert alert-block alert-danger fade in" style="margin-bottom: 0">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a target="_blank" href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
+<![endif]-->
+<div class="navbar navbar-fixed-top" id="top" >
+    <div class="navbar-inner">
+        <div class="container" >
+            <div style="float: left;position: relative"><span style="color: #000000;font-size: 22px;line-height: 48px;">成林教育</span>
+                <small >  您身边的教育专家</small>
+            </div>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="btnTitle">菜单</span>
+                <span class="icon-chevron-down icon-white"></span>
+            </a>
+            <!--<a class="brand" href="index.html" title="Home">-->
+            <!--</a>-->
+            <div class="nav-collapse">
+                <!--main nav-->
+                <ul class="nav">
+                    <li class="{$index_style}">
+                        <a href="{:U('Index/index')}">首页</a>
+                    </li>
+                    <c:nav root="rootNav"  name="cat">
+                        <if condition="$cat['has_child'] neq 0">
+                            <li class="dropdown {$cat.class}">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">
+                                    {$cat['name']}
+                                    <i class="icon-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <volist name=":cat($cat['id'],true)" id="cat_child">
+                                        <li><a href="{$cat_child['url']}">{$cat_child['name']}</a></li>
+                                    </volist>
+                                </ul>
+                            </li>
+                            <else/>
+                            <li class="{$cat.class}">
+                                <a href="{$cat['url']}">
+                                    {$cat['name']}
+                                </a>
+                            </li>
+                        </if>
+                    </c:nav>
+            </ul>
+            </div>
+            <!--end main menu-->
+
+        </div>
+    </div>
+</div>

@@ -26,3 +26,40 @@ SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000115
 SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.006304s ]
 SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1429060716 AND ( deadline <= 0 OR deadline > 1429060716 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000163s ]
 
+[ 2015-04-15T09:21:43+08:00 ] 192.168.99.27 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1429060902&_hash=cb6c0f25c40a70bbbd4bbb818769867392513a5a
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001842s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000184s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001806s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 5 AND `create_time` < 1429060903 AND ( deadline <= 0 OR deadline > 1429060903 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000221s ]
+
+[ 2015-04-15T09:21:43+08:00 ] 192.168.99.27 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1429060902&_hash=89f70ab3f2aa8a6bdda7bf57ccaef788342a1a0c
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.004770s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000120s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.001526s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 2 AND `create_time` < 1429060903 AND ( deadline <= 0 OR deadline > 1429060903 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000231s ]
+
+[ 2015-04-15T09:21:45+08:00 ] 192.168.99.27 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1429060905&_hash=15d506fa574967f2c5b6194fd0e6d4f665c3344b
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001790s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.017812s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1429060905 AND ( deadline <= 0 OR deadline > 1429060905 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.011980s ]
+NOTIC: [8] Undefined index: cover /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 42 行.
+
+[ 2015-04-15T09:21:57+08:00 ] 192.168.99.27 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1429060916&_hash=bad1f81596e7f7d9892743311db27ec73d93eb07
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.006569s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.006767s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 6 AND `create_time` < 1429060917 AND ( deadline <= 0 OR deadline > 1429060917 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000176s ]
+
+[ 2015-04-15T09:21:58+08:00 ] 192.168.99.27 /zmjh/api.php?_R=App&_M=Common&_C=Document&_A=lists&_time=1429060917&_hash=343fc341ecbabf712db79eb4b85cf2c7ffcd8135
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.002602s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.005174s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1429060918 AND ( deadline <= 0 OR deadline > 1429060918 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000167s ]
+

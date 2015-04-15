@@ -10,9 +10,16 @@ use Think\Model;
  */
 class NoticeModel extends Model{
     protected  $_auto = array(
-      array('create_time',NOW_TIME,self::MODEL_INSERT),
-      array('update_time',NOW_TIME,self::MODEL_BOTH)
+        array('create_time',NOW_TIME,self::MODEL_INSERT),
+        array('update_time',NOW_TIME,self::MODEL_BOTH),
+        array('uid','parse_uid',self::MODEL_BOTH,'callback')
     );
+
+    public function parse_time($uid){
+        if(substr($uid,-1) != ','){
+            return $uid.',';
+        }
+    }
 
     public function update($post=null){
         if(is_null($post)){

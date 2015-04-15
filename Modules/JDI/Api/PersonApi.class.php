@@ -13,7 +13,6 @@ namespace Modules\JDI\Api;
  * 1.获得公司资料<br/>
  * 2.获得公司列表<br/>
  * 3.获得用户通知,以及删除和标置为已读<br/>
- * 5.获取公司类别<br/>
  * @package Modules\Person\Api
  * @author lh
  * @time 2015-03-07 09:52:02
@@ -131,6 +130,7 @@ class PersonApi {
      * @param int $flag 通知标识
      */
     static public function notice($uid,$title,$bundle='',$flag=0){
+
         return notice($uid,$title,$bundle,$flag);
     }
 
@@ -144,7 +144,7 @@ class PersonApi {
             api_msg("没有指定uid而且用户尚未登录!");
             return false;
         }
-        $result = M('Notice')->where(array('uid'=>$uid,'status'=>0))->count();
+        $result = M('Notice')->where(array('uid'=>array('like'=>$uid.','),'status'=>0))->count();
         if($result){
             return $result;
         }else{

@@ -1,0 +1,30 @@
+[ 2015-04-15T09:13:14+08:00 ] ::1 /zmjh/index.php/Admin/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.176347s ]
+INFO: [ app_init ] --END-- [ RunTime:0.177995s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013917s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.072949s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.073032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011495s ]
+
+[ 2015-04-15T09:13:18+08:00 ] ::1 /zmjh/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001165s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003104s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+

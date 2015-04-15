@@ -95,6 +95,9 @@ function upload_image(){
  * @param int $flag 通知标识
  */
 function notice($uid,$title,$detail='',$flag=0){
+    if(substr($uid,-1) != ","){ //查询优化
+        $uid.= ",";
+    }
     $data['uid'] = $uid;
     $data['title'] = $title;
     $data['bundle'] = $detail;
@@ -232,6 +235,7 @@ function tree_to_list_first($tree,$child_key,&$list=array(),$level=0,$remove=0){
  * @return array
  */
 function str2arr($str, $glue = ',',$pos=null,$default=0){
+    $str = trim($str," \t\n\r\0\x0B,");
     if(!is_null($pos)){
         $array =  explode($glue, $str);
         if(!empty($array[$pos])){

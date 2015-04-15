@@ -82,8 +82,13 @@ class DocumentApi {
         }
         $result = $model->select();
 
-        $result = content_url($result);
-        return $result;
+        if($result){
+            $result = content_url($result);
+            return $result;
+        }else{
+            api_msg("暂无数据~~");
+            return false;
+        }
     }
 
 
@@ -107,8 +112,13 @@ class DocumentApi {
             $model->limit($page);
         }
         $result = $model->select();
-        $result = content_url($result);
-        return $result;
+        if($result){
+            $result = content_url($result);
+            return $result;
+        }else{
+            api_msg("暂无数据~~");
+            return false;
+        }
     }
 
     /**

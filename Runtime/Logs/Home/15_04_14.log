@@ -7570,3 +7570,195 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000405s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000461s ]
 
+[ 2015-04-14T14:09:45+08:00 ] 192.168.99.27 /zmjh/index.php/Admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001101s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003385s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003465s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000493s ]
+
+[ 2015-04-14T14:09:50+08:00 ] 192.168.99.27 /zmjh/index.php/Admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001254s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.002990s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2015-04-14T14:09:54+08:00 ] 192.168.99.27 /zmjh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001098s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.002808s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.002862s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+NOTIC: [8] Undefined variable: rootNav /Users/tiptimes/Desktop/www/zmjh/Runtime/Cache/Home/c50d1b4cd417a3f9d3d63abb8c3e1fab.php 第 74 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.013879s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000116s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000098s ]
+SQL: SHOW COLUMNS FROM `jdi_link` [ RunTime:0.006066s ]
+SQL: SELECT * FROM `jdi_link` WHERE `status` = 1 AND `group` = 'p-1' ORDER BY sort asc,id asc  [ RunTime:0.000102s ]
+NOTIC: [2] array_slice() expects parameter 1 to be array, string given /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 299 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.001696s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.006559s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1428991794 AND ( deadline <= 0 OR deadline > 1428991794 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000130s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000107s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000091s ]
+NOTIC: [2] Illegal string offset 'model_id' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 64 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 64 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000091s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000091s ]
+NOTIC: [2] Illegal string offset 'name' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000089s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000131s ]
+NOTIC: [2] Illegal string offset 'model_id' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 64 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Api/DocumentApi.class.php 第 64 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000108s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000094s ]
+NOTIC: [2] Illegal string offset 'url' /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/tiptimes/Desktop/www/zmjh/Application/Common/Common/cms.php 第 254 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.018005s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000120s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.006048s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1428905394 LIMIT 1   [ RunTime:0.000106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426399794 LIMIT 1   [ RunTime:0.000087s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000061s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.074635s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.077098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001765s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002338s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.002334s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.002374s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001944s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002506s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2015-04-14T14:09:55+08:00 ] 192.168.99.27 /zmjh/index.php/Index/index/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_exec_start ] --START--
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Users/tiptimes/Desktop/www/zmjh/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.001567s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000146s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.001737s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('192.168.99.27',1428991794,'http://192.168.99.31/zmjh/index.php','未分配或者内网IP','') [ RunTime:0.000113s ]
+
+[ 2015-04-14T14:10:05+08:00 ] 192.168.99.27 /zmjh/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.002774s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.002828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2015-04-14T14:12:02+08:00 ] 192.168.99.27 /zmjh/index.php/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001088s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.002756s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.002809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2015-04-14T14:12:05+08:00 ] 192.168.99.27 /zmjh/index.php/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.002808s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.002863s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2015-04-14T16:00:45+08:00 ] ::1 /zmjh/index.php/Admin/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.002841s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.002907s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+

@@ -27,6 +27,7 @@ class ResumeApi {
      * intension string 求职意向<br/>
      * create_time int 创建时间<br/>
      * update_time int 更新时间<br/>
+     * head int 头像(图片)
      * @param int $uid 用户的uid默认为当前登录用户
      * @return array
      */
@@ -48,7 +49,9 @@ class ResumeApi {
     }
 
     /**
-     * 添加简历
+     * 添加简历<br/>
+     * 具体添加参数,请自行查看后台resume模型数据定义
+     *
      */
     public static function addResumes(){
         if(!UID){

@@ -230,7 +230,7 @@
                     <td><?php echo ($node["sort"]); ?></td>
                     <td><?php echo ($node["id"]); ?></td>
                     <td>
-                        <?php $__FOR_START_1806262564__=0;$__FOR_END_1806262564__=$node["level"];for($i=$__FOR_START_1806262564__;$i < $__FOR_END_1806262564__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>|__
+                        <?php $__FOR_START_29259__=0;$__FOR_END_29259__=$node["level"];for($i=$__FOR_START_29259__;$i < $__FOR_END_29259__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>|__
                                     <?php else: ?>
                                     |--<?php endif; ?>
                                 <?php else: ?>
@@ -313,7 +313,7 @@
     (function(){
         var ThinkPHP = window.Think = {
             "ROOT"   : "/zmjh", //当前网站地址
-            "APP"    : "/zmjh/admin.php", //当前项目地址
+            "APP"    : "/zmjh/index.php", //当前项目地址
             "PUBLIC" : "/zmjh/Public", //项目公共目录地址
             "DEEP"   : "<?php echo C('URL_PATHINFO_DEPR');?>", //PATHINFO分割符
             "MODEL"  : ["<?php echo C('URL_MODEL');?>", "<?php echo C('URL_CASE_INSENSITIVE');?>", "<?php echo C('URL_HTML_SUFFIX');?>"],

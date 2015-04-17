@@ -20,7 +20,7 @@ class MemberModel extends \Think\Model{
         /* 验证用户名 */
         array('username', '1,30', -1, self::EXISTS_VALIDATE, 'length'), //用户名长度不合法
         array('username', 'checkDenyMember', -2, self::EXISTS_VALIDATE, 'callback'), //用户名禁止注册
-        array('username','/\w+[\w\d]+/','用户名必须字母开头,只能含有字母或者数字！',self::MUST_VALIDATE,'regex',self::MODEL_BOTH),
+        array('username','/\w+[\w\d]+/',-13,self::MUST_VALIDATE,'regex',self::MODEL_BOTH),
         array('username', '', -3, self::EXISTS_VALIDATE, 'unique'), //用户名被占用
 
         /* 验证密码 */
@@ -133,9 +133,11 @@ class MemberModel extends \Think\Model{
         //验证手机
         if(empty($data['mobile'])) unset($data['mobile']);
         if(empty($data['email']))unset($data['email']);
+		
         /* 添加用户 */
         if($this->create($data)){
             $uid = $this->add();
+			
             return $uid ? $uid : 0; //0-未知错误，大于0-注册成功
         } else {
             return $this->getError(); //错误详情见自动验证注释
@@ -387,6 +389,7 @@ class MemberModel extends \Think\Model{
             case -10: $error = '手机被禁止注册！'; break;
             case -11: $error = '手机号被占用！'; break;
             case -12: $error = '昵称长度应该在2到40个字符之间！'; break;
+			case -13: $error = '用户名必须字母开头,只能含有字母或者数字！';break;
             default:  $error = '未知错误';
         }
         return $error;

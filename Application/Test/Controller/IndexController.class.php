@@ -1,11 +1,17 @@
 <?php
 namespace Test\Controller;
+use Common\Api\UserApi;
 use Common\Controller\JDIController;
+
 class IndexController extends JDIController {
 
     /**
      * 获取表情列表。
      */
+	 public function test()
+	 {
+		 echo "1";
+		}
     public function getSmile()
     {
         exit(json_encode(D('Expression')->getExpression()));
@@ -15,6 +21,17 @@ class IndexController extends JDIController {
     {
         exit(json_encode($this->getAtWhoUsersCached()));
     }
+	
+	public function reg()
+	{
+		$username=$_POST['username'];
+		$password=$_POST['password'];
+		$re_password=$_POST['re_password'];
+		$nickname=$_POST['nickname'];
+		$phone=$_POST['phone'];
+		$flag=UserApi::register($phone,$username,$nickname,$password,$re_password);
+		var_dump($flag);
+	}
 
 
     private function getAtWhoUsers()

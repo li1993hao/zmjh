@@ -203,7 +203,7 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-    分类管理
+    <?php echo ($info['id']?'编辑':'新增'); ?> [<?php echo get_model_by_id($info['model_id']);?>] 属性
 
                     </h1>
                 </div>
@@ -212,74 +212,183 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    <div class="btn-group">
-        <a class="btn btn-sm btn-primary" href="<?php echo U('add?type=1');?>">添加分类</a>
-        <a class="btn btn-sm btn-primary" href="<?php echo U('add?type=2');?>">添加单页面</a>
-        <a class="btn btn-sm btn-primary"  href="<?php echo U('add?type=3');?>">添加外部链接</a>
-        <a class="btn btn-sm btn-primary"  href="<?php echo U('import');?>">批量添加</a>
-        <!--<a class="btn btn-sm ajax-get btn-primary"  href="<?php echo U('clearCache');?>">更新栏目缓存</a>-->
-    </div>
-    <div class="able-responsive">
-        <table class="table table-striped table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>排序</th>
-                <th>ID</th>
-                <th>分类名称</th>
-                <th>英文名称</th>
-                <th>类型</th>
-                <th>数据模型</th>
-                <th>状态</th>
-                <th>首页显示</th>
-                <th>操作</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php if(!empty($nodeList)): if(is_array($nodeList)): $i = 0; $__LIST__ = $nodeList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$node): $mod = ($i % 2 );++$i;?><tr>
-                    <td class="text-center">
-                        <label>
-                            <input style="width:40px;text-align: center" class="sort_input" type="text" data-id="<?php echo ($node["id"]); ?>" value="<?php echo ($node["sort"]); ?>"/>
-                        </label>
-                        </td>
-                    <td><?php echo ($node["id"]); ?></td>
-                    <td>
-                        <?php $__FOR_START_58635821__=0;$__FOR_END_58635821__=$node["level"];for($i=$__FOR_START_58635821__;$i < $__FOR_END_58635821__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>&nbsp;|__
-                                    <?php else: ?>
-                                    |--<?php endif; ?>
-                                <?php else: ?>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; } ?>
-                        <?php echo ($node["name"]); ?></td>
-                    <td><?php echo ($node["symbol"]); ?></td>
-                    <td><?php switch($node["type"]): case "1": ?>分类<?php break;?>
-                        <?php case "2": ?>单页面<?php break;?>
-                        <?php case "3": ?>外部链接<?php break;?>
-                        <?php default: ?>栏目<?php endswitch;?>
-                    </td>
-                    <td><?php echo (get_model_by_id($node["model_id"])); ?></td>
-                    <td>
-                        <?php echo ($node["status_text"]); ?>
-                    </td>
-                    <td>
-                        <?php if($node['index_show'] == 0): ?>否
-                            <?php else: ?>
-                            是<?php endif; ?>
-                    </td>
-                    <td>
-                        <?php if(($node["status"]) == "1"): ?><a href="<?php echo U('changeStatus?method=forbid&id='.$node['id']);?>" class="ajax-get">禁用</a>
-                            <?php else: ?>
-                            <a href="<?php echo U('changeStatus?method=resume&id='.$node['id']);?>" class="ajax-get">启用</a><?php endif; ?>
-                        <a href="<?php echo U('delete?id='.$node['id']);?>" class="ajax-get confirm">删除</a>
-                        <a href="<?php echo U('edit?id='.$node['id'].'&type='.$node['type']);?>">修改</a>
-                        <?php if(($node["type"]) == "1"): ?><a href="<?php echo U('add?select_id='.$node['id']);?>">添加分类</a><?php endif; ?>
-                    </switch></td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-         <?php else: ?>
-            <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
+    <div class="tabbable">
+        <form class="form-horizontal"  action="<?php echo U('update');?>" method="post">
 
-        </tbody>
-    </table>
+        <ul class="nav nav-tabs padding-16 tab-size-bigger tab-space-1">
+            <li class="active"><a data-toggle="tab"  href="#tab1">基 础</a></li>
+            <li ><a data-toggle="tab"  href="#tab2">高 级</a></li>
+        </ul>
+        <div class="tab-content no-border padding-24">
+            <!-- 基础 -->
+				<div id="tab1" class="tab-pane in active">
+					<div class="form-group">
+						<label class="item-label">字段名<span class="check-tips">（请输入字段名 英文字母开头，长度不超过30）</span></label>
+						<div class="controls">
+							<input type="text" class="text input-large" name="name" value="<?php echo ($info["name"]); ?>">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">字段标题<span class="check-tips">（请输入字段标题，用于表单显示）</span></label>
+						<div class="controls">
+							<input type="text" class="text input-large" name="title" value="<?php echo ($info["title"]); ?>">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">字段类型<span class="check-tips">（用于表单中的展示方式）</span></label>
+						<div class="controls">
+							<select name="type" id="data-type">
+								<option value="">----请选择----</option>
+								<?php $_result=get_attribute_type();if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$type): $mod = ($i % 2 );++$i;?><option value="<?php echo ($key); ?>" rule="<?php echo ($type[1]); ?>"><?php echo ($type[0]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">字段定义<span class="check-tips">（字段属性的sql表示）</span></label>
+						<div class="controls">
+							<input type="text" class="text input-large" name="field" value="<?php echo ($info["field"]); ?>" id="data-field">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">参数<span class="check-tips">（布尔、枚举、多选字段类型的定义数据）</span></label>
+						<div class="controls">
+							<label class="textarea input-large">
+								<textarea name="extra"><?php echo ($info["extra"]); ?></textarea>
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">默认值<span class="check-tips">（字段的默认值）</span></label>
+						<div class="controls">
+							<input type="text" class="text input-large" name="value" value="<?php echo ($info["value"]); ?>">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">字段备注<span class="check-tips">(用于表单中的提示)</span></label>
+						<div class="controls">
+							<input type="text" class="text input-large" name="remark" value="<?php echo ($info["remark"]); ?>">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">是否显示<span class="check-tips">（是否显示在表单中）</span></label>
+						<div class="controls">
+							<select name="is_show">
+								<option value="1">始终显示</option>
+								<option value="2">新增显示</option>
+								<option value="3">编辑显示</option>
+								<option value="0">不显示</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">是否必填<span class="check-tips">（用于自动验证）</span></label>
+						<div class="controls">
+							<select name="is_must">
+								<option value="0">否</option>
+								<option value="1">是</option>
+							</select>
+						</div>
+					</div>
+                    </div>
+                <div id="tab2" class="tab-pane tab2">
+					<div class="form-group">
+						<label class="item-label">验证方式<span class="check-tips"></span></label>
+						<div class="controls">
+							<select name="validate_type">
+								<option value="regex">正则验证(regex)</option>
+								<option value="function">函数验证(function)</option>
+								<option value="unique">唯一验证(unique)</option>
+								<option value="length">长度验证(length)</option>
+                                <option value="in">验证在范围内(in)</option>
+                                <option value="notin">验证不在范围内(notin)</option>
+                                <option value="between">区间验证(between)</option>
+                                <option value="notbetween">不在区间验证(notbetween)</option>
+							</select>
+						</div>
+					</div>
+                    <div class="form-group">
+                        <label class="item-label">正则选项<span class="check-tips"></span></label>
+                        <div class="controls">
+                            <select id="regex" onchange="$('input[name=validate_rule]').val($(this).val());">
+                                <option value="">--请选择--</option>
+                                <?php $_result=regex();if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["rule"]); ?>"><?php echo ($vo["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </select>
+                        </div>
+                    </div>
+					<div class="form-group">
+						<label class="item-label">验证规则<span class="check-tips">（根据验证方式定义相关验证规则）</span></label>
+						<div class="controls">
+							<input type="text" class="text input-large" name="validate_rule" value="<?php echo ($info["validate_rule"]); ?>">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">出错提示<span class="check-tips"></span></label>
+						<div class="controls">
+							<input type="text" class="text input-large" name="error_info" value="<?php echo ($info["error_info"]); ?>">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">验证时间<span class="check-tips"></span></label>
+						<div class="controls">
+							<select name="validate_time">
+                                <option value="3">始 终</option>
+								<option value="1">新 增</option>
+								<option value="2">编 辑</option>
+								</select>
+						</div>
+					</div>
+                    <div class="form-group">
+                        <label class="item-label">验证条件<span class="check-tips">(如果字段不是必填项而且有验证条件的话请选择值不为空时验证)</span></label>
+                        <div class="controls">
+                            <select name="validate_condition">
+                                <option value="0">存在字段就验证</option>
+                                <option value="1">必须验证</option>
+                                <option value="2">值不为空的时候验证</option>
+                            </select>
+                        </div>
+                    </div>
+					<div class="form-group">
+						<label class="item-label">自动完成方式<span class="check-tips"></span></label>
+						<div class="controls">
+							<select name="auto_type">
+								<option value="function">函数</option>
+								<option value="field">字段</option>
+								<option value="string">字符串</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">自动完成规则<span class="check-tips">（根据完成方式订阅相关规则）</span></label>
+						<div class="controls">
+							<input type="text" class="text input-large" name="auto_rule" value="<?php echo ($info["auto_rule"]); ?>">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="item-label">自动完成时间<span class="check-tips"></span></label>
+						<div class="controls">
+							<select name="auto_time">
+								<option value="3">始 终</option>
+								<option value="1">新 增</option>
+								<option value="2">编 辑</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- 按钮 -->
+				<div class="form-group">
+					<label class="item-label"></label>
+					<div class="controls">
+						<input type="hidden" name="id" value="<?php echo ($info['id']); ?>"/>
+						<input type="hidden" name="model_id" value="<?php echo ($info['model_id']); ?>"/>
+						<button class="btn btn-sm btn-primary ajax-post no-refresh" type="submit" target-form="form-horizontal">确 定</button>
+						<button class="btn btn-sm" onclick="javascript:history.back(-1);return false;">返 回</button>
+					</div>
+				</div>
+        </div>
+        </form>
     </div>
- 
+
                         <!-- /.col -->
                     </div>
                     <!-- /.row -->
@@ -351,24 +460,20 @@
 
 
 
-    <script type="text/javascript">
-        $(".sort_input").on('change',function(){
-            var id = $(this).data('id');
-            var value = $(this).val();
-            if($.isNumeric(value)){
-                $.post("<?php echo U('sort');?>",{'id':id,'value':value},function(data){
-                    if(data.status){
-                    }else{
-                        errorAlert(data.msg);
-                    }
-
-                },'json')
-            }else{
-                errorAlert('输入必须是数字~~');
-                $(this).focus();
-            }
-        });
-    </script>
+<script type="text/javascript" charset="utf-8">
+Think.setValue('type', "<?php echo ((isset($info["type"]) && ($info["type"] !== ""))?($info["type"]):''); ?>");
+Think.setValue('is_show', "<?php echo ((isset($info["is_show"]) && ($info["is_show"] !== ""))?($info["is_show"]):1); ?>");
+Think.setValue('is_must', "<?php echo ((isset($info["is_must"]) && ($info["is_must"] !== ""))?($info["is_must"]):0); ?>");
+Think.setValue('validate_time', "<?php echo ((isset($info["validate_time"]) && ($info["validate_time"] !== ""))?($info["validate_time"]):3); ?>");
+Think.setValue('auto_time', "<?php echo ((isset($info["auto_time"]) && ($info["auto_time"] !== ""))?($info["auto_time"]):3); ?>");
+Think.setValue('validate_type', "<?php echo ((isset($info["validate_type"]) && ($info["validate_type"] !== ""))?($info["validate_type"]):'regex'); ?>");
+Think.setValue('auto_type', "<?php echo ((isset($info["auto_type"]) && ($info["auto_type"] !== ""))?($info["auto_type"]):'function'); ?>");
+$(function(){
+	$('#data-type').change(function(){
+		$('#data-field').val($(this).find('option:selected').attr('rule'));
+	});
+})
+</script>
 
 </body>
 </html>

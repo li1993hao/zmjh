@@ -63,6 +63,15 @@ function content_url($list,$fun=null){
                 }
             }
 
+            if(APP_MODE == 'api'){//content加数据
+                $create_time =date('Y-m-d H:i',$list[$k]['create_time']);
+                $html = <<<sql
+<h3 style="text-align:center">{$list[$k]['title']}</h3><span>发布时间:{$create_time}</span>&nbsp;&nbsp;<hr/>
+sql;
+                $html .= $list[$k]['content'];
+                $list[$k]['content'] =$html;
+            }
+
             if(!empty($v['link'])){ //外链
                 if('http://' === substr($v['link'], 0, 7)){
                     $list[$k]['url'] = $v['url'];

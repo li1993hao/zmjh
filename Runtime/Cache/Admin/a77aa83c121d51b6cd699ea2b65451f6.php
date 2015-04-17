@@ -203,7 +203,7 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-    分类管理
+    <?php echo isset($info['id'])?'编辑':'新增';?>后台菜单
 
                     </h1>
                 </div>
@@ -212,74 +212,81 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    <div class="btn-group">
-        <a class="btn btn-sm btn-primary" href="<?php echo U('add?type=1');?>">添加分类</a>
-        <a class="btn btn-sm btn-primary" href="<?php echo U('add?type=2');?>">添加单页面</a>
-        <a class="btn btn-sm btn-primary"  href="<?php echo U('add?type=3');?>">添加外部链接</a>
-        <a class="btn btn-sm btn-primary"  href="<?php echo U('import');?>">批量添加</a>
-        <!--<a class="btn btn-sm ajax-get btn-primary"  href="<?php echo U('clearCache');?>">更新栏目缓存</a>-->
-    </div>
-    <div class="able-responsive">
-        <table class="table table-striped table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>排序</th>
-                <th>ID</th>
-                <th>分类名称</th>
-                <th>英文名称</th>
-                <th>类型</th>
-                <th>数据模型</th>
-                <th>状态</th>
-                <th>首页显示</th>
-                <th>操作</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php if(!empty($nodeList)): if(is_array($nodeList)): $i = 0; $__LIST__ = $nodeList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$node): $mod = ($i % 2 );++$i;?><tr>
-                    <td class="text-center">
-                        <label>
-                            <input style="width:40px;text-align: center" class="sort_input" type="text" data-id="<?php echo ($node["id"]); ?>" value="<?php echo ($node["sort"]); ?>"/>
-                        </label>
-                        </td>
-                    <td><?php echo ($node["id"]); ?></td>
-                    <td>
-                        <?php $__FOR_START_58635821__=0;$__FOR_END_58635821__=$node["level"];for($i=$__FOR_START_58635821__;$i < $__FOR_END_58635821__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>&nbsp;|__
-                                    <?php else: ?>
-                                    |--<?php endif; ?>
-                                <?php else: ?>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; } ?>
-                        <?php echo ($node["name"]); ?></td>
-                    <td><?php echo ($node["symbol"]); ?></td>
-                    <td><?php switch($node["type"]): case "1": ?>分类<?php break;?>
-                        <?php case "2": ?>单页面<?php break;?>
-                        <?php case "3": ?>外部链接<?php break;?>
-                        <?php default: ?>栏目<?php endswitch;?>
-                    </td>
-                    <td><?php echo (get_model_by_id($node["model_id"])); ?></td>
-                    <td>
-                        <?php echo ($node["status_text"]); ?>
-                    </td>
-                    <td>
-                        <?php if($node['index_show'] == 0): ?>否
-                            <?php else: ?>
-                            是<?php endif; ?>
-                    </td>
-                    <td>
-                        <?php if(($node["status"]) == "1"): ?><a href="<?php echo U('changeStatus?method=forbid&id='.$node['id']);?>" class="ajax-get">禁用</a>
-                            <?php else: ?>
-                            <a href="<?php echo U('changeStatus?method=resume&id='.$node['id']);?>" class="ajax-get">启用</a><?php endif; ?>
-                        <a href="<?php echo U('delete?id='.$node['id']);?>" class="ajax-get confirm">删除</a>
-                        <a href="<?php echo U('edit?id='.$node['id'].'&type='.$node['type']);?>">修改</a>
-                        <?php if(($node["type"]) == "1"): ?><a href="<?php echo U('add?select_id='.$node['id']);?>">添加分类</a><?php endif; ?>
-                    </switch></td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-         <?php else: ?>
-            <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
+    <form action="<?php echo U();?>" method="post" class="form-horizontal normal-form" >
+        <div class="form-group">
+            <label>标题<span class="check-tips">（用于后台显示的配置标题）</span></label>
+            <div>
+                <input type="text" class="text input-large" name="title" value="<?php echo ((isset($info["title"]) && ($info["title"] !== ""))?($info["title"]):''); ?>">
+            </div>
+        </div>
 
-        </tbody>
-    </table>
-    </div>
- 
+        <div class="form-group">
+            <label>排序<span class="check-tips">（用于分组显示的顺序）</span></label>
+            <div >
+                <input type="text" class="text input-small" name="sort" value="<?php echo ((isset($info["sort"]) && ($info["sort"] !== ""))?($info["sort"]):0); ?>">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label>链接<span class="check-tips">（U函数解析的URL或者外链,主:如果是主菜单下有二级菜单,请添Public/index代表动态菜单）</span></label>
+            <div>
+                <input type="text" class="text input-large" name="url" value="<?php echo ((isset($info["url"]) && ($info["url"] !== ""))?($info["url"]):''); ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>上级菜单<span class="check-tips">（所属的上级菜单）</span></label>
+            <div >
+                <select name="pid">
+                    <?php if(is_array($Menus)): $i = 0; $__LIST__ = $Menus;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><option value="<?php echo ($menu["id"]); ?>"><?php echo ($menu["title_show"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  >分组<span class="check-tips">（用于左侧分组二级菜单）</span></label>
+            <div>
+                <input type="text" class="text input-large" name="group" value="<?php echo ((isset($info["group"]) && ($info["group"] !== ""))?($info["group"]):''); ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>是否隐藏<span class="check-tips"></span></label>
+            <div class="radio">
+                <label>
+                    <input name="hide" type="radio" class="ace" value="1">
+                    <span class="lbl">是</span>
+                </label>
+                <label>
+                    <input name="hide" type="radio" class="ace" value="0">
+                    <span class="lbl">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  >仅开发者模式可见<span class="check-tips"></span></label>
+            <div class="radio">
+                <label>
+                    <input name="is_dev" type="radio" class="ace" value="1">
+                    <span class="lbl">是</span>
+                </label>
+                <label>
+                    <input name="is_dev" type="radio" class="ace" value="0">
+                    <span class="lbl">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  >说明<span class="check-tips">（菜单详细说明）</span></label>
+            <div>
+                <input type="text" class="text input-large" name="tip" value="<?php echo ((isset($info["tip"]) && ($info["tip"] !== ""))?($info["tip"]):''); ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="hidden" name="id" value="<?php echo ((isset($info["id"]) && ($info["id"] !== ""))?($info["id"]):''); ?>">
+            <button class="btn btn-primary btn-sm ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-sm" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+
                         <!-- /.col -->
                     </div>
                     <!-- /.row -->
@@ -352,22 +359,9 @@
 
 
     <script type="text/javascript">
-        $(".sort_input").on('change',function(){
-            var id = $(this).data('id');
-            var value = $(this).val();
-            if($.isNumeric(value)){
-                $.post("<?php echo U('sort');?>",{'id':id,'value':value},function(data){
-                    if(data.status){
-                    }else{
-                        errorAlert(data.msg);
-                    }
-
-                },'json')
-            }else{
-                errorAlert('输入必须是数字~~');
-                $(this).focus();
-            }
-        });
+        Think.setValue("pid", <?php echo ((isset($info["pid"]) && ($info["pid"] !== ""))?($info["pid"]): 0); ?>);
+        Think.setValue("hide", <?php echo ((isset($info["hide"]) && ($info["hide"] !== ""))?($info["hide"]): 0); ?>);
+        Think.setValue("is_dev", <?php echo ((isset($info["is_dev"]) && ($info["is_dev"] !== ""))?($info["is_dev"]): 0); ?>);
     </script>
 
 </body>

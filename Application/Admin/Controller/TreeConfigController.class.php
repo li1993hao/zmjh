@@ -8,6 +8,20 @@ use Common\Controller\AdminController;
  */
 class TreeConfigController extends AdminController
 {
+    protected  $type = 0; //0代表行业配置,1学院配置
+    protected function _initialize()
+    {
+        parent::_initialize();
+        $this->type =  I('get.type',I('post.type',0));
+        $this->assign("type",$this->type);
+    }
+
+    public function xueyuan(){
+        $this->type = 1;
+        $this->assign("type",$this->type);
+        $this->index();
+    }
+
     public function  index()
     {
         $pid  = I('get.pid',0);
@@ -19,11 +33,13 @@ class TreeConfigController extends AdminController
         $all_Tree   =   M('Tree')->getField('id,name');
         $map['pid'] =   $pid;
         $map['status'] =array('gt',-1);
+        if($pid == 0){
+            $map['type'] = $this->type;
+        }
         if($name)
             $map['name'] = array('like',"%{$name}%");
         $list       =   M("Tree")->where($map)->field(true)->order('sort asc,id asc')->select();
         int_to_string($list);
-
         if($list) {
             foreach($list as &$key){
                 if($key['pid']){
@@ -36,9 +52,12 @@ class TreeConfigController extends AdminController
 
         // 记录当前列表页的cookie
         MK();
-
-        $this->meta_title = '职位类别配置';
-        $this->display();
+        if($this->type == 0){
+            $this->meta_title = '职位类别配置';
+        }else{
+            $this->meta_title = '学院类别配置';
+        }
+        $this->display('index');
     }
 
     /**
@@ -120,11 +139,17 @@ class TreeConfigController extends AdminController
 
     public function exportJs(){
         $map = array('status'=>array('gt',0));
+        $map['type'] = $this->type;
         $list = M('Tree')->where($map)->select();
         //得到栏目树形结构
         $tree =list_to_tree($list,'id','pid','children');
         $content = "var job_cate=".json_encode($tree).";";
-        $filename = 'Public/jdi/job_cate?ver='.NOW_TIME.'.js';
+        if($this->type == 0){
+            $name = 'job_cate';
+        }else{
+            $name = 'uni_cate';
+        }
+        $filename = 'Public/jdi/'.$name.'?ver='.NOW_TIME.'.js';
         $dir         =  dirname($filename);
         if(!is_dir($dir))
             mkdir($dir,0755,true);
@@ -171,6 +196,7 @@ class TreeConfigController extends AdminController
         $data['pid'] = $pid;
         $data['level'] = $level;
         $data['status'] = 1;
+        $data['type'] = $this->type;
         if($pid==0){
             $data['cp_name'] = $data['name'];
         }else{

@@ -18,7 +18,9 @@ namespace Modules\JDI\Api;
  * 1:代表企业已发送面试通知等待学生处理的简历
  * 2:代表已经面试完成后等待企业处理的简历
  * 3:代表企业发送完录取通知等待学生处理的简历
- * 4:代表学生同样录用，等待学校审核的
+ * 4:代表学生同意录用，等待学校审核的简历
+ * 5:代表学校通过审核，学生被顺利录取
+ * -1:代表实效的简历投递，这可能包括任何一个环节的拒绝操作，或者超过设定时间未处理的简历
  * @package Modules\Person\Api
  * @author lh
  * @time 2015-03-07 09:53:21
@@ -79,19 +81,19 @@ class StaffApi {
     /**
      * 添加事务(<strong style="color:red">需要传递参数!</strong>)<br/>
      * 需要传递的参数:<br/>
-     * topic_table  如果是企业的话为company
-     * topic_id    如果是企业的话为企业资料的id(<span style="color:red">注意不是uid</span>)
-     * action  collect为收藏事务,like为点赞事务,resume 为投递简历 投递简历的时候需要附加参数bundle代表投递的简历id
+     * topic_table  如果是企业的话为company，其他的操作就是其对应表名称，记住首字母要小写
+     * topic_id    如果是企业的话为企业资料的id(<span style="color:red">注意不是uid</span>) 其他的操作就是其对应表字段的id，记住首字母要小写
+     * action  collect为收藏事务,like为点赞事务,resume 为投递简历 其他待扩展
+     * bundle(可选) 附加数据 投递简历的时候需要附加参数bundle代表投递的简历id
      * @return bool true为成功 false为失败
      */
     static public function addStaff(){
         $model = D('UserStaff');
         $_POST['uid']=UID;
-
         if($model->create() && $model->add()!==false){
             if($_POST['action'] == "collect"){
                 M($_POST['topic_table'])->where(array('id'=>$_POST['topic_id']))->setInc('collect_num');
-            }elseif($_POST['action'] == "collect"){
+            }elseif($_POST['action'] == "like"){
                 M($_POST['topic_table'])->where(array('id'=>$_POST['topic_id']))->setInc('like_num');
             }
             api_msg("操作成功!");
@@ -103,8 +105,8 @@ class StaffApi {
     }
 
     /**
-     * 取消事务
-     * @param int $id 删除事务
+     * 删除事务
+     * @param int $id 这里传的是事务的id
      * @return bool
      */
     static public function delStaff($id){
@@ -124,9 +126,12 @@ class StaffApi {
     }
 
     /**
-     * 取消事务
+     * 删除当前登录用户的指定事务<br/>
+     * 比如要删除收藏企业则对应参数应该是:<br/>
+     * "topic_table":"company","topic_id":"2","action":"collect"<br/>
+     * 上面的topic_id为收藏企业资料的id<br/>
      * @param string $topic_table   如果是企业的话为company,如果是产品为production,帖子为tiba
-     * @param int $topic_id 记录id 如果是企业的话为企业用户的uid,如果是产品为产品id,帖子的话为帖子id
+     * @param int $topic_id 记录id 如果是企业的话为企业资料的id
      * @param string $action 事务类型
      * @return bool
      */
@@ -147,9 +152,9 @@ class StaffApi {
     }
 
     /**
-     * 是否含有某条记录
-     * @param string $topic_table   如果是企业的话为company,如果是产品为production,帖子为tiba
-     * @param int $topic_id 记录id  如果是企业的话为企业资料的id(<span style="color:red">注意不是uid</span>),如果是产品为产品id,帖子的话为帖子id
+     * 是否含有某个记录
+     * @param string $topic_table   如果是企业的话为company
+     * @param int $topic_id 记录id  如果是企业的话为企业资料的id(<span style="color:red">注意不是uid</span>)
      * @param string $action  collect为收藏事务,like为点赞事务,resume为投递简历
      * @return string
      */
@@ -174,8 +179,14 @@ class StaffApi {
     /**
      * 改变事务状态
      * 这里主要是用做投递简历状态的改变
-     * 0代表已经投递,但企业未处理
-     * 1代表
+     * 投递简历staff状态对应含义:<br/>
+     * 0:代表学生已经投递等待企业处理的简历
+     * 1:代表企业已发送面试通知等待学生处理的简历
+     * 2:代表已经面试完成后等待企业处理的简历
+     * 3:代表企业发送完录取通知等待学生处理的简历
+     * 4:代表学生同意录用，等待学校审核的简历
+     * 5:代表学校通过审核，学生被顺利录取
+     * -1:代表实效的简历投递，这可能包括任何一个环节的拒绝操作，或者超过设定时间未处理的简历
      * $param int $id 事务的id
      * @param int $status  改变后的状态
      */
@@ -187,8 +198,8 @@ class StaffApi {
 
     /**
      * 得到某个主题的事务数 <br/>
-     * @param string $topic_table   如果是企业的话为company,如果是产品为production,帖子为tiba
-     * @param int $topic_id 记录id 如果是企业的话为企业用户的uid,如果是产品为产品id,帖子的话为帖子id
+     * @param string $topic_table   如果是企业的话为company
+     * @param int $topic_id 记录id 如果是企业的话为企业资料的id
      * @param string $action 事务类型
      * @param array|string where 筛选条件
      * @return mixed

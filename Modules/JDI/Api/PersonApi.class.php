@@ -52,8 +52,140 @@ class PersonApi {
             return false;
         }
         return $result;
-
     }
+
+    /**
+     * 添加或者修改学生资料(<strong>需要传递参数!如果参数中有id则为修改否则为添加</strong>)<br/>
+     * 传递资料参考模型定义
+     */
+    public static function modifyStudent(){
+        $Model  =   checkAttr(M('Student'),"Student");
+        $has_image = false;
+        if(!empty($_FILES)){
+            $has_image = true;
+            $images = upload_image();
+            if($images['status'] == 0){// 图片上次失败
+                api_msg($images['msg']);
+                return false;
+            }
+        }
+        $_POST['uid'] = UID;
+        if($Model->create()){
+            if($_POST['id']){
+                $result = $Model->save();
+            }else{
+                $result = $Model->add();
+            }
+            if($has_image){
+                $data['id'] = $result;
+                $imagesData = $images['data'];
+                $ids = array_column($imagesData,"id");
+                $data['picture'] =   arr2str($ids);
+                M('Student')->save($data); //保存上传的图片
+            }
+            if($result){
+                return true;
+            }else{
+                return false;
+            }
+        } else {
+            api_msg($Model->getError());
+            return false;
+        }
+    }
+
+
+    /**
+     *获取指定配置<br/>
+     * CAT_JOB 代表行业类别<br/>
+     * CAT_UN 代表学校<br/>
+     * 其他配置参照网站后台配置设定
+     * @param string $key  形如a,b,c 则获取a,b,c的配置
+     * @return mixed
+     */
+    public static function getConfig($key){
+        $array = str2arr($key);
+        $data =array();
+        foreach($array as $k){
+            if($k == "CAT_JOB"){
+                $map = array('status'=>array('gt',0));
+                $map['type'] = 0;
+                $list = M('Tree')->where($map)->select();
+                //得到栏目树形结构
+                $tree =list_to_tree($list,'id','pid','children');
+                $data['CAT_JOB'] =$tree;
+            }elseif($k == "CAT_UN"){
+                $map = array('status'=>array('gt',0));
+                $map['type'] = 1;
+                $list = M('Tree')->where($map)->select();
+                //得到栏目树形结构
+                $tree =list_to_tree($list,'id','pid','children');
+                $data['CAT_UN'] =$tree;
+            }else{
+                $data[$k] = C($k);
+            }
+        }
+        return $data;
+    }
+
+    public static function getConfigVersion(){
+            return "1";
+    }
+
+    /**
+     * 添加或者修改学生资料(<strong>需要传递参数!如果参数中有id则为修改否则为添加</strong>)<br/>
+     * 传递资料参考模型定义
+     */
+    public static function modifyCompany(){
+        $Model  =   checkAttr(M('Company'),"Company");
+        $has_image = false;
+        if(!empty($_FILES)){
+            $has_image = true;
+            $images = upload_image();
+            if($images['status'] == 0){// 图片上次失败
+                api_msg($images['msg']);
+                return false;
+            }
+        }
+        $_POST['uid'] = UID;
+        if($Model->create()){
+            if($_POST['id']){
+                $result = $Model->save();
+            }else{
+                $result = $Model->add();
+            }
+            if($has_image){
+                $data['id'] = $result;
+                $imagesData = $images['data'];
+                $ids = array_column($imagesData,"id");
+                $data['logo'] =   arr2str($ids);
+                M('Company')->save($data); //保存上传的图片
+            }
+            if($result){
+                return true;
+            }else{
+                return false;
+            }
+        } else {
+            api_msg($Model->getError());
+            return false;
+        }
+    }
+
+
+    /**
+     * 编辑学生资料
+     */
+    public static function editCompany(){
+        $Model  =   checkAttr(M('Student'),"Student");
+        if($Model->create() && $Model->save()!==false){
+            return true;
+        } else {
+            api_msg($Model->getError());
+            return false;
+        }
+    }
+
 
     /**
      * 公司列表
@@ -167,7 +299,7 @@ class PersonApi {
 
     /**
      * 把通知设为已读
-     * @param int $id 通知id、
+     * @param int $id 通知id
      * @return bool
      */
     public static function readNotice($id){

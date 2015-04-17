@@ -216,6 +216,7 @@
     <form id="form" action="<?php echo U('import');?>" method="post" class="form-horizontal">
         <div class="form-group">
             <label class="item-label">导入的内容<span class="check-tips">（请按照导入格式输入）</span></label>
+            <input type="hidden" class="text input-small" name="type" value="<?php echo ($type); ?>">
             <div class="controls">
                 <label class="textarea input-large">
                     <textarea name="tree" style="height: 200px;width: 250px"></textarea>

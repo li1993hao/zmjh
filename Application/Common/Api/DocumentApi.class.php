@@ -22,9 +22,10 @@ class DocumentApi {
      * @param  mixed  $category 分类ID获取英文名称
      * @param  number  $pos      推荐位
      * @param  integer $status   状态
+     * @ignore
      * @return array             查询条件
      */
-    private static function listMap($category='', $status = 1, $pos = null){
+    public  static function listMap($category='', $status = 1, $pos = null){
         /* 设置状态 */
         $map = array('status' => $status);
         /* 设置分类 */
@@ -90,6 +91,8 @@ class DocumentApi {
             return false;
         }
     }
+
+
 
 
     /**

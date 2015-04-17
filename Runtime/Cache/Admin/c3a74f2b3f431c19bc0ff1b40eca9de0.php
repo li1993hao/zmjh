@@ -214,11 +214,11 @@
                         
     <div>
         <div class="btn-group">
-            <a class="btn btn-sm btn-primary" href="<?php echo U('add',array('pid'=>I('get.pid',0)));?>">新 增</a>
+            <a class="btn btn-sm btn-primary" href="<?php echo U('add',array('pid'=>I('get.pid',0),'type'=>$type));?>">新 增</a>
             <button class="btn btn-sm btn-primary ajax-post confirm" url="<?php echo U('del');?>" target-form="ids" data-tip="确定要删除所选项目么?">删 除</button>
-            <a class="btn btn-sm btn-primary" href="<?php echo U('import');?>">批量导入</a>
-            <button class="btn list_sort btn-sm btn-primary" url="<?php echo U('sort',array('pid'=>I('get.pid',0)),'');?>">排序</button>
-            <a class="btn  btn-sm btn-primary ajax-get"  href="<?php echo U('exportJs');?>">生成js文件(文件放在Public/jdi 下面)</a>
+            <a class="btn btn-sm btn-primary" href="<?php echo U('import?type='.$type);?>">批量导入</a>
+            <button class="btn list_sort btn-sm btn-primary" url="<?php echo U('sort',array('pid'=>I('get.pid',0),'type'=>$type));?>">排序</button>
+            <a class="btn  btn-sm btn-primary ajax-get"  href="<?php echo U('exportJs?type='.$type);?>">生成js文件(文件放在Public/jdi 下面)</a>
         </div>
         <!-- 高级搜索 -->
         <div class="pull-right">
@@ -263,7 +263,7 @@
                         <td><?php echo ((isset($sport["up_name"]) && ($sport["up_name"] !== ""))?($sport["up_name"]):'无'); ?></td>
                         <td><?php echo ((isset($sport["children_count"]) && ($sport["children_count"] !== ""))?($sport["children_count"]):'0'); ?></td>
                         <td>
-                            <a title="编辑" href="<?php echo U('edit?id='.$sport['id']);?>">编辑</a>
+                            <a title="编辑" href="<?php echo U('edit?id='.$sport['id'].'&type'.$type);?>">编辑</a>
                             <?php if(($sport["status"]) == "1"): ?><a href="<?php echo U('changeStatus?method=forbid&ids='.$sport['id']);?>" class="ajax-get">禁用</a>
                                 <?php else: ?>
                                 <a href="<?php echo U('changeStatus?method=resume&ids='.$sport['id']);?>" class="ajax-get">启用</a><?php endif; ?>
@@ -334,7 +334,7 @@
     (function(){
         var ThinkPHP = window.Think = {
             "ROOT"   : "/zmjh", //当前网站地址
-            "APP"    : "/zmjh/admin.php", //当前项目地址
+            "APP"    : "/zmjh/index.php", //当前项目地址
             "PUBLIC" : "/zmjh/Public", //项目公共目录地址
             "DEEP"   : "<?php echo C('URL_PATHINFO_DEPR');?>", //PATHINFO分割符
             "MODEL"  : ["<?php echo C('URL_MODEL');?>", "<?php echo C('URL_CASE_INSENSITIVE');?>", "<?php echo C('URL_HTML_SUFFIX');?>"],

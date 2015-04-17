@@ -203,7 +203,7 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-    分类管理
+    菜单列表
 
                     </h1>
                 </div>
@@ -212,74 +212,84 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    <div class="btn-group">
-        <a class="btn btn-sm btn-primary" href="<?php echo U('add?type=1');?>">添加分类</a>
-        <a class="btn btn-sm btn-primary" href="<?php echo U('add?type=2');?>">添加单页面</a>
-        <a class="btn btn-sm btn-primary"  href="<?php echo U('add?type=3');?>">添加外部链接</a>
-        <a class="btn btn-sm btn-primary"  href="<?php echo U('import');?>">批量添加</a>
-        <!--<a class="btn btn-sm ajax-get btn-primary"  href="<?php echo U('clearCache');?>">更新栏目缓存</a>-->
+    <div>
+        <div class="btn-group">
+        <a class="btn btn-sm btn-primary" href="<?php echo U('add',array('pid'=>I('get.pid',0)));?>">新 增</a>
+        <button class="btn btn-sm btn-primary ajax-post confirm" url="<?php echo U('del');?>" target-form="ids" data-tip="确定要删除所选菜单么?">删 除</button>
+        <a class="btn btn-sm btn-primary" href="<?php echo U('import',array('pid'=>I('get.pid',0)));?>">导 入</a>
+        <button class="btn list_sort btn-sm btn-primary" url="<?php echo U('sort',array('pid'=>I('get.pid',0)),'');?>">排序</button>
+        </div>
+        <!-- 高级搜索 -->
+        <div class="pull-right">
+            <span class="input-icon">
+                <input type="text" placeholder="搜索..." autocomplete="off" id="search">
+                <i class="icon-search"></i>
+			</span>
+        </div>
     </div>
-    <div class="able-responsive">
-        <table class="table table-striped table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>排序</th>
-                <th>ID</th>
-                <th>分类名称</th>
-                <th>英文名称</th>
-                <th>类型</th>
-                <th>数据模型</th>
-                <th>状态</th>
-                <th>首页显示</th>
-                <th>操作</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php if(!empty($nodeList)): if(is_array($nodeList)): $i = 0; $__LIST__ = $nodeList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$node): $mod = ($i % 2 );++$i;?><tr>
-                    <td class="text-center">
-                        <label>
-                            <input style="width:40px;text-align: center" class="sort_input" type="text" data-id="<?php echo ($node["id"]); ?>" value="<?php echo ($node["sort"]); ?>"/>
-                        </label>
-                        </td>
-                    <td><?php echo ($node["id"]); ?></td>
-                    <td>
-                        <?php $__FOR_START_58635821__=0;$__FOR_END_58635821__=$node["level"];for($i=$__FOR_START_58635821__;$i < $__FOR_END_58635821__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>&nbsp;|__
-                                    <?php else: ?>
-                                    |--<?php endif; ?>
-                                <?php else: ?>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; } ?>
-                        <?php echo ($node["name"]); ?></td>
-                    <td><?php echo ($node["symbol"]); ?></td>
-                    <td><?php switch($node["type"]): case "1": ?>分类<?php break;?>
-                        <?php case "2": ?>单页面<?php break;?>
-                        <?php case "3": ?>外部链接<?php break;?>
-                        <?php default: ?>栏目<?php endswitch;?>
-                    </td>
-                    <td><?php echo (get_model_by_id($node["model_id"])); ?></td>
-                    <td>
-                        <?php echo ($node["status_text"]); ?>
-                    </td>
-                    <td>
-                        <?php if($node['index_show'] == 0): ?>否
-                            <?php else: ?>
-                            是<?php endif; ?>
-                    </td>
-                    <td>
-                        <?php if(($node["status"]) == "1"): ?><a href="<?php echo U('changeStatus?method=forbid&id='.$node['id']);?>" class="ajax-get">禁用</a>
-                            <?php else: ?>
-                            <a href="<?php echo U('changeStatus?method=resume&id='.$node['id']);?>" class="ajax-get">启用</a><?php endif; ?>
-                        <a href="<?php echo U('delete?id='.$node['id']);?>" class="ajax-get confirm">删除</a>
-                        <a href="<?php echo U('edit?id='.$node['id'].'&type='.$node['type']);?>">修改</a>
-                        <?php if(($node["type"]) == "1"): ?><a href="<?php echo U('add?select_id='.$node['id']);?>">添加分类</a><?php endif; ?>
-                    </switch></td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-         <?php else: ?>
-            <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
 
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="center">
+                        <label>
+                            <input type="checkbox" class="ace check-all">
+                            <span class="lbl"></span>
+                        </label>
+                    </th>
+                    <th>ID</th>
+                    <th>名称</th>
+                    <th>上级菜单</th>
+                    <th>分组</th>
+                    <th>URL</th>
+                    <th>排序</th>
+                    <th>仅开发者模式显示</th>
+                    <th>隐藏</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><tr>
+                    <td class="center">
+                        <label>
+                        <input type="checkbox" class="ids ace" name="id[]" value="<?php echo ($menu["id"]); ?>">
+                        <span class="lbl"></span>
+                        </label>
+                    </td>
+                    <td><?php echo ($menu["id"]); ?></td>
+                    <td>
+                        <a href="<?php echo U('index?pid='.$menu['id']);?>"><?php echo ($menu["title"]); ?></a>
+                    </td>
+                    <td><?php echo ((isset($menu["up_title"]) && ($menu["up_title"] !== ""))?($menu["up_title"]):'无'); ?></td>
+                    <td><?php echo ($menu["group"]); ?></td>
+                    <td><?php echo ($menu["url"]); ?></td>
+                    <td><?php echo ($menu["sort"]); ?></td>
+                    <td>
+                        <a href="<?php echo U('toogleDev',array('id'=>$menu['id'],'value'=>abs($menu['is_dev']-1)));?>" class="ajax-get">
+                        <?php echo ($menu["is_dev_text"]); ?>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="<?php echo U('toogleHide',array('id'=>$menu['id'],'value'=>abs($menu['hide']-1)));?>" class="ajax-get">
+                        <?php echo ($menu["hide_text"]); ?>
+                        </a>
+                    </td>
+                    <td>
+                        <a title="编辑" href="<?php echo U('edit?id='.$menu['id']);?>">编辑</a>
+                        <a class="confirm ajax-get" title="删除" href="<?php echo U('del?id='.$menu['id']);?>">删除</a>
+                    </td>
+                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+            <?php else: ?>
+            <td colspan="10" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="page">
+
+        </div>
     </div>
- 
+
                         <!-- /.col -->
                     </div>
                     <!-- /.row -->
@@ -352,21 +362,34 @@
 
 
     <script type="text/javascript">
-        $(".sort_input").on('change',function(){
-            var id = $(this).data('id');
-            var value = $(this).val();
-            if($.isNumeric(value)){
-                $.post("<?php echo U('sort');?>",{'id':id,'value':value},function(data){
-                    if(data.status){
-                    }else{
-                        errorAlert(data.msg);
-                    }
+        $(function() {
+            //回车搜索
+            $("#search").keyup(function(e) {
+                if (e.keyCode === 13) {
+                    var url =  "<?php echo U(CONTROLLER_NAME.'/'.ACTION_NAME.'?title=PLACEHODLE');?>";
+                    var query = $('#search').val();
+                    url = url.replace('PLACEHODLE',query);
+                    window.location.href = url;
+                    return false;
+                }
+            });
+            //点击排序
+            $('.list_sort').click(function(){
+                var url = $(this).attr('url');
+                var ids = $('.ids:checked');
+                var param = '';
+                if(ids.length > 0){
+                    var str = new Array();
+                    ids.each(function(){
+                        str.push($(this).val());
+                    });
+                    param = str.join(',');
+                }
 
-                },'json')
-            }else{
-                errorAlert('输入必须是数字~~');
-                $(this).focus();
-            }
+                if(url != undefined && url != ''){
+                    window.location.href = url + '/ids/' + param;
+                }
+            });
         });
     </script>
 

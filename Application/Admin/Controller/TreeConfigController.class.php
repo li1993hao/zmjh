@@ -149,10 +149,10 @@ class TreeConfigController extends AdminController
         }else{
             $name = 'uni_cate';
         }
-        $filename = 'Public/jdi/'.$name.'?ver='.NOW_TIME.'.js';
+        $filename = 'Public/jdi/'.$name.'.js';
         $dir         =  dirname($filename);
         if(!is_dir($dir))
-            mkdir($dir,0755,true);
+            mkdir($dir,0777,true);
         if(false === file_put_contents($filename,$content)){
             $this->error("生成失败！");
         }else{

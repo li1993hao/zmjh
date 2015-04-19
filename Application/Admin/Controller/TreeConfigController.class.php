@@ -140,7 +140,7 @@ class TreeConfigController extends AdminController
     public function exportJs(){
         $map = array('status'=>array('gt',0));
         $map['type'] = $this->type;
-        $list = M('Tree')->where($map)->select();
+        $list = M('Tree')->where($map)->field('pid,id,name')->select();
         //得到栏目树形结构
         $tree =list_to_tree($list,'id','pid','children');
         $content = "var job_cate=".json_encode($tree).";";
@@ -149,7 +149,7 @@ class TreeConfigController extends AdminController
         }else{
             $name = 'uni_cate';
         }
-        $filename = 'Public/jdi/'.$name.'.js';
+        $filename = 'Public/jdi/'.$name.NOW_TIME.'.js';
         $dir         =  dirname($filename);
         if(!is_dir($dir))
             mkdir($dir,0777,true);

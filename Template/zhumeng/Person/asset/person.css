@@ -1,0 +1,10 @@
+legend span{
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.form-error{
+    color:#FF0000;
+    margin: 0;
+    float: right;
+}

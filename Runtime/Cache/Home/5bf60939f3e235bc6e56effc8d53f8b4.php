@@ -27,15 +27,24 @@
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery-1.10.2.min.js"></script>
 <![endif]-->
 
+<<<<<<< HEAD
+<script type="text/javascript" src="/zmjh/Public/vendor/placeholder/placeholder.js"></script>
+
+
+=======
 <!--<script type="text/javascript" src="/zmjh/Public/vendor/placeholder/placeholder.js"></script>-->
 <script type="text/javascript" src="/zmjh/public/jdi/job_cate.js"></script>
 <script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/fenlei.js"></script>
+>>>>>>> FETCH_HEAD
 <!-- CSS styles -->
 <link href="/zmjh/Template/zhumeng/asset/css/bootstrap.css" rel="stylesheet"/>
 <!--Skins: uncomment to activate-->
 <link href="/zmjh/Template/zhumeng/asset/css/bootstrap-theme.css" rel="stylesheet"/>
 <link href="/zmjh/Template/zhumeng/asset/css/main_page.css" rel="stylesheet"/>
+<<<<<<< HEAD
+=======
 <!--<link href="/zmjh/Template/zhumeng/asset/css/list_page.css" rel="stylesheet"/>-->
+>>>>>>> FETCH_HEAD
 <!--<link href="css/skin_orange.css" rel="stylesheet"/>
 -->
 <!-- http://remysharp.com/2009/01/07/html5-enabling-script/ -->
@@ -93,16 +102,27 @@ jQuery(function(){
 <![endif]-->
 
 <div class="container-fluid">
+<<<<<<< HEAD
+<div class="row">
+  <div class="col-md-12 bg">
+    <div class="col-md-5 h_logo"> 
+      <!--<img class="logo_pic" src="/zmjh/images/main_page/logo.png"/>--> 
+=======
 <!--<div class="row">
   <div class="col-md-12 bg">
     <div class="col-md-5 h_logo"> 
       <img class="logo_pic" src="/zmjh/images/main_page/logo.png"/>
+>>>>>>> FETCH_HEAD
     </div>
     <div class="col-md-7">
       <h3>天津高校就业信息网</h3>
     </div>
   </div>
+<<<<<<< HEAD
+</div>
+=======
 </div>-->
+>>>>>>> FETCH_HEAD
 
 <!--<div class="row">
        <div class="col-md-12 fgx">
@@ -212,6 +232,23 @@ jQuery(function(){
        </div>
       <div class="row">
        <div class="bg con_center bottom" style="width:80%">
+<<<<<<< HEAD
+        <div class="col-md-2 bg" style="margin-left:25%;">
+         <label>友情链接:</label>
+         <ul>
+          <li><a>南开大学</a></li>
+          <li><a>天津大学</a></li>
+          <li><a>理工大学</a></li>
+         </ul>
+        </div>
+        <div class="col-md-4 col-md-offset-2 bg">
+         <label>客户端下载</label>
+         <div>
+          <img src="/zmjh/images/main_page/b_pic.png"/>
+          <img src="/zmjh/images/main_page/b_pic.png"/>
+         </div>
+         
+=======
         <div class="col-md-2 bg yqlj">
          <label>友情链接:</label>
          <div>
@@ -231,10 +268,13 @@ jQuery(function(){
           <img width="150px" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg"/>
          </div>
          <?php echo plugin('IPlistener');?>
+>>>>>>> FETCH_HEAD
         </div>
        </div>
        
       </div>
+<<<<<<< HEAD
+=======
       
         <div class="row">
          <div class="col-md-12" style="height:150px;">
@@ -244,6 +284,7 @@ jQuery(function(){
              </h3>
            </div>
         </div>
+>>>>>>> FETCH_HEAD
       </div>
 </footer>
 

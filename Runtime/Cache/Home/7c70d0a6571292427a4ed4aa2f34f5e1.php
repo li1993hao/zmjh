@@ -91,6 +91,8 @@ jQuery(function(){
 <!--[if lt IE 8]>
 <div class="alert alert-block alert-danger fade in" style="margin-bottom: 0">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a target="_blank" href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
 <![endif]-->
+<<<<<<< HEAD
+=======
 
 <div class="container-fluid">
 <!--<div class="row">
@@ -109,11 +111,12 @@ jQuery(function(){
        </div>
      </div>-->
 
+>>>>>>> FETCH_HEAD
 <div class="row bg_ti_color">
   <div style="width:70%;">
     <div class="col-md-12 bg">
       <ul class="h_title" id="h_title">
-        <li ><a href="<?php echo U('Index/index');?>">主页</a></li>
+        <li ><a href="<?php echo U('Home/Index/index');?>">主页</a></li>
         <?php $__NAV__=cat('',false,$rootNav,'active'); if(is_array($__NAV__)): $i = 0; $__LIST__ = $__NAV__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat): $mod = ($i % 2 );++$i; if($cat['has_child'] != 0): ?><li >
               <div class="btn-group"> <a type="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <?php echo ($cat['name']); ?> <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu" style="margin-top:-1px;">

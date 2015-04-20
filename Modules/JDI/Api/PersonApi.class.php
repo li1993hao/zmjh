@@ -44,6 +44,22 @@ class PersonApi {
         }
     }
 
+    public static function student(){
+        if(!isset($uid)){
+            $uid = UID;
+            if($uid <= 0){
+                api_msg("没有指定uid而且用户尚未登录!");
+                return false;
+            }
+        }
+        $result = M('Student')->where(array("uid"=>$uid))->find();
+        if($result){
+            return $result;
+        }else{
+            return false;
+        }
+    }
+
     public static function companyPosition(){
         $map['status'] = 1;
         $result = M('Company')->where($map)->field("name,id,point")->select();
@@ -133,7 +149,7 @@ class PersonApi {
     }
 
     /**
-     * 添加或者修改学生资料(<strong>需要传递参数!如果参数中有id则为修改否则为添加</strong>)<br/>
+     * 添加或者修改企业资料(<strong>需要传递参数!如果参数中有id则为修改否则为添加</strong>)<br/>
      * 传递资料参考模型定义
      */
     public static function modifyCompany(){

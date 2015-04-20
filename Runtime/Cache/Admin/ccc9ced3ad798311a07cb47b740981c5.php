@@ -230,15 +230,7 @@
                     <td><?php echo ($node["sort"]); ?></td>
                     <td><?php echo ($node["id"]); ?></td>
                     <td>
-<<<<<<< HEAD
-                        <?php $__FOR_START_1307618044__=0;$__FOR_END_1307618044__=$node["level"];for($i=$__FOR_START_1307618044__;$i < $__FOR_END_1307618044__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>|__
-=======
-<<<<<<< HEAD
-                        <?php $__FOR_START_17937__=0;$__FOR_END_17937__=$node["level"];for($i=$__FOR_START_17937__;$i < $__FOR_END_17937__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>|__
-=======
-                        <?php $__FOR_START_27991040__=0;$__FOR_END_27991040__=$node["level"];for($i=$__FOR_START_27991040__;$i < $__FOR_END_27991040__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>|__
->>>>>>> origin/master
->>>>>>> FETCH_HEAD
+                        <?php $__FOR_START_15798__=0;$__FOR_END_15798__=$node["level"];for($i=$__FOR_START_15798__;$i < $__FOR_END_15798__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>|__
                                     <?php else: ?>
                                     |--<?php endif; ?>
                                 <?php else: ?>
@@ -321,7 +313,7 @@
     (function(){
         var ThinkPHP = window.Think = {
             "ROOT"   : "/zmjh", //当前网站地址
-            "APP"    : "/zmjh/admin.php", //当前项目地址
+            "APP"    : "/zmjh/index.php", //当前项目地址
             "PUBLIC" : "/zmjh/Public", //项目公共目录地址
             "DEEP"   : "<?php echo C('URL_PATHINFO_DEPR');?>", //PATHINFO分割符
             "MODEL"  : ["<?php echo C('URL_MODEL');?>", "<?php echo C('URL_CASE_INSENSITIVE');?>", "<?php echo C('URL_HTML_SUFFIX');?>"],

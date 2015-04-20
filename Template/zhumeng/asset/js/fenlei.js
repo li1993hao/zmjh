@@ -1,8 +1,10 @@
+
 $(function()
 {
+	
 	var t_str='';
 	var s_str='';
-	/*添加一二级菜单*/
+	
 	for(var i=0;i<job_cate.length;i++)
 		{
 			$('#tb').append('<tr class="'+job_cate[i].id+'"></tr>');
@@ -20,7 +22,7 @@ $(function()
 					s_str='';
 			}
 		}
-		/*添加三级菜单*/
+		
          for(var i=0;i<job_cate.length;i++)
 		 {
 			 if(job_cate[i].children)

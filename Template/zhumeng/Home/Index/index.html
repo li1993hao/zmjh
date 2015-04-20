@@ -3,7 +3,7 @@
 <!--main tagline area-->
 <!--main content-->
       <div class="row">
-       <div class="col-md-12 bg">
+       <div class="col-md-12 bg" style="height:300px;">
        
          <div id="carousel-example-generic" class="carousel slide h_pic" data-ride="carousel"> 
         <!-- Indicators -->
@@ -26,18 +26,18 @@
         <!--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> 
         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>--> </div>
         
-         <div class=" col-md-2 col-md-offset-9  bg_login" id="form">
+         <div class="bg_login" id="form" style="position:absolute; left:75%">
          
           <form class="form-horizontal">
            <div class="form-group">
-            <!--<label for="account" class="col-sm-3 control-label">账号</label>-->
+            
             <div class="col-sm-12">
             <input type="text" class="form-control" id="account" placeholder="账号">
             </div>
            </div>
           
            <div class="form-group">
-            <!--<label for="password" class="col-sm-3 control-label">密码</label>-->
+            
             <div class="col-sm-12">
             <input type="password" class="form-control" id="password" placeholder="密码">
             </div>
@@ -72,7 +72,7 @@
        
       
        <div class="row">
-        <div class="col-md-12 fg">
+        <div class="col-md-12 fg" style="position:absolute height:600px;">
         </div>
        </div>
        
@@ -91,18 +91,18 @@
           </div>
          </div>
          
-         <div class="bg col-md-3" id="bt_hylb">
+         <div class="bg col-md-3" id="bt_hylb" style="border:1px solid #000">
            <label style="padding:10px 0px;margin-top:5px;">请选择行业类别:</label>
           <span class="glyphicon-shopping-cart" style="margin-left:30%"></span>
           <div class="hangye bg">
           <volist name="Think.config.COMPANY_CATEGORY" id="vo">
-           <div class="col-md-3"><a>{$vo}</a></div>
+           <div class="col-md-3" ><a style="color:#000;">{$vo}</a></div>
           </volist>
          </div>
          </div>
          
          <div class="col-md-4 s_job_pad bg">
-          <input type="text" placeholder="请输入职位名，公司名等关键字" style="width:250px;"/>
+          <input type="text" placeholder="请输入职位名，公司名等关键字" style="width:250px; height:50px; margin-top:-11px;"/>
          </div>
          <div class="col-md-2 s_job_pad bg" >
           <button style="width:150px;">找工作</button>
@@ -321,8 +321,8 @@
       </div>
       
       <div class="row">
-        <div class="col-md-12 fg">
-        </div>
+        <div class="col-md-12" style="height:20px;">
+        </div> 
        </div>
       
       <div class="row">
@@ -478,18 +478,18 @@
           </div>
          </div>
          
-         <div class="col-md-4 bg" style="margin-top:10px;">
+         <div class="col-md-4 bg well" style="margin-top:10px; height:400px;">
            <div class="tongzhigonggao">
             <c:list who="6" name="vo" limit="0,6">
-             <div class="col-md-12" style="border-bottom:1px dotted #000000;margin-top:3px;">
-                <div class="col-md-9" style="padding:0px;">
+             
+                <div class="col-md-9" style="padding:0px; height:45px;border-bottom:1px dotted #000000;">
                  <span class="">{$key+1}.</span>
                  {$vo.title}
                 </div>
-                <div class="col-md-3" style="text-align:right;padding:0px;">
+                <div class="col-md-3" style="text-align:right;padding:0px; height:45px;">
                 <a href="{$vo.url}"><span>更多</span></a>
                 </div>
-             </div>
+             
              
             </c:list>
             <div style="text-align:right;">

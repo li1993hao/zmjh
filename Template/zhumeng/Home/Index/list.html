@@ -3,33 +3,26 @@
   <!--main tagline area-->
   
   <section class="taglineWrap">
-    <div class="container">
+    <div style="background-color:#EEEEEE">
       <div class="row-fluid  tagline">
         <div class="breadcrumbs">
           <div class="container" style="font-size: 16px;">
+          <div style="height:30px;margin-top:30px;">
             <volist name="nav" id="av">
               <if condition="$i eq count($nav)"> {$av.name}
                 <else/>
                 <a href="{$av.url}" style="color: #49afcd">{$av.name}</a>/ </if>
             </volist>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- /container --> 
   </section>
-  <div class="row">
-    <div class="col-md-3 bg" style="height:350px;">
-      <div>推荐招聘信息</div>
-      <div class="l_con">
-        <ul>
-          <li><a>1招聘文员若干</a></li>
-          <li><a>2招聘文员若干</a></li>
-          <li><a>3招聘文员若干</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-9 bg" style="height:auto;">
+  <div class="row well">
+    <div style="margin-left:25%">
+    <div class="col-md-12 bg" style="height:auto;width:75%;">
       <notempty name="list">
       <volist name="list" id="info">
       <present name="info.cover_path">
@@ -44,10 +37,12 @@
         <a href="{$info.url}" class="btn btn-info">详情</a>
         </div>
         <else/>
-        <div style="border-bottom:1px dotted #333333;">
-         <a href="{$info.url}l">{$info.title}</a> <i class="icon-calendar"></i>{$info.create_time|date='Y-m-d H:i',###} &nbsp;&nbsp; <i class="icon-eye-open"></i> {$info.view}
+        <div style="border-bottom:1px dotted #333333; margin-top:20px; height:auto;">
+         <p><a href="{$info.url}l" style="font-size:30px;">{$info.title}</a> </p><i class="icon-calendar"></i>{$info.create_time|date='Y-m-d H:i',###} &nbsp;&nbsp; <i class="icon-eye-open"></i> {$info.view}
+         <p style="margin-top:15px;">
          <label>{$info.description|msubstr=0,120}</label>
-         <a href="{$info.url}" class="btn btn-primary">详情</a> 
+         <a href="{$info.url}" class="btn btn-default btn-xs" style="margin-left:20px;" >详情</a> 
+         </p>
         </div>
         </present>
     </volist>
@@ -55,6 +50,7 @@
     <h1 style="text-align: center">{$tip|default='暂时还没有新闻哦~~'}</h1>
     </notempty>
     <div>{$page}</div>
+  </div>
   </div>
   </div>
 </block>

@@ -37,28 +37,13 @@
 <!--[if IE]>
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery-1.10.2.min.js"></script>
 <![endif]-->
-
-<<<<<<< HEAD
-=======
-<!--<script type="text/javascript" src="/zmjh/Public/vendor/placeholder/placeholder.js"></script>-->
-<script type="text/javascript" src="/zmjh/public/jdi/job_cate.js"></script>
-<script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/fenlei.js"></script>
-<!-- CSS styles -->
-<link href="/zmjh/Template/zhumeng/asset/css/bootstrap.css" rel="stylesheet"/>
-<!--Skins: uncomment to activate-->
-<link href="/zmjh/Template/zhumeng/asset/css/bootstrap-theme.css" rel="stylesheet"/>
-<link href="/zmjh/Template/zhumeng/asset/css/main_page.css" rel="stylesheet"/>
-<!--<link href="/zmjh/Template/zhumeng/asset/css/list_page.css" rel="stylesheet"/>-->
-<!--<link href="css/skin_orange.css" rel="stylesheet"/>
--->
-<!-- http://remysharp.com/2009/01/07/html5-enabling-script/ -->
->>>>>>> FETCH_HEAD
 <!--[if lt IE 9]>
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/html5shiv.js"></script>
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/respond.min.js"></script>
 <![endif]-->
+<link href="/zmjh/Template/zhumeng/asset/css/common.css" rel="stylesheet"/>
 <link href="/zmjh/Template/zhumeng/asset/css/main_page.css" rel="stylesheet"/>
-
+<link href="/zmjh/Template/zhumeng/asset/css/common.css" rel="stylesheet"/>
 
 
     
@@ -70,30 +55,10 @@
 <!--[if lt IE 8]>
 <div class="alert alert-block alert-danger fade in" style="margin-bottom: 0">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a target="_blank" href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
 <![endif]-->
-<<<<<<< HEAD
-=======
 
-<div class="container-fluid">
-<!--<div class="row">
-  <div class="col-md-12 bg">
-    <div class="col-md-5 h_logo"> 
-      <img class="logo_pic" src="/zmjh/images/main_page/logo.png"/>
-    </div>
-    <div class="col-md-7">
-      <h3>天津高校就业信息网</h3>
-    </div>
-  </div>
-</div>-->
-
-<!--<div class="row">
-       <div class="col-md-12 fgx">
-       </div>
-     </div>-->
-
->>>>>>> FETCH_HEAD
 <div class="row bg_ti_color">
-  <div style="width:70%;">
-    <div class="col-md-12 bg">
+  <div style="width:100%;">
+    <div class="col-md-12 bg" style="position:relative;">
       <ul class="h_title" id="h_title">
         <li ><a href="<?php echo U('Home/Index/index');?>">主页</a></li>
         <?php $__NAV__=cat('',false,$rootNav,'active'); if(is_array($__NAV__)): $i = 0; $__LIST__ = $__NAV__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat): $mod = ($i % 2 );++$i; if($cat['has_child'] != 0): ?><li >
@@ -117,7 +82,7 @@
 <!--main tagline area-->
 <!--main content-->
       <div class="row">
-       <div class="col-md-12 bg">
+       <div class="col-md-12 bg" style="height:300px;">
        
          <div id="carousel-example-generic" class="carousel slide h_pic" data-ride="carousel"> 
         <!-- Indicators -->
@@ -140,18 +105,18 @@
         <!--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> 
         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>--> </div>
         
-         <div class=" col-md-2 col-md-offset-9  bg_login" id="form">
+         <div class="bg_login" id="form" style="position:absolute; left:75%">
          
           <form class="form-horizontal">
            <div class="form-group">
-            <!--<label for="account" class="col-sm-3 control-label">账号</label>-->
+            
             <div class="col-sm-12">
             <input type="text" class="form-control" id="account" placeholder="账号">
             </div>
            </div>
           
            <div class="form-group">
-            <!--<label for="password" class="col-sm-3 control-label">密码</label>-->
+            
             <div class="col-sm-12">
             <input type="password" class="form-control" id="password" placeholder="密码">
             </div>
@@ -186,13 +151,13 @@
        
       
        <div class="row">
-        <div class="col-md-12 fg">
+        <div class="col-md-12 fg" style="position:absolute height:600px;">
         </div>
        </div>
        
        <div class="row bg">
     <div class="bg con_center" style="width:70%" >
-         <div class="bg col-md-3" id="bt_zwlb">
+         <div class="col-md-3" id="bt_zwlb" style="border:1px solid #000">
            <label style="padding:10px 0px;margin-top:5px;float:left;">请选择职位类别:</label>
           <li class="down"><img src="/zmjh/Template/zhumeng/asset/img/content/select_icon.gif" /></li>
           <div class="zhiwei">
@@ -205,16 +170,16 @@
           </div>
          </div>
          
-         <div class="bg col-md-3" id="bt_hylb">
+         <div class="bg col-md-3" id="bt_hylb" style="border:1px solid #000">
            <label style="padding:10px 0px;margin-top:5px;">请选择行业类别:</label>
           <span class="glyphicon-shopping-cart" style="margin-left:30%"></span>
           <div class="hangye bg">
-          <?php if(is_array(C("COMPANY_CATEGORY"))): $i = 0; $__LIST__ = C("COMPANY_CATEGORY");if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-3"><a><?php echo ($vo); ?></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
+          <?php if(is_array(C("COMPANY_CATEGORY"))): $i = 0; $__LIST__ = C("COMPANY_CATEGORY");if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-3" ><a style="color:#000;"><?php echo ($vo); ?></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
          </div>
          </div>
          
          <div class="col-md-4 s_job_pad bg">
-          <input type="text" placeholder="请输入职位名，公司名等关键字" style="width:250px;"/>
+          <input type="text" placeholder="请输入职位名，公司名等关键字" style="width:250px; height:50px; margin-top:-11px;"/>
          </div>
          <div class="col-md-2 s_job_pad bg" >
           <button style="width:150px;">找工作</button>
@@ -433,8 +398,8 @@
       </div>
       
       <div class="row">
-        <div class="col-md-12 fg">
-        </div>
+        <div class="col-md-12" style="height:20px;">
+        </div> 
        </div>
       
       <div class="row">
@@ -590,17 +555,15 @@
           </div>
          </div>
          
-         <div class="col-md-4 bg" style="margin-top:10px;">
+         <div class="col-md-4 bg well" style="margin-top:10px; height:400px;">
            <div class="tongzhigonggao">
-            <?php $__LIST__=lists('6','0,6'); if(is_array($__LIST__)): $i = 0; $__LIST__ = $__LIST__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-12" style="border-bottom:1px dotted #000000;margin-top:3px;">
-                <div class="col-md-9" style="padding:0px;">
+            <?php $__LIST__=lists('6','0,6'); if(is_array($__LIST__)): $i = 0; $__LIST__ = $__LIST__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-9" style="padding:0px; height:45px;border-bottom:1px dotted #000000;">
                  <span class=""><?php echo ($key+1); ?>.</span>
                  <?php echo ($vo["title"]); ?>
                 </div>
-                <div class="col-md-3" style="text-align:right;padding:0px;">
+                <div class="col-md-3" style="text-align:right;padding:0px; height:45px;">
                 <a href="<?php echo ($vo["url"]); ?>"><span>更多</span></a>
-                </div>
-             </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                </div><?php endforeach; endif; else: echo "" ;endif; ?>
             <div style="text-align:right;">
               <a href='<?php echo cat_field('6','url') ?>'>更多</a>
             </div>
@@ -634,22 +597,22 @@
       <div>
         <hr>
        </div>
-      <div class="row">
-       <div class="bg con_center bottom" style="width:80%">
+      <div class="row" style="background-color:#303A40">
+       <div class="bg con_center bottom" style="width:80%;color:white;">
         <div class="col-md-2 bg yqlj">
          <label>友情链接:</label>
-         <div>
+         <div style="margin-top:30px;" >
           <ul>
-           <li><a>南开大学</a></li>
-           <li><a>天津大学</a></li>
-           <li><a>理工大学</a></li>
-           <li><a>南开大学</a></li>
-           <li><a>天津大学</a></li>
-           <li><a>理工大学</a></li>
+           <li><a style="color:white;">南开大学</a></li>
+           <li><a style="color:white;">天津大学</a></li>
+           <li><a style="color:white;">理工大学</a></li>
+           <li><a style="color:white;">南开大学</a></li>
+           <li><a style="color:white;">天津大学</a></li>
+           <li><a style="color:white;">理工大学</a></li>
           </ul>
          </div>
         </div>
-        <div class="col-md-4 col-md-offset-6 bg">
+        <div class="col-md-4 col-md-offset-6 bg" style="color:white;">
          <label>客户端下载</label>
          <div>
           <img width="150px" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg"/>
@@ -661,7 +624,7 @@
       </div>
       
         <div class="row">
-         <div class="col-md-12" style="height:150px;">
+         <div class="col-md-12" style="height:50px;">
          <hr />
              <h3 style="text-align: center">
                 &copy; 时代科技
@@ -672,27 +635,27 @@
 </footer>
 
 <script type="text/javascript">
-    (function(){
-        var ThinkPHP = window.Think = {
+         var ThinkPHP = window.Think = {
             "ROOT"   : "/zmjh", //当前网站地址
             "APP"    : "/zmjh/index.php", //当前项目地址
             "PUBLIC" : "/zmjh/Public", //项目公共目录地址
             "DEEP"   : "<?php echo C('URL_PATHINFO_DEPR');?>", //PATHINFO分割符
             "MODEL"  : ["<?php echo C('URL_MODEL');?>", "<?php echo C('URL_CASE_INSENSITIVE');?>", "<?php echo C('URL_HTML_SUFFIX');?>"],
             "VAR"    : ["<?php echo C('VAR_MODULE');?>", "<?php echo C('VAR_CONTROLLER');?>", "<?php echo C('VAR_ACTION');?>"]
-        }
-        $("#nav_top_main_bt").click(function(){
-            $("#nav_top_main").toggle(200);
-        })
-    })();
+        };
+		
 </script>
+
 <script type="text/javascript" src="/zmjh/Public/vendor/think.js"></script>
 <script type="text/javascript" src="/zmjh/Public/Admin/js/common.js"></script>
-<script src="/zmjh/Public/vendor/ace/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery.gritter.min.js"></script>
 <script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/main_page.js"></script>
+<script type="text/javascript" src="/zmjh/Public/jdi/job_cate.js"></script>
+<script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/fenlei.js"></script>
 
 
 
-<?php echo hook('pageFooter');?>
+
 </body>
 </html>

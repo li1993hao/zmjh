@@ -243,7 +243,7 @@
                         </td>
                     <td><?php echo ($node["id"]); ?></td>
                     <td>
-                        <?php $__FOR_START_25761__=0;$__FOR_END_25761__=$node["level"];for($i=$__FOR_START_25761__;$i < $__FOR_END_25761__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>&nbsp;|__
+                        <?php $__FOR_START_25124__=0;$__FOR_END_25124__=$node["level"];for($i=$__FOR_START_25124__;$i < $__FOR_END_25124__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>&nbsp;|__
                                     <?php else: ?>
                                     |--<?php endif; ?>
                                 <?php else: ?>

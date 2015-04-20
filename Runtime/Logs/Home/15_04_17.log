@@ -1,0 +1,313 @@
+[ 2015-04-17T12:59:22+08:00 ] ::1 /zmjh/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.004660s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.004813s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000296s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000414s ]
+NOTIC: [8] Undefined variable: rootNav D:\wamp\www\zmjh\Runtime\Cache\Home\c50d1b4cd417a3f9d3d63abb8c3e1fab.php 第 74 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.003882s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000618s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 2399 bytes D:\wamp\www\zmjh\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 104 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 1 LIMIT 1   [ RunTime:0.000383s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000385s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 2 LIMIT 1   [ RunTime:0.000403s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000427s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 3 LIMIT 1   [ RunTime:0.000328s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000389s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 4 LIMIT 1   [ RunTime:0.000339s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000415s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 5 LIMIT 1   [ RunTime:0.000385s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 5 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000331s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 6 LIMIT 1   [ RunTime:0.000340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 6 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000427s ]
+SQL: SHOW COLUMNS FROM `jdi_link` [ RunTime:0.003706s ]
+SQL: SELECT * FROM `jdi_link` WHERE `status` = 1 AND `group` = 'p-1' ORDER BY sort asc,id asc  [ RunTime:0.000272s ]
+NOTIC: [2] array_slice() expects parameter 1 to be array, string given D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 308 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.004280s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.004016s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1429246761 AND ( deadline <= 0 OR deadline > 1429246761 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000610s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000445s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000260s ]
+NOTIC: [2] Illegal string offset 'model_id' D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000317s ]
+NOTIC: [2] Illegal string offset 'url' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000406s ]
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000377s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000291s ]
+NOTIC: [2] Illegal string offset 'model_id' D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000269s ]
+NOTIC: [2] Illegal string offset 'url' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000289s ]
+NOTIC: [2] Illegal string offset 'url' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.003808s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.004632s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1429160361 LIMIT 1   [ RunTime:0.000329s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426654761 LIMIT 1   [ RunTime:0.000269s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000194s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.130555s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000726s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000327s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.137646s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004830s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007124s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.007100s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.007255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005398s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007692s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000808s ]
+
+[ 2015-04-17T12:59:22+08:00 ] ::1 /zmjh/index.php/Home/Index/index/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002868s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001417s ]
+INFO: [ app_exec_start ] --START--
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.004478s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.003524s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1429246762,'http://localhost/zmjh/','未知','未知') [ RunTime:0.000423s ]
+
+[ 2015-04-17T15:06:01+08:00 ] ::1 /zmjh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003669s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.004997s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.005114s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000387s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000564s ]
+NOTIC: [8] Undefined variable: rootNav D:\wamp\www\zmjh\Runtime\Cache\Home\c50d1b4cd417a3f9d3d63abb8c3e1fab.php 第 74 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.003366s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000544s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000274s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000336s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 5 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000279s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 6 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000279s ]
+SQL: SHOW COLUMNS FROM `jdi_link` [ RunTime:0.003973s ]
+SQL: SELECT * FROM `jdi_link` WHERE `status` = 1 AND `group` = 'p-1' ORDER BY sort asc,id asc  [ RunTime:0.000265s ]
+NOTIC: [2] array_slice() expects parameter 1 to be array, string given D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 308 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.003761s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.003610s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1429254361 AND ( deadline <= 0 OR deadline > 1429254361 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000488s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000389s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000441s ]
+NOTIC: [2] Illegal string offset 'model_id' D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000341s ]
+NOTIC: [2] Illegal string offset 'url' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000276s ]
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000286s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000275s ]
+NOTIC: [2] Illegal string offset 'model_id' D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000328s ]
+NOTIC: [2] Illegal string offset 'url' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000343s ]
+NOTIC: [2] Illegal string offset 'url' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.003758s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.003616s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1429167961 LIMIT 1   [ RunTime:0.000324s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426662361 LIMIT 1   [ RunTime:0.000235s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000171s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.074078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003627s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000375s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.080285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003557s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002426s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005567s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.005450s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.005563s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004097s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002426s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001107s ]
+
+[ 2015-04-17T15:06:01+08:00 ] ::1 /zmjh/index.php/Home/Index/index/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003165s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+INFO: [ app_exec_start ] --START--
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.004269s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.002850s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1429254361,'http://localhost/zmjh/index.php','未知','未知') [ RunTime:0.000334s ]
+
+[ 2015-04-17T15:11:21+08:00 ] ::1 /zmjh/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002190s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003573s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003684s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000455s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000758s ]
+NOTIC: [8] Undefined variable: rootNav D:\wamp\www\zmjh\Runtime\Cache\Home\c50d1b4cd417a3f9d3d63abb8c3e1fab.php 第 74 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.003630s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000523s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000408s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000294s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000301s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000291s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 5 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000369s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 6 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `jdi_link` [ RunTime:0.003474s ]
+SQL: SELECT * FROM `jdi_link` WHERE `status` = 1 AND `group` = 'p-1' ORDER BY sort asc,id asc  [ RunTime:0.000281s ]
+NOTIC: [2] array_slice() expects parameter 1 to be array, string given D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 308 行.
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.003599s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.003439s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 3 AND `create_time` < 1429254681 AND ( deadline <= 0 OR deadline > 1429254681 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000468s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000331s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 14 LIMIT 1   [ RunTime:0.000270s ]
+NOTIC: [2] Illegal string offset 'model_id' D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000285s ]
+NOTIC: [2] Illegal string offset 'url' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000298s ]
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000259s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 12 LIMIT 1   [ RunTime:0.000267s ]
+NOTIC: [2] Illegal string offset 'model_id' D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Api\DocumentApi.class.php 第 65 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 16 LIMIT 1   [ RunTime:0.000278s ]
+NOTIC: [2] Illegal string offset 'url' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `id` = 17 LIMIT 1   [ RunTime:0.000258s ]
+NOTIC: [2] Illegal string offset 'url' D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 263 行.
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.004002s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.003284s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1429168281 LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426662681 LIMIT 1   [ RunTime:0.000237s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.072177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003453s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003579s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000532s ]
+INFO: [ pageFooter ] --START--
+SQL: SELECT `config` FROM `jdi_addons` WHERE `name` = 'IPlistener' AND `status` = 1 LIMIT 1   [ RunTime:0.000319s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.078298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003673s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005906s ]
+INFO: Run Addons\IPlistener\IPlistenerAddon [ RunTime:0.005803s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.005907s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004210s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2015-04-17T15:11:22+08:00 ] ::1 /zmjh/index.php/Home/Index/index/_extend/addons/_addons/IPlistener/_controller/IPlistener/_action/updateIp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002282s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_exec_start ] --START--
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.004482s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.003608s ]
+SQL: INSERT INTO `jdi_iplistener` (`ip`,`visit_time`,`visit_url`,`city`,`isp`) VALUES ('::1',1429254682,'http://localhost/zmjh/','未知','未知') [ RunTime:0.000306s ]
+

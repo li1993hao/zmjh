@@ -20,4 +20,5 @@ $(function()
 	{
 		$(this).prev().click();
 	});
+	/*$('.tongzhigonggao').load('/zmjh/index.php/Home/Index/category/cate/tongzhigonggao');*/
 });

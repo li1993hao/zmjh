@@ -75,6 +75,47 @@
         <div class="col-md-12 fg">
         </div>
        </div>
+       
+       <div class="row bg">
+    <div class="bg con_center" style="width:70%" >
+         <div class="bg col-md-3" id="bt_zwlb">
+           <label style="padding:10px 0px;margin-top:5px;float:left;">请选择职位类别:</label>
+          <li class="down"><img src="__THEME__/img/content/select_icon.gif" /></li>
+          <div class="zhiwei">
+           <table>
+            <tbody id="tb"></tbody>
+           </table>
+          </div>
+          <div>
+         
+          </div>
+         </div>
+         
+         <div class="bg col-md-3" id="bt_hylb">
+           <label style="padding:10px 0px;margin-top:5px;">请选择行业类别:</label>
+          <span class="glyphicon-shopping-cart" style="margin-left:30%"></span>
+          <div class="hangye bg">
+          <volist name="Think.config.COMPANY_CATEGORY" id="vo">
+           <div class="col-md-3"><a>{$vo}</a></div>
+          </volist>
+         </div>
+         </div>
+         
+         <div class="col-md-4 s_job_pad bg">
+          <input type="text" placeholder="请输入职位名，公司名等关键字" style="width:250px;"/>
+         </div>
+         <div class="col-md-2 s_job_pad bg" >
+          <button style="width:150px;">找工作</button>
+         </div>
+         <div>
+         </div>
+       </div>  
+  </div>
+       
+       <div class="row">
+        <div class="col-md-12 fg">
+        </div>
+       </div>
 <div class="row" style="background-color:#FAFAFA">
        <div class="col-md-12 bg">
         <div class="con_center bg hotinfo" style="width:80%">
@@ -438,81 +479,22 @@
          </div>
          
          <div class="col-md-4 bg" style="margin-top:10px;">
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <!--1-->
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingOne">
-               <h4 class="panel-title">
-                <a  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">第一批公示名单
-        </a>
-             </h4>
-           </div>
-         <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        test
-      </div>
-    </div>
-  </div>
-  <!--2-->
-          <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          和平区名单
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        test
-      </div>
-    </div>
-  </div>
-  <!--3-->
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-           河西区名单
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        test
-      </div>
-    </div>
-  </div>
-  <!--4-->
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingFour">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-           河北区名单
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-      <div class="panel-body">
-        test1
-      </div>
-    </div>
-  </div>
-  <!--5-->
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingFive">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-           河东区名单
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-      <div class="panel-body">
-        test1
-      </div>
-    </div>
-  </div>
+           <div class="tongzhigonggao">
+            <c:list who="6" name="vo" limit="0,6">
+             <div class="col-md-12" style="border-bottom:1px dotted #000000;margin-top:3px;">
+                <div class="col-md-9" style="padding:0px;">
+                 <span class="">{$key+1}.</span>
+                 {$vo.title}
+                </div>
+                <div class="col-md-3" style="text-align:right;padding:0px;">
+                <a href="{$vo.url}"><span>更多</span></a>
+                </div>
+             </div>
+             
+            </c:list>
+            <div style="text-align:right;">
+              <a href='<c:cat who="6" field="url"/>'>更多</a>
+            </div>
            </div>
           </div>
          </div>

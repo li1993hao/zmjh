@@ -203,7 +203,8 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-                        
+    新增用户
+
                     </h1>
                 </div>
                 <!-- /.page-header -->
@@ -211,7 +212,44 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    来自公共模块
+    <form action="<?php echo _U(add);?>" method="post" class="form-horizontal normal-form">
+        <div class="form-group">
+            <div class="controls">
+                <label>所属区县:</label>
+                <select name="quxian">
+                    <?php if(is_array(C("QUXIAN"))): $i = 0; $__LIST__ = C("QUXIAN");if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($key); ?>"><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>用户名<span class="check-tips">（用户名会作为默认的昵称）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="username" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label >密码<span class="check-tips">（用户密码不能少于6位）</span></label>
+            <div class="controls">
+                <input type="password" class="text input-large" name="password" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label >确认密码</label>
+            <div class="controls">
+                <input type="password" class="text input-large" name="repassword" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label >邮箱<span class="check-tips">（用户邮箱，用于找回密码等安全操作）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="email" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-sm btn-primary ajax-post"  type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-sm" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
 
                         <!-- /.col -->
                     </div>

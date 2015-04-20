@@ -132,55 +132,72 @@ jQuery(function(){
 
 <!-- 主体 -->
 
-  <!--main tagline area-->
-  
-  <section class="taglineWrap">
-    <div class="container">
-      <div class="row-fluid  tagline">
-        <div class="breadcrumbs">
-          <div class="container" style="font-size: 16px;">
-            <?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$av): $mod = ($i % 2 );++$i; if($i == count($nav)): echo ($av["name"]); ?>
-                <?php else: ?>
-                <a href="<?php echo ($av["url"]); ?>" style="color: #49afcd"><?php echo ($av["name"]); ?></a>/<?php endif; endforeach; endif; else: echo "" ;endif; ?>
-          </div>
-        </div>
-      </div>
+
+
+    <!--main tagline area-->
+    <section class="taglineWrap">
+        <div class="container">
+            <div class="row-fluid  tagline">
+                <div class="breadcrumbs">
+                    <div class="container" style="font-size: 16px;">
+                        <?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$av): $mod = ($i % 2 );++$i; if($i == count($nav)): echo ($av["name"]); ?>
+                                <?php else: ?>
+                                <a href="<?php echo ($av["url"]); ?>" style="color: #49afcd"><?php echo ($av["name"]); ?></a>/<?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /container -->
+    </section>
+    <section class="mainContentWrap">
+        <div class="container mainContent">
+            <div class="row-fluid">
+
+                <!--main content-->
+
+                <div class="span12">
+                    <div class="row-fluid">
+                        <div class="row-fluid pageTitle">
+                                <?php if(info.title_color == '#555' ): ?><h1  style="margin-bottom:10;text-align: center"><?php echo ($info["title"]); ?></h1>
+                                    <?php else: ?>
+                                    <h1 class="text-center" style="margin-bottom:10px;text-align: center;color:<?php echo ($info["title_color"]); ?>"><?php echo ($info["title"]); ?></h1><?php endif; ?>
+                            <div style="margin-bottom: 10px">
+                                <span><i class="icon-calendar"></i><?php echo (date('Y-m-d H:i',$info["create_time"])); ?></span>&nbsp;
+                                <span><i class="icon-pencil"></i><?php echo get_nickname($info['uid']);?></span>&nbsp;
+                                <span><i class="icon-eye-open"></i> <?php echo ($info["view"]); ?></span>&nbsp;
+                                <?php if(!empty($info["keyword"])): ?><span>
+                                        <i class="icon-tags"></i>
+                                        <span><?php echo ($info["keyword"]); ?></span>
+                                    </span><?php endif; ?>
+                                <?php echo plugin('SocialShare');?>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <section><?php echo (htmlspecialchars_decode($info["content"])); ?></section>
+                            <?php echo plugin('SocialButton');?>
+                            <?php $prev = api('Document/prev',array('id'=>$info['id'],'category_id'=>$info['category_id']))?>
+<?php $next = api('Document/next',array('id'=>$info['id'],'category_id'=>$info['category_id']))?>
+<hr/>
+<div class="blog_footer clearfix">
+    <div style="float: left">
+        上一篇:
+        <?php if(!empty($prev)): ?><a href="<?php echo ($prev["url"]); ?>" data-color="<?php echo ($prev["list_color"]); ?>"><?php echo (msubstr($prev["title"],0,20,true)); ?></a>
+            <?php else: ?>
+            没有了!<?php endif; ?>
     </div>
-    <!-- /container --> 
-  </section>
-  <div class="row">
-    <div class="col-md-3 bg" style="height:350px;">
-      <div>推荐招聘信息</div>
-      <div class="l_con">
-        <ul>
-          <li><a>1招聘文员若干</a></li>
-          <li><a>2招聘文员若干</a></li>
-          <li><a>3招聘文员若干</a></li>
-        </ul>
-      </div>
+    <div style="float: right">
+        下一篇:
+        <?php if(!empty($next)): ?><a href="<?php echo ($next["url"]); ?>" data-color="<?php echo ($next["list_color"]); ?>"><?php echo (msubstr($next["title"],0,20,true)); ?></a>
+            <?php else: ?>
+            没有了!<?php endif; ?>
     </div>
-    <div class="col-md-9 bg" style="height:auto;">
-      <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i; if(isset($info["cover_path"])): ?><div> 
-      <a href="<?php echo ($info["url"]); ?>">
-        <img src="<?php echo (thumb($info["cover_path"],218,180)); ?>" style="height: 100%;width: 100%" alt="project"/> 
-      </a>     
-       <a href="<?php echo ($info["url"]); ?>l"><?php echo ($info["title"]); ?></a> 
-       <i class="icon-calendar"></i><?php echo (date('Y-m-d H:i',$info["create_time"])); ?> &nbsp;&nbsp; 
-       <i class="icon-eye-open"></i> <?php echo ($info["view"]); ?>
-        <p><?php echo (msubstr($info["description"],0,120)); ?></p>
-        <a href="<?php echo ($info["url"]); ?>" class="btn btn-info">详情</a>
+</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <?php else: ?>
-        <div style="border-bottom:1px dotted #333333;">
-         <a href="<?php echo ($info["url"]); ?>l"><?php echo ($info["title"]); ?></a> <i class="icon-calendar"></i><?php echo (date('Y-m-d H:i',$info["create_time"])); ?> &nbsp;&nbsp; <i class="icon-eye-open"></i> <?php echo ($info["view"]); ?>
-         <label><?php echo (msubstr($info["description"],0,120)); ?></label>
-         <a href="<?php echo ($info["url"]); ?>" class="btn btn-primary">详情</a> 
-        </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-    <?php else: ?>
-    <h1 style="text-align: center"><?php echo ((isset($tip) && ($tip !== ""))?($tip):'暂时还没有新闻哦~~'); ?></h1><?php endif; ?>
-    <div><?php echo ($page); ?></div>
-  </div>
-  </div>
+    </section>
 
 
 <!-- /主体 -->

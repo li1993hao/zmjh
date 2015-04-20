@@ -203,7 +203,8 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-                        
+    模版编辑
+
                     </h1>
                 </div>
                 <!-- /.page-header -->
@@ -211,7 +212,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    来自公共模块
+    <iframe src="<?php echo U('ide');?>" style=" width:100%; height: 600px; border: 5px solid #EEE;"></iframe>
 
                         <!-- /.col -->
                     </div>

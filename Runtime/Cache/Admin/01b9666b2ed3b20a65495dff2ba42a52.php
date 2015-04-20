@@ -203,7 +203,8 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-                        
+    <?php echo ($auth_group['id']?'编辑':'新增'); ?>用户组
+
                     </h1>
                 </div>
                 <!-- /.page-header -->
@@ -211,7 +212,26 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    来自公共模块
+    <form action="<?php echo U('AuthManager/writeGroup');?>" enctype="application/x-www-form-urlencoded" method="POST"
+            class="form-horizontal normal-form">
+        <div class="form-group">
+            <label for="auth-title">用户组</label>
+            <div >
+                <input id="auth-title" type="text" name="title" class="text input-large" value="<?php echo ($auth_group["title"]); ?>"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="auth-description" class="item-label">描述</label>
+            <div >
+                <label class="textarea input-large"><textarea id="auth-description" type="text" name="description"><?php echo ($auth_group["description"]); ?></textarea></label>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="hidden" name="id" value="<?php echo ($auth_group["id"]); ?>" />
+            <button type="submit" class="btn btn-sm btn-primary ajax-post" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-sm " onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
 
                         <!-- /.col -->
                     </div>

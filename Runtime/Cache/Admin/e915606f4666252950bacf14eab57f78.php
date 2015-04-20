@@ -249,7 +249,6 @@
 	</form>
 			</div>
 	</div>
-<<<<<<< HEAD
 
                         <!-- /.col -->
                     </div>
@@ -324,80 +323,4 @@
 
 
 </body>
-=======
-
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.page-content -->
-            </div>
-            <!-- /.main-content -->
-        </div>
-    </div>
-</div><!-- /.main-container -->
-
-
-
-<!-- /主体 -->
-
-<!-- 底部 -->
-
-<script type="text/javascript">
-    !function(){
-        var str = "<script src='/zmjh/Public/vendor/ace/js/jquery.mobile.custom.min.js'>"+"<"+"script>";
-        if("ontouchend" in document) document.write(str);
-    }();
-</script>
-<script src="/zmjh/Public/vendor/ace/js/bootstrap.min.js"></script>
-<script src="/zmjh/Public/vendor/ace/js/typeahead-bs2.min.js"></script>
-
-<!-- page specific plugin scripts -->
-
-<!--[if lte IE 8]>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/excanvas.min.js"></script>
-<![endif]-->
-
-<script type="text/javascript"  src="/zmjh/Public/vendor/ace/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery.easy-pie-chart.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery.sparkline.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/flot/jquery.flot.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/flot/jquery.flot.pie.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/flot/jquery.flot.resize.min.js"></script>
-
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/bootbox.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery.gritter.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/bootstrap-wysiwyg.min.js"></script>
-
-<!-- ace scripts -->
-
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/ace-elements.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/ace.min.js"></script>
-<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery.hotkeys.min.js"></script>
-<script type="text/javascript">
-    (function(){
-        var ThinkPHP = window.Think = {
-            "ROOT"   : "/zmjh", //当前网站地址
-            "APP"    : "/zmjh/index.php", //当前项目地址
-            "PUBLIC" : "/zmjh/Public", //项目公共目录地址
-            "DEEP"   : "<?php echo C('URL_PATHINFO_DEPR');?>", //PATHINFO分割符
-            "MODEL"  : ["<?php echo C('URL_MODEL');?>", "<?php echo C('URL_CASE_INSENSITIVE');?>", "<?php echo C('URL_HTML_SUFFIX');?>"],
-            "VAR"    : ["<?php echo C('VAR_MODULE');?>", "<?php echo C('VAR_CONTROLLER');?>", "<?php echo C('VAR_ACTION');?>"]
-        }
-        $("#nav_top_main_bt").click(function(){
-            $("#nav_top_main").toggle(200);
-        })
-    })();
-</script>
-<script type="text/javascript" src="/zmjh/Public/vendor/think.js"></script>
-<script type="text/javascript" src="/zmjh/Public/Admin/js/common.js"></script>
-
-
-
-
-
-</body>
->>>>>>> origin/master
 </html>

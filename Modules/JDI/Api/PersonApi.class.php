@@ -110,14 +110,14 @@ class PersonApi {
             if($k == "CAT_JOB"){
                 $map = array('status'=>array('gt',0));
                 $map['type'] = 0;
-                $list = M('Tree')->where($map)->select();
+                $list = M('Tree')->where($map)->field('pid,id,name')->select();
                 //得到栏目树形结构
                 $tree =list_to_tree($list,'id','pid','children');
                 $data['CAT_JOB'] =$tree;
             }elseif($k == "CAT_UN"){
                 $map = array('status'=>array('gt',0));
                 $map['type'] = 1;
-                $list = M('Tree')->where($map)->select();
+                $list = M('Tree')->where($map)->field('pid,id,name')->select();
                 //得到栏目树形结构
                 $tree =list_to_tree($list,'id','pid','children');
                 $data['CAT_UN'] =$tree;

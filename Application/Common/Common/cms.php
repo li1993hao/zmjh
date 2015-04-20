@@ -17,10 +17,10 @@ function list_url($list){
     if(APP_MODE != 'api'){ //判断是否时api模式
         if(!isset($list['id'])){
             foreach($list as $k=>$v){
-                $list[$k]['url'] = U('Index/category?cate='.$v['symbol'].'&p=1');
+                $list[$k]['url'] = U('Home/Index/category?cate='.$v['symbol'].'&p=1');
             }
         }else{
-            $list['url']= U('Index/category?cate='.$list['symbol'].'&p=1');
+            $list['url']= U('Home/Index/category?cate='.$list['symbol'].'&p=1');
         }
     }
     return $list;
@@ -87,7 +87,7 @@ sql;
             }else{
                 if(APP_MODE != 'api'){
                     $cate = api('Category/get_category',array('id'=>$list[$k]['category_id'],'field'=>'symbol'));
-                    $list[$k]['url'] = U('Index/content?cate='.$cate.'&id='.$list[$k]['id']);
+                    $list[$k]['url'] = U('Home/Index/content?cate='.$cate.'&id='.$list[$k]['id']);
                 }
             }
             if($fun instanceof Closure){ //回调接口
@@ -134,7 +134,7 @@ sql;
         }else{
             if(APP_MODE != 'api'){
                 $cate = api('Category/get_category',array('id'=>$list['category_id'],'field'=>'symbol'));
-                $list['url'] = U('Index/content?cate='.$cate.'&id='.$list['id']);
+                $list['url'] = U('Home/Index/content?cate='.$cate.'&id='.$list['id']);
             }
         }
         if($fun instanceof Closure){ //回调函数

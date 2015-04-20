@@ -20,6 +20,17 @@
 <meta name="description" content="<?php echo (C("WEB_SITE_DESCRIPTION")); ?>" />
 <meta name="author" content="天津时代科技有限公司" />
 <meta name="keyword" content="<?php echo (C("WEB_SITE_KEYWORD")); ?>"/>
+<meta name="renderer" content="webkit">
+<!-- basic styles -->
+<link href="/zmjh/Public/vendor/ace/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/zmjh/Public/vendor/ace/css/font-awesome.min.css" />
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="/zmjh/Public/vendor/ace/css/font-awesome-ie7.min.css" />
+<![endif]-->
+<link rel="stylesheet" href="/zmjh/Public/vendor/ace/css/jquery.gritter.css" />
+<!-- fonts -->
+
 <!--[if !IE]> -->
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery-2.0.3.min.js"></script>
 <!-- <![endif]-->
@@ -27,60 +38,14 @@
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery-1.10.2.min.js"></script>
 <![endif]-->
 
-<script type="text/javascript" src="/zmjh/Public/vendor/placeholder/placeholder.js"></script>
-
-
-<!-- CSS styles -->
-<link href="/zmjh/Template/zhumeng/asset/css/bootstrap.css" rel="stylesheet"/>
-<!--Skins: uncomment to activate-->
-<link href="/zmjh/Template/zhumeng/asset/css/bootstrap-theme.css" rel="stylesheet"/>
-<link href="/zmjh/Template/zhumeng/asset/css/main_page.css" rel="stylesheet"/>
-<!--<link href="css/skin_orange.css" rel="stylesheet"/>
--->
-<!-- http://remysharp.com/2009/01/07/html5-enabling-script/ -->
 <!--[if lt IE 9]>
-<script type="text/javascript">/*@cc_on'abbr article aside audio canvas details figcaption figure footer header hgroup mark meter nav output progress section summary subline time video'.replace(/\w+/g,function(n){document.createElement(n)})@*/</script>
+<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/html5shiv.js"></script>
+<script type="text/javascript" src="/zmjh/Public/vendor/ace/js/respond.min.js"></script>
 <![endif]-->
-<script type="text/javascript">(function(H){H.className=H.className.replace(/bno-jsb/,'js')})(document.documentElement)</script>
-<script type="text/javascript">
-   var JPlaceHolder = {
-    //检测
-    _check : function(){
-        return 'placeholder' in document.createElement('input');
-    },
-    //初始化
-    init : function(){
-        if(!this._check()){
-            this.fix();
-        }
-    },
-    //修复
-    fix : function(){
-        jQuery(':input[placeholder]').each(function(index, element) {
-            var self = $(this), txt = self.attr('placeholder');
-            self.wrap($('<div></div>').css({position:'relative', zoom:'1', border:'none', background:'none', padding:'none', margin:'none'}));
-            var pos = self.position(), h = self.outerHeight(true), paddingleft = self.css('padding-left');
-            var holder = $('<span></span>').text(txt).css({position:'absolute', left:pos.left, top:pos.top+7, height:h, lienHeight:h, paddingLeft:paddingleft, color:'#aaa'}).appendTo(self.parent());
-            self.focusin(function(e) {
-                holder.hide();
-            }).focusout(function(e) {
-                if(!self.val()){
-                    holder.show();
-                }
-            });
-            holder.click(function(e) {
-                holder.hide();
-                self.focus();
-            });
-        });
-    }
-};
-//执行
-jQuery(function(){
-    JPlaceHolder.init();    
-});
-   </script>
-<!-- favicon & iSO touch icons -->
+<link href="/zmjh/Template/zhumeng/asset/css/main_page.css" rel="stylesheet"/>
+
+
+
     
     
 </head>
@@ -90,29 +55,11 @@ jQuery(function(){
 <!--[if lt IE 8]>
 <div class="alert alert-block alert-danger fade in" style="margin-bottom: 0">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a target="_blank" href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
 <![endif]-->
-
-<div class="container-fluid">
-<div class="row">
-  <div class="col-md-12 bg">
-    <div class="col-md-5 h_logo"> 
-      <!--<img class="logo_pic" src="/zmjh/images/main_page/logo.png"/>--> 
-    </div>
-    <div class="col-md-7">
-      <h3>天津高校就业信息网</h3>
-    </div>
-  </div>
-</div>
-
-<!--<div class="row">
-       <div class="col-md-12 fgx">
-       </div>
-     </div>-->
-
 <div class="row bg_ti_color">
   <div style="width:70%;">
     <div class="col-md-12 bg">
       <ul class="h_title" id="h_title">
-        <li ><a href="<?php echo U('Index/index');?>">主页</a></li>
+        <li ><a href="<?php echo U('Home/Index/index');?>">主页</a></li>
         <?php $__NAV__=cat('',false,$rootNav,'active'); if(is_array($__NAV__)): $i = 0; $__LIST__ = $__NAV__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat): $mod = ($i % 2 );++$i; if($cat['has_child'] != 0): ?><li >
               <div class="btn-group"> <a type="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <?php echo ($cat['name']); ?> <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu" style="margin-top:-1px;">
@@ -698,9 +645,24 @@ jQuery(function(){
       </div>
 </footer>
 
-
+<script type="text/javascript">
+    (function(){
+        var ThinkPHP = window.Think = {
+            "ROOT"   : "/zmjh", //当前网站地址
+            "APP"    : "/zmjh/index.php", //当前项目地址
+            "PUBLIC" : "/zmjh/Public", //项目公共目录地址
+            "DEEP"   : "<?php echo C('URL_PATHINFO_DEPR');?>", //PATHINFO分割符
+            "MODEL"  : ["<?php echo C('URL_MODEL');?>", "<?php echo C('URL_CASE_INSENSITIVE');?>", "<?php echo C('URL_HTML_SUFFIX');?>"],
+            "VAR"    : ["<?php echo C('VAR_MODULE');?>", "<?php echo C('VAR_CONTROLLER');?>", "<?php echo C('VAR_ACTION');?>"]
+        }
+        $("#nav_top_main_bt").click(function(){
+            $("#nav_top_main").toggle(200);
+        })
+    })();
+</script>
 <script type="text/javascript" src="/zmjh/Public/vendor/think.js"></script>
-<script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/bootstrap.js"></script>
+<script type="text/javascript" src="/zmjh/Public/Admin/js/common.js"></script>
+<script src="/zmjh/Public/vendor/ace/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/main_page.js"></script>
 
 

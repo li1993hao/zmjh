@@ -27,14 +27,15 @@
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery-1.10.2.min.js"></script>
 <![endif]-->
 
-<script type="text/javascript" src="/zmjh/Public/vendor/placeholder/placeholder.js"></script>
-
-
+<!--<script type="text/javascript" src="/zmjh/Public/vendor/placeholder/placeholder.js"></script>-->
+<script type="text/javascript" src="/zmjh/public/jdi/job_cate.js"></script>
+<script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/fenlei.js"></script>
 <!-- CSS styles -->
 <link href="/zmjh/Template/zhumeng/asset/css/bootstrap.css" rel="stylesheet"/>
 <!--Skins: uncomment to activate-->
 <link href="/zmjh/Template/zhumeng/asset/css/bootstrap-theme.css" rel="stylesheet"/>
 <link href="/zmjh/Template/zhumeng/asset/css/main_page.css" rel="stylesheet"/>
+<!--<link href="/zmjh/Template/zhumeng/asset/css/list_page.css" rel="stylesheet"/>-->
 <!--<link href="css/skin_orange.css" rel="stylesheet"/>
 -->
 <!-- http://remysharp.com/2009/01/07/html5-enabling-script/ -->
@@ -90,6 +91,27 @@ jQuery(function(){
 <!--[if lt IE 8]>
 <div class="alert alert-block alert-danger fade in" style="margin-bottom: 0">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a target="_blank" href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
 <![endif]-->
+<<<<<<< HEAD
+=======
+
+<div class="container-fluid">
+<!--<div class="row">
+  <div class="col-md-12 bg">
+    <div class="col-md-5 h_logo"> 
+      <img class="logo_pic" src="/zmjh/images/main_page/logo.png"/>
+    </div>
+    <div class="col-md-7">
+      <h3>天津高校就业信息网</h3>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="row">
+       <div class="col-md-12 fgx">
+       </div>
+     </div>-->
+
+>>>>>>> FETCH_HEAD
 <div class="row bg_ti_color">
   <div style="width:70%;">
     <div class="col-md-12 bg">
@@ -113,89 +135,55 @@ jQuery(function(){
 
 <!-- 主体 -->
 
-    <!--main tagline area-->
-    <section class="taglineWrap">
-        <div class="container">
-            <div class="row-fluid  tagline">
-                <div class="breadcrumbs">
-                    <div class="container" style="font-size: 16px;">
-                        <?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$av): $mod = ($i % 2 );++$i; if($i == count($nav)): echo ($av["name"]); ?>
-                                <?php else: ?>
-                                <a href="<?php echo ($av["url"]); ?>" style="color: #49afcd"><?php echo ($av["name"]); ?></a>/<?php endif; endforeach; endif; else: echo "" ;endif; ?>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- /container -->
-    </section>
-
-    <section class="mainContentWrap">
-        <div class="container mainContent">
-
-            <div class="row-fluid">
-
-                <div class="span12">
-                        <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><div class="row-fluid">
-                                <?php if(isset($info["cover_path"])): ?><div class="span3">
-                                        <div class="innerSpacer">
-                                            <div class="portfolioItem">
-                                                <a href="<?php echo ($info["url"]); ?>">
-                                                    <img src="<?php echo (thumb($info["cover_path"],218,180)); ?>" style="height: 100%;width: 100%" alt="project"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--description-->
-                                    <div class="span9">
-                                        <div class="item-description">
-                                            <h3>
-                                                <a href="<?php echo ($info["url"]); ?>l"><?php echo ($info["title"]); ?></a>
-                                            </h3>
-                                            <div class="subtitle">
-                                                <i class="icon-calendar"></i><?php echo (date('Y-m-d H:i',$info["create_time"])); ?> &nbsp;&nbsp;
-                                                <i class="icon-eye-open"></i> <?php echo ($info["view"]); ?>
-                                            </div>
-
-                                            <p><?php echo (msubstr($info["description"],0,120)); ?></p>
-
-                                            <!--alert error-->
-                                                <a href="<?php echo ($info["url"]); ?>" class="btn btn-info">详情</a>
-                                        </div>
-                                    </div>
-                                    <div class="divider solid clearfix"><span></span></div>
-                                    <?php else: ?>
-                                    <div class="span12">
-                                        <div class="item-description">
-                                            <h3>
-                                                <a href="<?php echo ($info["url"]); ?>l"><?php echo ($info["title"]); ?></a>
-                                            </h3>
-                                            <div class="subtitle">
-                                                <i class="icon-calendar"></i><?php echo (date('Y-m-d H:i',$info["create_time"])); ?> &nbsp;&nbsp;
-                                                <i class="icon-eye-open"></i> <?php echo ($info["view"]); ?>
-                                            </div>
-
-                                            <p><?php echo (msubstr($info["description"],0,120)); ?></p>
-
-                                            <!--alert error-->
-                                            <a href="<?php echo ($info["url"]); ?>" class="btn btn-info">详情</a>
-                                        </div>
-                                    </div><?php endif; ?>
-                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
-                            <?php else: ?>
-                            <h1 style="text-align: center"><?php echo ((isset($tip) && ($tip !== ""))?($tip):'暂时还没有新闻哦~~'); ?></h1><?php endif; ?>
-                        <!--pagination-->
-                        <div class="row-fluid project-pagination">
-                            <div class="span12">
-                                <?php echo ($page); ?>
-                            </div>
-                        </div>
-                        <!--end pagination-->
-
-                    </div>
-
-                </div>
+  <!--main tagline area-->
+  
+  <section class="taglineWrap">
+    <div class="container">
+      <div class="row-fluid  tagline">
+        <div class="breadcrumbs">
+          <div class="container" style="font-size: 16px;">
+            <?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$av): $mod = ($i % 2 );++$i; if($i == count($nav)): echo ($av["name"]); ?>
+                <?php else: ?>
+                <a href="<?php echo ($av["url"]); ?>" style="color: #49afcd"><?php echo ($av["name"]); ?></a>/<?php endif; endforeach; endif; else: echo "" ;endif; ?>
+          </div>
         </div>
-    </section>
-
+      </div>
+    </div>
+    <!-- /container --> 
+  </section>
+  <div class="row">
+    <div class="col-md-3 bg" style="height:350px;">
+      <div>推荐招聘信息</div>
+      <div class="l_con">
+        <ul>
+          <li><a>1招聘文员若干</a></li>
+          <li><a>2招聘文员若干</a></li>
+          <li><a>3招聘文员若干</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-9 bg" style="height:auto;">
+      <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i; if(isset($info["cover_path"])): ?><div> 
+      <a href="<?php echo ($info["url"]); ?>">
+        <img src="<?php echo (thumb($info["cover_path"],218,180)); ?>" style="height: 100%;width: 100%" alt="project"/> 
+      </a>     
+       <a href="<?php echo ($info["url"]); ?>l"><?php echo ($info["title"]); ?></a> 
+       <i class="icon-calendar"></i><?php echo (date('Y-m-d H:i',$info["create_time"])); ?> &nbsp;&nbsp; 
+       <i class="icon-eye-open"></i> <?php echo ($info["view"]); ?>
+        <p><?php echo (msubstr($info["description"],0,120)); ?></p>
+        <a href="<?php echo ($info["url"]); ?>" class="btn btn-info">详情</a>
+        </div>
+        <?php else: ?>
+        <div style="border-bottom:1px dotted #333333;">
+         <a href="<?php echo ($info["url"]); ?>l"><?php echo ($info["title"]); ?></a> <i class="icon-calendar"></i><?php echo (date('Y-m-d H:i',$info["create_time"])); ?> &nbsp;&nbsp; <i class="icon-eye-open"></i> <?php echo ($info["view"]); ?>
+         <label><?php echo (msubstr($info["description"],0,120)); ?></label>
+         <a href="<?php echo ($info["url"]); ?>" class="btn btn-primary">详情</a> 
+        </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+    <?php else: ?>
+    <h1 style="text-align: center"><?php echo ((isset($tip) && ($tip !== ""))?($tip):'暂时还没有新闻哦~~'); ?></h1><?php endif; ?>
+    <div><?php echo ($page); ?></div>
+  </div>
+  </div>
 
 
 <!-- /主体 -->
@@ -210,25 +198,38 @@ jQuery(function(){
        </div>
       <div class="row">
        <div class="bg con_center bottom" style="width:80%">
-        <div class="col-md-2 bg" style="margin-left:25%;">
+        <div class="col-md-2 bg yqlj">
          <label>友情链接:</label>
-         <ul>
-          <li><a>南开大学</a></li>
-          <li><a>天津大学</a></li>
-          <li><a>理工大学</a></li>
-         </ul>
+         <div>
+          <ul>
+           <li><a>南开大学</a></li>
+           <li><a>天津大学</a></li>
+           <li><a>理工大学</a></li>
+           <li><a>南开大学</a></li>
+           <li><a>天津大学</a></li>
+           <li><a>理工大学</a></li>
+          </ul>
+         </div>
         </div>
-        <div class="col-md-4 col-md-offset-2 bg">
+        <div class="col-md-4 col-md-offset-6 bg">
          <label>客户端下载</label>
          <div>
-          <img src="/zmjh/images/main_page/b_pic.png"/>
-          <img src="/zmjh/images/main_page/b_pic.png"/>
+          <img width="150px" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg"/>
          </div>
-         
+         <?php echo plugin('IPlistener');?>
         </div>
        </div>
        
       </div>
+      
+        <div class="row">
+         <div class="col-md-12" style="height:150px;">
+         <hr />
+             <h3 style="text-align: center">
+                &copy; 时代科技
+             </h3>
+           </div>
+        </div>
       </div>
 </footer>
 

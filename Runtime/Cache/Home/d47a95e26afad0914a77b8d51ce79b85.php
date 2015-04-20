@@ -38,6 +38,21 @@
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery-1.10.2.min.js"></script>
 <![endif]-->
 
+<<<<<<< HEAD
+=======
+<!--<script type="text/javascript" src="/zmjh/Public/vendor/placeholder/placeholder.js"></script>-->
+<script type="text/javascript" src="/zmjh/public/jdi/job_cate.js"></script>
+<script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/fenlei.js"></script>
+<!-- CSS styles -->
+<link href="/zmjh/Template/zhumeng/asset/css/bootstrap.css" rel="stylesheet"/>
+<!--Skins: uncomment to activate-->
+<link href="/zmjh/Template/zhumeng/asset/css/bootstrap-theme.css" rel="stylesheet"/>
+<link href="/zmjh/Template/zhumeng/asset/css/main_page.css" rel="stylesheet"/>
+<!--<link href="/zmjh/Template/zhumeng/asset/css/list_page.css" rel="stylesheet"/>-->
+<!--<link href="css/skin_orange.css" rel="stylesheet"/>
+-->
+<!-- http://remysharp.com/2009/01/07/html5-enabling-script/ -->
+>>>>>>> FETCH_HEAD
 <!--[if lt IE 9]>
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/html5shiv.js"></script>
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/respond.min.js"></script>
@@ -55,6 +70,27 @@
 <!--[if lt IE 8]>
 <div class="alert alert-block alert-danger fade in" style="margin-bottom: 0">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a target="_blank" href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
 <![endif]-->
+<<<<<<< HEAD
+=======
+
+<div class="container-fluid">
+<!--<div class="row">
+  <div class="col-md-12 bg">
+    <div class="col-md-5 h_logo"> 
+      <img class="logo_pic" src="/zmjh/images/main_page/logo.png"/>
+    </div>
+    <div class="col-md-7">
+      <h3>天津高校就业信息网</h3>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="row">
+       <div class="col-md-12 fgx">
+       </div>
+     </div>-->
+
+>>>>>>> FETCH_HEAD
 <div class="row bg_ti_color">
   <div style="width:70%;">
     <div class="col-md-12 bg">
@@ -149,6 +185,45 @@
        </div>
        
       
+       <div class="row">
+        <div class="col-md-12 fg">
+        </div>
+       </div>
+       
+       <div class="row bg">
+    <div class="bg con_center" style="width:70%" >
+         <div class="bg col-md-3" id="bt_zwlb">
+           <label style="padding:10px 0px;margin-top:5px;float:left;">请选择职位类别:</label>
+          <li class="down"><img src="/zmjh/Template/zhumeng/asset/img/content/select_icon.gif" /></li>
+          <div class="zhiwei">
+           <table>
+            <tbody id="tb"></tbody>
+           </table>
+          </div>
+          <div>
+         
+          </div>
+         </div>
+         
+         <div class="bg col-md-3" id="bt_hylb">
+           <label style="padding:10px 0px;margin-top:5px;">请选择行业类别:</label>
+          <span class="glyphicon-shopping-cart" style="margin-left:30%"></span>
+          <div class="hangye bg">
+          <?php if(is_array(C("COMPANY_CATEGORY"))): $i = 0; $__LIST__ = C("COMPANY_CATEGORY");if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-3"><a><?php echo ($vo); ?></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
+         </div>
+         </div>
+         
+         <div class="col-md-4 s_job_pad bg">
+          <input type="text" placeholder="请输入职位名，公司名等关键字" style="width:250px;"/>
+         </div>
+         <div class="col-md-2 s_job_pad bg" >
+          <button style="width:150px;">找工作</button>
+         </div>
+         <div>
+         </div>
+       </div>  
+  </div>
+       
        <div class="row">
         <div class="col-md-12 fg">
         </div>
@@ -516,81 +591,19 @@
          </div>
          
          <div class="col-md-4 bg" style="margin-top:10px;">
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <!--1-->
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingOne">
-               <h4 class="panel-title">
-                <a  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">第一批公示名单
-        </a>
-             </h4>
-           </div>
-         <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        test
-      </div>
-    </div>
-  </div>
-  <!--2-->
-          <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          和平区名单
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        test
-      </div>
-    </div>
-  </div>
-  <!--3-->
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-           河西区名单
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        test
-      </div>
-    </div>
-  </div>
-  <!--4-->
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingFour">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-           河北区名单
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-      <div class="panel-body">
-        test1
-      </div>
-    </div>
-  </div>
-  <!--5-->
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingFive">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-           河东区名单
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-      <div class="panel-body">
-        test1
-      </div>
-    </div>
-  </div>
+           <div class="tongzhigonggao">
+            <?php $__LIST__=lists('6','0,6'); if(is_array($__LIST__)): $i = 0; $__LIST__ = $__LIST__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-12" style="border-bottom:1px dotted #000000;margin-top:3px;">
+                <div class="col-md-9" style="padding:0px;">
+                 <span class=""><?php echo ($key+1); ?>.</span>
+                 <?php echo ($vo["title"]); ?>
+                </div>
+                <div class="col-md-3" style="text-align:right;padding:0px;">
+                <a href="<?php echo ($vo["url"]); ?>"><span>更多</span></a>
+                </div>
+             </div><?php endforeach; endif; else: echo "" ;endif; ?>
+            <div style="text-align:right;">
+              <a href='<?php echo cat_field('6','url') ?>'>更多</a>
+            </div>
            </div>
           </div>
          </div>
@@ -623,25 +636,38 @@
        </div>
       <div class="row">
        <div class="bg con_center bottom" style="width:80%">
-        <div class="col-md-2 bg" style="margin-left:25%;">
+        <div class="col-md-2 bg yqlj">
          <label>友情链接:</label>
-         <ul>
-          <li><a>南开大学</a></li>
-          <li><a>天津大学</a></li>
-          <li><a>理工大学</a></li>
-         </ul>
+         <div>
+          <ul>
+           <li><a>南开大学</a></li>
+           <li><a>天津大学</a></li>
+           <li><a>理工大学</a></li>
+           <li><a>南开大学</a></li>
+           <li><a>天津大学</a></li>
+           <li><a>理工大学</a></li>
+          </ul>
+         </div>
         </div>
-        <div class="col-md-4 col-md-offset-2 bg">
+        <div class="col-md-4 col-md-offset-6 bg">
          <label>客户端下载</label>
          <div>
-          <img src="/zmjh/images/main_page/b_pic.png"/>
-          <img src="/zmjh/images/main_page/b_pic.png"/>
+          <img width="150px" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg"/>
          </div>
-         
+         <?php echo plugin('IPlistener');?>
         </div>
        </div>
        
       </div>
+      
+        <div class="row">
+         <div class="col-md-12" style="height:150px;">
+         <hr />
+             <h3 style="text-align: center">
+                &copy; 时代科技
+             </h3>
+           </div>
+        </div>
       </div>
 </footer>
 

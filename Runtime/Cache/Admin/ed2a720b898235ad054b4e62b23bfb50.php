@@ -151,51 +151,12 @@
         </a>
 
         
-            <div class="sidebar sidebar-fixed" id="sidebar">
-                <script type="text/javascript">
-                    try {
-                        ace.settings.check('sidebar', 'fixed')
-                    } catch (e) {
-                    }
-                </script>
+    <style>
+        .main-content{
+            margin-left: 0;
+        }
+    </style>
 
-                <ul class="nav nav-list">
-                    <?php if(!empty($_extra_menu)): ?>
-                        <?php echo extra_menu($_extra_menu,$__MENU__); endif; ?>
-                    <?php if(is_array($__MENU__["child"])): $i = 0; $__LIST__ = $__MENU__["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_menu): $mod = ($i % 2 );++$i;?><!-- 子导航 -->
-                        <?php if(!empty($sub_menu)): if(empty($key)): if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li class="<?php echo ((isset($menu["class"]) && ($menu["class"] !== ""))?($menu["class"]):''); ?>">
-                                        <a href="<?php echo _U($menu['url']);?>">
-                                            <span class="menu-text"><?php echo ($menu["title"]); ?></span>
-                                        </a>
-                                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                                <?php else: ?>
-                                <?php $group_class = $__MENU__['group_class'][$key]; ?>
-                                <li class="<?php echo ($group_class); ?>">
-                                    <a href="#" class="dropdown-toggle">
-                                        <span class="menu-text"><?php echo ($key); ?></span>
-                                        <b class="arrow icon-angle-down"></b>
-                                    </a>
-                                    <ul class="submenu">
-                                        <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li class="<?php echo ((isset($menu["class"]) && ($menu["class"] !== ""))?($menu["class"]):''); ?>">
-                                                <a href="<?php echo _U($menu['url']);?>"><?php echo ($menu["title"]); ?></a>
-                                            </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                                    </ul>
-                                </li><?php endif; endif; ?>
-                        <!-- /子导航 --><?php endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
-                <!-- /.nav-list -->
-                <div class="sidebar-collapse" id="sidebar-collapse">
-                    <i class="icon-double-angle-right" data-icon1="icon-double-angle-left"
-                       data-icon2="icon-double-angle-right"></i>
-                </div>
-                <script type="text/javascript">
-                    try {
-                        ace.settings.check('sidebar', 'collapsed')
-                    } catch (e) {
-                    }
-                </script>
-            </div>
-        
 
         <div class="main-content">
 
@@ -203,7 +164,8 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-                        
+    修改密码
+
                     </h1>
                 </div>
                 <!-- /.page-header -->
@@ -211,7 +173,34 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    来自公共模块
+		<div class="tab-content">
+	<!-- 修改密码表单 -->
+	<form action="<?php echo U();?>" method="post" class="form-horizontal normal-form">
+		<div class="form-group">
+			<label class="item-label">原密码：</label>
+			<div class="controls">
+				<input type="password" name="old" class="text input-large" autocomplete="off" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="item-label">新密码：</label>
+			<div class="controls">
+				<input type="password" name="password" class="text input-large" autocomplete="off" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="item-label">确认密码：</label>
+			<div class="controls">
+				<input type="password" name="repassword" class="text input-large" autocomplete="off" />
+			</div>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-sm btn-primary ajax-post" target-form="form-horizontal">确 认</button>
+			<button class="btn btn-sm" onclick="javascript:history.back(-1);return false;">返 回</button>
+		</div>
+	</form>
+			</div>
+	</div>
 
                         <!-- /.col -->
                     </div>
@@ -267,7 +256,7 @@
     (function(){
         var ThinkPHP = window.Think = {
             "ROOT"   : "/zmjh", //当前网站地址
-            "APP"    : "/zmjh/index.php", //当前项目地址
+            "APP"    : "/zmjh/Admin.php", //当前项目地址
             "PUBLIC" : "/zmjh/Public", //项目公共目录地址
             "DEEP"   : "<?php echo C('URL_PATHINFO_DEPR');?>", //PATHINFO分割符
             "MODEL"  : ["<?php echo C('URL_MODEL');?>", "<?php echo C('URL_CASE_INSENSITIVE');?>", "<?php echo C('URL_HTML_SUFFIX');?>"],

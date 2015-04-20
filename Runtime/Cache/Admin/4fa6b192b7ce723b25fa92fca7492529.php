@@ -227,7 +227,7 @@
                 <input type="text" class="text input-small" name="sort" value="<?php echo ((isset($info["sort"]) && ($info["sort"] !== ""))?($info["sort"]):0); ?>">
             </div>
         </div>
-
+        <input type="hidden" class="text input-small" name="type" value="<?php echo ($type); ?>">
         <div class="form-group">
             <label>上级项目<span class="check-tips">（所属的上级项目）</span></label>
             <div >

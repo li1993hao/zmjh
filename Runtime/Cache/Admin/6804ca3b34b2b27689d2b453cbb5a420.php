@@ -203,7 +203,8 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-                        
+    查看行为日志
+
                     </h1>
                 </div>
                 <!-- /.page-header -->
@@ -211,7 +212,54 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    来自公共模块
+    <div class="profile-user-info profile-user-info-striped">
+        <div class="profile-info-row">
+            <div class="profile-info-name"> 行为名称 </div>
+
+            <div class="profile-info-value">
+                <span><?php echo get_action($info['action_id'], "title");?></span>
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name"> 执行者 </div>
+
+            <div class="profile-info-value">
+                <i class="blue icon-user bigger-110"></i>
+                <span><?php echo get_nickname($info['user_id']);?></span>
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name"> 执行IP </div>
+
+            <div class="profile-info-value">
+                <i class="icon-map-marker blue bigger-110"></i>
+                <span><?php echo long2ip($info['action_ip']);?></span>
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name"> 执行时间 </div>
+
+            <div class="profile-info-value">
+                <i class="icon-time blue bigger-110"></i>
+                <span><?php echo date('Y-m-d H:i:s',$info['create_time']);?></span>
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">备注</div>
+            <div class="profile-info-value">
+                <i class="icon-edit blue bigger-110"></i>
+                <span><?php echo ($info["remark"]); ?></span>
+            </div>
+        </div>
+    </div>
+    <div class="space-6"></div>
+    <div class="profile-user-info">
+        <button class="btn btn-sm" onclick="javascript:history.back(-1);return false;">返 回</button>
+    </div>
+
 
                         <!-- /.col -->
                     </div>

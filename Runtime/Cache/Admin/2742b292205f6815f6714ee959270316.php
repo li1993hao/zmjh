@@ -203,7 +203,8 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-                        
+    模块授权
+
                     </h1>
                 </div>
                 <!-- /.page-header -->
@@ -211,7 +212,54 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    来自公共模块
+    <div class="table-responsive">
+        <form action="<?php echo U('addToModule');?>"  class="form-horizontal">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th class="center">
+                        <label>
+                            <input type="checkbox" class="ace check-all">
+                            <span class="lbl"></span>
+                        </label>
+                    </th>
+                    <th>名称</th>
+                    <th>标识</th>
+                    <th >描述</th>
+                    <th >状态</th>
+                    <th>作者</th>
+                    <th >版本</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php if(!empty($nodeList)): if(is_array($nodeList)): $i = 0; $__LIST__ = $nodeList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$node): $mod = ($i % 2 );++$i;?><tr class="level" data-level="<?php echo ($node['level']); ?>">
+                            <td class="center">
+                                <label>
+                                    <?php if(in_array($node['id'],$authed_group)): ?><input type="checkbox" class="ace ids" value="<?php echo ($node["id"]); ?>" checked="true"  name="mid[]">
+                                        <?php else: ?>
+                                        <input type="checkbox" class="ace ids" value="<?php echo ($node["id"]); ?>"  name="mid[]"><?php endif; ?>
+                                    <span class="lbl"></span>
+                                </label>
+                            </td>
+                            <td><?php echo ($node["title"]); ?></td>
+                            <td><?php echo ($node["name"]); ?></td>
+                            <td><?php echo ($node["description"]); ?></td>
+                            <td><?php echo ($node["status_text"]); ?></td>
+                            <td><?php echo ($node["author"]); ?></a></td>
+                            <td><?php echo ($node["version"]); ?></td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <?php else: ?>
+                    <tr><td colspan="3"><h1 class="text-center">暂无数据!</h1></td></tr><?php endif; ?>
+
+                </tbody>
+            </table>
+            <input type="hidden" value="<?php echo ($this_group); ?>" name="group_id"/>
+        </form>
+        <div class="form-group">
+            <button class="btn btn-primary btn-sm ajax-post"  type="submit"  target-form="form-horizontal">确 定</button>
+            <button class="btn btn-sm" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </div>
 
                         <!-- /.col -->
                     </div>

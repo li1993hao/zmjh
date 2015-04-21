@@ -163,7 +163,7 @@
        <div class="bg con_center bottom" style="width:80%;color:white;">
         <div class="col-md-2 bg yqlj">
          <label>友情链接:</label>
-         <div >
+         <div style="margin-top:30px;" >
           <ul>
            <li><a style="color:white;">南开大学</a></li>
            <li><a style="color:white;">天津大学</a></li>
@@ -186,7 +186,7 @@
       </div>
       
         <div class="row">
-         <div class="col-md-12" style="height:150px;">
+         <div class="col-md-12" style="height:50px;">
          <hr />
              <h3 style="text-align: center">
                 &copy; 时代科技

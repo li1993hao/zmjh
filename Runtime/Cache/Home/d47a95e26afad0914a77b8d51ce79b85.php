@@ -94,11 +94,11 @@
         
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-          <div class="item active" > <img class="img-responsive" style="height:320px;"src="/zmjh/Template/zhumeng/asset/img/content/bg3.png" alt="...">
+          <div class="item active" > <img class="img-responsive" style="height:320px; width:100%;"src="/zmjh/Template/zhumeng/asset/img/content/bg3.png" alt="...">
           <!--style="background-size:cover;height:320px;width:100%;"-->
             <!--<div class="carousel-caption"> ... </div>-->
           </div>
-          <div class="item" > <img class="img-responsive" style="height:320px;" src="/zmjh/Template/zhumeng/asset/img/content/bg2.jpg" alt="...">
+          <div class="item" > <img class="img-responsive" style="height:320px;  width:100%;" src="/zmjh/Template/zhumeng/asset/img/content/bg2.jpg" alt="...">
             <!--<div class="carousel-caption"> ... </div>-->
           </div>
         </div>
@@ -172,7 +172,7 @@
          
          <div class="bg col-md-3" id="bt_hylb" style="border:1px solid #000">
            <label style="padding:10px 0px;margin-top:5px;">请选择行业类别:</label>
-          <span class="glyphicon-shopping-cart" style="margin-left:30%"></span>
+          <li class="down"><img src="/zmjh/Template/zhumeng/asset/img/content/select_icon.gif" /></li>
           <div class="hangye bg">
           <?php if(is_array(C("COMPANY_CATEGORY"))): $i = 0; $__LIST__ = C("COMPANY_CATEGORY");if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-3" ><a style="color:#000;"><?php echo ($vo); ?></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
          </div>
@@ -612,9 +612,16 @@
           </ul>
          </div>
         </div>
-        <div class="col-md-4 col-md-offset-6 bg" style="color:white;">
-         <label>客户端下载</label>
+        <div class="col-md-7 col-md-offset-1">
          <div>
+          <p>客户端下载</p>
+          <img width="150px;" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg" />
+          <img width="150px;" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg"/ />
+         </div>
+        </div>
+        <div class="col-md-2 bg" style="color:white;">
+         <div style="float:right;">
+           <p><label>微信平台</label></p>
           <img width="150px" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg"/>
          </div>
          <?php echo plugin('IPlistener');?>

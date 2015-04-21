@@ -4543,3 +4543,242 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001038s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001181s ]
 
+[ 2015-04-20T19:28:16+08:00 ] ::1 /zmjh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.059160s ]
+INFO: [ app_init ] --END-- [ RunTime:0.097544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017438s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.098981s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.099272s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001411s ]
+NOTIC: [8] Undefined variable: rootNav D:\wamp\www\zmjh\Runtime\Cache\Home\d47a95e26afad0914a77b8d51ce79b85.php 第 64 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.006858s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000998s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000409s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000278s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000269s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000242s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 5 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000243s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 6 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000227s ]
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.007359s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.007517s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 6 AND `create_time` < 1429529294 AND ( deadline <= 0 OR deadline > 1429529294 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.001079s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.007337s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.006984s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1429442894 LIMIT 1   [ RunTime:0.000974s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426937294 LIMIT 1   [ RunTime:0.000819s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000337s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.496934s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.034930s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.035100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058690s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020321s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020551s ]
+
+[ 2015-04-20T19:29:12+08:00 ] ::1 /zmjh/index.php/Home/Index/content/cate/tongzhigonggao/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001847s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.003233s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.003333s ]
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.002778s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.002881s ]
+SQL: SELECT * FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 6 AND `create_time` < 1429529352 AND ( deadline <= 0 OR deadline > 1429529352 ) AND `id` = 10 LIMIT 1   [ RunTime:0.000426s ]
+SQL: UPDATE `jdi_article` SET `view`=view+1 WHERE `status` = 1 AND `category_id` = 6 AND `create_time` < 1429529352 AND ( deadline <= 0 OR deadline > 1429529352 ) AND `id` = 10 [ RunTime:0.057457s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000326s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.003319s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000417s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000261s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000238s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000215s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000365s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 5 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000393s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 6 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000292s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\wamp\www\zmjh\Runtime\Cache\Home\5bf60939f3e235bc6e56effc8d53f8b4.php 第 109 行.
+NOTIC: [8] Use of undefined constant title_color - assumed 'title_color' D:\wamp\www\zmjh\Runtime\Cache\Home\5bf60939f3e235bc6e56effc8d53f8b4.php 第 109 行.
+SQL: SHOW COLUMNS FROM `jdi_member` [ RunTime:0.059459s ]
+SQL: SELECT * FROM `jdi_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000792s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.006951s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialShare' LIMIT 1   [ RunTime:0.000613s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'SocialButton' LIMIT 1   [ RunTime:0.000583s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000426s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` > '10' AND `category_id` = 6 AND `status` = 1 AND `create_time` < 1429529352 AND ( deadline <= 0 OR deadline > 1429529352 ) ORDER BY `id` asc LIMIT 1   [ RunTime:0.000763s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000402s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `id` < '10' AND `category_id` = 6 AND `status` = 1 AND `create_time` < 1429529352 AND ( deadline <= 0 OR deadline > 1429529352 ) ORDER BY `id` Desc LIMIT 1   [ RunTime:0.000651s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.006303s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1429442952 LIMIT 1   [ RunTime:0.000900s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426937352 LIMIT 1   [ RunTime:0.000937s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000328s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.132492s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006798s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006798s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000721s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001871s ]
+
+[ 2015-04-20T19:29:18+08:00 ] ::1 /zmjh/index.php/Home/Index/category/cate/shixixinxi/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001494s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.002875s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.002958s ]
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.002800s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `jdi_recruitment` [ RunTime:0.058946s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`weight`,`position`,`salary`,`number`,`welfare`,`position_des`,`is_up`,`collect_num`,`category` FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1429529358 AND ( deadline <= 0 OR deadline > 1429529358 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,10   [ RunTime:0.000876s ]
+NOTIC: [8] Undefined index: cover D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 42 行.
+NOTIC: [8] Undefined index: cover D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 42 行.
+NOTIC: [8] Undefined index: cover D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 42 行.
+NOTIC: [8] Undefined index: cover D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 42 行.
+NOTIC: [8] Undefined index: cover D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 42 行.
+NOTIC: [8] Undefined index: cover D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 42 行.
+NOTIC: [8] Undefined index: cover D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 42 行.
+NOTIC: [8] Undefined index: cover D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 42 行.
+NOTIC: [8] Undefined index: cover D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 42 行.
+NOTIC: [8] Undefined index: cover D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 40 行.
+NOTIC: [8] Undefined index: auto_image D:\wamp\www\zmjh\Application\Common\Common\cms.php 第 42 行.
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 58 LIMIT 1   [ RunTime:0.000400s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `jdi_recruitment` WHERE `status` = 1 AND `category_id` = 1 AND `create_time` < 1429529358 AND ( deadline <= 0 OR deadline > 1429529358 ) LIMIT 1   [ RunTime:0.000401s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.002726s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000375s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000234s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000209s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000204s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000204s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 5 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 6 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000165s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.002615s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.002732s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1429442958 LIMIT 1   [ RunTime:0.000376s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426937358 LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000114s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024382s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000437s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000670s ]
+
+[ 2015-04-20T19:29:32+08:00 ] ::1 /zmjh/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003622s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001452s ]
+INFO: [ app_exec_start ] --START--
+INFO: Run Common\Behavior\ExtendBehavior [ RunTime:0.004176s ]
+INFO: [ app_exec_start ] --END-- [ RunTime:0.004369s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000471s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000570s ]
+NOTIC: [8] Undefined variable: rootNav D:\wamp\www\zmjh\Runtime\Cache\Home\d47a95e26afad0914a77b8d51ce79b85.php 第 64 行.
+SQL: SHOW COLUMNS FROM `jdi_node` [ RunTime:0.002776s ]
+SQL: SELECT * FROM `jdi_node` WHERE `status` = 1 AND `type` IN ('1','2','3') AND `pid` = 0 AND `index_show` = 1 ORDER BY sort  [ RunTime:0.000405s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 1 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000236s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 2 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000179s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 3 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000246s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 4 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000245s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 5 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_node` WHERE `pid` = 6 AND `status` = 1 AND `type` IN ('1','2','3') AND `index_show` = 1 LIMIT 1   [ RunTime:0.000198s ]
+SQL: SHOW COLUMNS FROM `jdi_model` [ RunTime:0.003058s ]
+SQL: SELECT `name` FROM `jdi_model` WHERE `id` = 20 LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `jdi_article` [ RunTime:0.002898s ]
+SQL: SELECT `id`,`title`,`uid`,`category_id`,`description`,`link`,`deadline`,`view`,`create_time`,`update_time`,`url`,`status`,`title_color`,`list_color`,`content`,`is_up`,`position`,`cover`,`extend`,`weight`,`keyword`,`auto_image` FROM `jdi_article` WHERE `status` = 1 AND `category_id` = 6 AND `create_time` < 1429529371 AND ( deadline <= 0 OR deadline > 1429529371 ) ORDER BY `weight` DESC, `update_time` DESC LIMIT 0,6   [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `jdi_addons` [ RunTime:0.002672s ]
+SQL: SELECT * FROM `jdi_addons` WHERE `name` = 'IPlistener' LIMIT 1   [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `jdi_iplistener` [ RunTime:0.002626s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1429442971 LIMIT 1   [ RunTime:0.000368s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` WHERE `visit_time` > 1426937371 LIMIT 1   [ RunTime:0.000383s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdi_iplistener` LIMIT 1   [ RunTime:0.000168s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.053373s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000426s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+

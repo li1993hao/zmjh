@@ -140,7 +140,7 @@
        <div class="bg con_center bottom" style="width:80%;color:white;">
         <div class="col-md-2 bg yqlj">
          <label>友情链接:</label>
-         <div >
+         <div style="margin-top:30px;" >
           <ul>
            <li><a style="color:white;">南开大学</a></li>
            <li><a style="color:white;">天津大学</a></li>
@@ -151,9 +151,16 @@
           </ul>
          </div>
         </div>
-        <div class="col-md-4 col-md-offset-6 bg" style="color:white;">
-         <label>客户端下载</label>
+        <div class="col-md-7 col-md-offset-1" style="border:1px solid #000;">
          <div>
+          <p>客户端下载</p>
+          <img width="150px;" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg" />
+          <img width="150px;" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg"/ />
+         </div>
+        </div>
+        <div class="col-md-2 bg" style="color:white;">
+         <div style="border:1px solid #000; float:right;">
+           <p><label>微信平台</label></p>
           <img width="150px" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg"/>
          </div>
          <?php echo plugin('IPlistener');?>
@@ -163,7 +170,7 @@
       </div>
       
         <div class="row">
-         <div class="col-md-12" style="height:150px;">
+         <div class="col-md-12" style="height:50px;">
          <hr />
              <h3 style="text-align: center">
                 &copy; 时代科技

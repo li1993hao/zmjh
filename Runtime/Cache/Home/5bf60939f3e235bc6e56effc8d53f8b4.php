@@ -42,12 +42,52 @@
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/respond.min.js"></script>
 <![endif]-->
 <link href="/zmjh/Template/zhumeng/asset/css/common.css" rel="stylesheet"/>
-<link href="/zmjh/Template/zhumeng/asset/css/main_page.css" rel="stylesheet"/>
-<link href="/zmjh/Template/zhumeng/asset/css/common.css" rel="stylesheet"/>
+<link href="/zmjh/Template/zhumeng/asset/css/tx.css" rel="stylesheet"/>
+
+
+<script type="text/javascript">
+   var JPlaceHolder = {
+    //检测
+    _check : function(){
+        return 'placeholder' in document.createElement('input');
+    },
+    //初始化
+    init : function(){
+        if(!this._check()){
+            this.fix();
+        }
+    },
+    //修复
+    fix : function(){
+        jQuery(':input[placeholder]').each(function(index, element) {
+            var self = $(this), txt = self.attr('placeholder');
+            self.wrap($('<div></div>').css({position:'relative', zoom:'1', border:'none', background:'none', padding:'none', margin:'none'}));
+            var pos = self.position(), h = self.outerHeight(true), paddingleft = self.css('padding-left');
+            var holder = $('<span></span>').text(txt).css({position:'absolute', left:pos.left, top:pos.top+7, height:h, lienHeight:h, paddingLeft:paddingleft, color:'#aaa'}).appendTo(self.parent());
+            self.focusin(function(e) {
+                holder.hide();
+            }).focusout(function(e) {
+                if(!self.val()){
+                    holder.show();
+                }
+            });
+            holder.click(function(e) {
+                holder.hide();
+                self.focus();
+            });
+        });
+    }
+};
+//执行
+jQuery(function(){
+    JPlaceHolder.init();    
+});
+   </script>
 
 
     
-    
+	<link href="/zmjh/Template/zhumeng/asset/css/content.css" rel="stylesheet"/>
+
 </head>
 <body>
 <!-- 头部 -->
@@ -55,35 +95,127 @@
 <!--[if lt IE 8]>
 <div class="alert alert-block alert-danger fade in" style="margin-bottom: 0">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a target="_blank" href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
 <![endif]-->
-
-<div class="row bg_ti_color">
-  <div style="width:100%;">
-    <div class="col-md-12 bg" style="position:relative;">
-      <ul class="h_title" id="h_title">
-        <li ><a href="<?php echo U('Home/Index/index');?>">主页</a></li>
-        <?php $__NAV__=cat('',false,$rootNav,'active'); if(is_array($__NAV__)): $i = 0; $__LIST__ = $__NAV__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat): $mod = ($i % 2 );++$i; if($cat['has_child'] != 0): ?><li >
-              <div class="btn-group"> <a type="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <?php echo ($cat['name']); ?> <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu" style="margin-top:-1px;">
-                  <?php $_result=cat($cat['id'],true);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat_child): $mod = ($i % 2 );++$i;?><li><a href="<?php echo ($cat_child['url']); ?>"><?php echo ($cat_child['name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
-              </div>
-            </li>
-            <?php else: ?>
-            <li> <a href="<?php echo ($cat['url']); ?>"> <?php echo ($cat['name']); ?> </a> </li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-      </ul>
+<div class="container-fiuld">
+ <div class="row" style="margin:0;">
+  <div class="col-md-12 t_nav bg">
+   <div class="nav_mask"></div>
+   <div class="nav_width">
+    <div class="nav_logo">
+     <img src="/zmjh/Template/zhumeng/asset/img/content/nav_logo2.png"/>
     </div>
+    <div class="nav_menu">
+     <ul>
+      <li><span><a href="<?php echo U('Home/Index/index');?>">首页</a></span></li>
+       <?php $__NAV__=cat('',false,$rootNav,'active'); if(is_array($__NAV__)): $i = 0; $__LIST__ = $__NAV__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat): $mod = ($i % 2 );++$i; if($cat['has_child'] != 0): ?><li>
+          <span><a href="#"><?php echo ($cat['name']); ?></a></span>
+          <div>
+           <?php $_result=cat($cat['id'],true);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat_child): $mod = ($i % 2 );++$i;?><a href="<?php echo ($cat_child['url']); ?>"><?php echo ($cat_child['name']); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+           </div>
+          </li>
+         <?php else: ?>
+          <li><span><a href="<?php echo ($cat['url']); ?>"> <?php echo ($cat['name']); ?> </a></span></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+      
+     </ul>
+    </div>
+    <div class="nav_btn">
+     <a href="#">登录</a>
+     <a href="#">注册</a>
+    </div>
+   </div>
   </div>
-</div>
+ </div>
 
 <!-- /头部 -->
 
 <!-- 主体 -->
 
-
-
-    <!--main tagline area-->
-    <section class="taglineWrap">
-    <div style="background-color:#EEEEEE;height:70px;">
+  <div class="row" style="margin:0; position:relative;">
+    <div class="col-md-12" style="height:120px;"></div>
+  </div>
+  
+  <div class="row" style="margin:0;">
+    <div class="list_nav">
+    <div class="col-md-12">
+      <?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$av): $mod = ($i % 2 );++$i; if($i == count($nav)): echo ($av["name"]); ?>
+          <?php else: ?>
+          <a href="<?php echo ($av["url"]); ?>"style="color: #000">您现在的位置：<?php echo ($av["name"]); ?></a>><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+    </div>
+    </div>
+  </div>
+  
+  <div class="row" style="margin:0;">
+    <div class="con_container bg">
+      <div class="con_l_con bg">
+        <div class=""> <img style="margin-top:-12px;" src="/zmjh/Template/zhumeng/asset/img/content/l_con.png"/> <img src="/zmjh/Template/zhumeng/asset/img/content/l_fgx.png"/> </div>
+        <div class="">
+          <ul class="con_con_ul">
+          <?php $__LIST__=lists('1','0,10'); if(is_array($__LIST__)): $i = 0; $__LIST__ = $__LIST__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><div class="triangle-right"></div><a href="<?php echo ($vo["url"]); ?>"><?php echo ($vo["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+            <!--<li>
+              <div class="triangle-right"></div>
+              <a>资源管理专员(1名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>客服专员(3名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>专题主编(2名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>市场推广专员(1名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>电话销售(5名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>销售主管(2名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>大客户经理(1名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>绩效专员(10名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>IT系统开发工程师(3名)</a></li>-->
+          </ul>
+        </div>
+      </div>
+      <div class="con_r_con bg">
+        <?php if(info.title_color == '#555' ): ?><h3  style="margin-bottom:10;text-align: center"><?php echo ($info["title"]); ?></h3>
+          <?php else: ?>
+          <h3 class="text-center" style="margin-bottom:10px;text-align: center;color:<?php echo ($info["title_color"]); ?>"><?php echo ($info["title"]); ?>
+          </h3>
+          <div>
+           <?php echo (htmlspecialchars_decode($info["content"])); ?>
+           <!--<?php echo plugin('SocialButton');?>-->
+           
+          </div><?php endif; ?>
+      </div>
+      <div class="col-md-12">
+       <div style="font-family:'Microsoft YaHei'; float:left; margin-left:310px;width:655px;">
+        <?php $prev = api('Document/prev',array('id'=>$info['id'],'category_id'=>$info['category_id']))?>
+<?php $next = api('Document/next',array('id'=>$info['id'],'category_id'=>$info['category_id']))?>
+<hr/>
+<div class="blog_footer clearfix">
+    <div style="float: left">
+        上一篇:
+        <?php if(!empty($prev)): ?><a href="<?php echo ($prev["url"]); ?>" data-color="<?php echo ($prev["list_color"]); ?>"><?php echo (msubstr($prev["title"],0,20,true)); ?></a>
+            <?php else: ?>
+            没有了!<?php endif; ?>
+    </div>
+    <div style="float: right">
+        下一篇:
+        <?php if(!empty($next)): ?><a href="<?php echo ($next["url"]); ?>" data-color="<?php echo ($next["list_color"]); ?>"><?php echo (msubstr($next["title"],0,20,true)); ?></a>
+            <?php else: ?>
+            没有了!<?php endif; ?>
+    </div>
+</div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!--<section class="taglineWrap">
+    <div style="background-color:#EEEEEE;height:70px;margin-top:62px;">
         <div class="container">
             <div class="row-fluid  tagline">
                 <div class="breadcrumbs">
@@ -95,13 +227,13 @@
                 </div>
             </div>
         </div> 
-        </div><!-- /container -->
+        </div>
     </section>
     <section class="mainContentWrap">
         <div class="container mainContent well" style="height:600px;">
             <div class="row-fluid">
 
-                <!--main content-->
+                
 
                 <div class="span12">
                     <div class="row-fluid">
@@ -109,6 +241,7 @@
                                 <?php if(info.title_color == '#555' ): ?><h1  style="margin-bottom:10;text-align: center"><?php echo ($info["title"]); ?></h1>
                                     <?php else: ?>
                                     <h1 class="text-center" style="margin-bottom:10px;text-align: center;color:<?php echo ($info["title_color"]); ?>"><?php echo ($info["title"]); ?></h1><?php endif; ?>
+                               
                             <div style="margin-bottom: 10px">
                                 <span><i class="icon-calendar"></i><?php echo (date('Y-m-d H:i',$info["create_time"])); ?></span>&nbsp;
                                 <span><i class="icon-pencil"></i><?php echo get_nickname($info['uid']);?></span>&nbsp;
@@ -146,55 +279,46 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--> 
 
 
 <!-- /主体 -->
 
 <!-- 底部 -->
 <!--footer-->
-<footer id="footer">
+
     <!--footer testimonail-->
     
-      <div>
-        <hr>
+   
+   <div class="row" style="margin:0;">
+    <div class="col-md-12 footer">
+      <div class="footer_inner">
+       <div class="lianj">
+       <p>友情链接</p>
+        <ul>
+         <li><a>天津大学</a></li>
+         <li><a>南开大学</a></li>
+         <li><a>天津工业大学</a></li>
+         <li><a>天津理工大学</a></li>
+        </ul>
        </div>
-      <div class="row" style="background-color:#303A40">
-       <div class="bg con_center bottom" style="width:80%;color:white;">
-        <div class="col-md-2 bg yqlj">
-         <label>友情链接:</label>
-         <div style="margin-top:30px;" >
-          <ul>
-           <li><a style="color:white;">南开大学</a></li>
-           <li><a style="color:white;">天津大学</a></li>
-           <li><a style="color:white;">理工大学</a></li>
-           <li><a style="color:white;">南开大学</a></li>
-           <li><a style="color:white;">天津大学</a></li>
-           <li><a style="color:white;">理工大学</a></li>
-          </ul>
+       <div class="phone">
+        <p>客户端下载</p>
+         <div style="height:100px;">
+          <div style="width:100px;height:100px;float:left; margin-left:20px; background-color:#FFF;"><img style="width:100px;" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg" /></div>
+          <div style="width:100px;height:100px;margin-left:70px; float:left;background-color:#FFF;"><img style="width:100px;" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg" /></div>
          </div>
-        </div>
-        <div class="col-md-4 col-md-offset-6 bg" style="color:white;">
-         <label>客户端下载</label>
-         <div>
-          <img width="150px" src="/zmjh/Template/zhumeng/asset/img/content/weixin.jpg"/>
-         </div>
-         <?php echo plugin('IPlistener');?>
-        </div>
        </div>
-       
+       <div class="address">
+        <p>地址:天津市西青区鑫茂科技园</p>
+        <p>电话:13920344xxx</p>
+        <p>邮箱:xxxxxxxx@gmail.com</p>
+       </div>
       </div>
-      
-        <div class="row">
-         <div class="col-md-12" style="height:50px;">
-         <hr />
-             <h3 style="text-align: center">
-                &copy; 时代科技
-             </h3>
-           </div>
-        </div>
-      </div>
-</footer>
+    </div>
+   </div>
+    </div>
+
 
 <script type="text/javascript">
          var ThinkPHP = window.Think = {
@@ -213,8 +337,10 @@
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/zmjh/Public/vendor/ace/js/jquery.gritter.min.js"></script>
 <script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/main_page.js"></script>
-<script type="text/javascript" src="/zmjh/Public/jdi/job_cate.js"></script>
-<script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/fenlei.js"></script>
+<!--<script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/list_page.js"></script>-->
+<!--<script type="text/javascript" src="/zmjh/Public/jdi/job_cate.js"></script>
+<script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/fenlei.js"></script>-->
+
 
 
 

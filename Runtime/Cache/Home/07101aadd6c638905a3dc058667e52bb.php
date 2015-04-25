@@ -86,7 +86,8 @@ jQuery(function(){
 
 
     
-	<link href="/zmjh/Template/zhumeng/asset/css/list.css" rel="stylesheet"/>
+	<link href="/zmjh/Template/zhumeng/asset/css/contentsx.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/zmjh/Template/zhumeng/asset/js/contentsx.js"></script>
 
 </head>
 <body>
@@ -129,83 +130,83 @@ jQuery(function(){
 
 <!-- 主体 -->
 
-  <!--main tagline area-->
-  
   <div class="row" style="margin:0; position:relative;">
     <div class="col-md-12" style="height:120px;"></div>
   </div>
   
   <div class="row" style="margin:0;">
-    <div class="list_nav">
-    <div class="col-md-12">
-      <?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$av): $mod = ($i % 2 );++$i; if($i == count($nav)): echo ($av["name"]); ?>
+    <div class="consx_container bg">
+      <div class=" consx_l_con bg">
+        <div class=""> <img style="margin-top:-12px;" src="/zmjh/Template/zhumeng/asset/img/content/l_con.png"/> <img src="/zmjh/Template/zhumeng/asset/img/content/l_fgx.png"/> </div>
+        <div class="">
+          <ul class="consx_con_ul">
+          <?php $__LIST__=lists('1','0,10'); if(is_array($__LIST__)): $i = 0; $__LIST__ = $__LIST__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><div class="triangle-right"></div><a href="<?php echo ($vo["url"]); ?>"><?php echo ($vo["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+            <!--<li>
+              <div class="triangle-right"></div>
+              <a>资源管理专员(1名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>客服专员(3名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>专题主编(2名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>市场推广专员(1名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>电话销售(5名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>销售主管(2名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>大客户经理(1名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>绩效专员(10名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>IT系统开发工程师(3名)</a></li>-->
+          </ul>
+        </div>
+      </div>
+      <div class="consx_r_con1 bg">
+        <?php if(info.title_color == '#555' ): ?><h3  style="margin-bottom:14px;text-align: center"><?php echo ($info["title"]); ?></h3>
           <?php else: ?>
-          <a href="<?php echo ($av["url"]); ?>"style="color: #000">您现在的位置：<?php echo ($av["name"]); ?></a>><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-    </div>
-    </div>
-  </div>
-  
-  <div class="row" style="margin:0;">
-    <div class="list_container bg">
-     <div class="left_con bg">
-      <div class="">
-        <img style="margin-top:-12px;" src="/zmjh/Template/zhumeng/asset/img/content/l_con.png"/>
-        <img src="/zmjh/Template/zhumeng/asset/img/content/l_fgx.png"/>
+          <h3 class="text-center" style="margin-bottom:20px;text-align: center;color:<?php echo ($info["title_color"]); ?>"><?php echo ($info["title"]); ?>
+          </h3><?php endif; ?>
+        <div class="bg">
+           <span><?php echo (date('Y-m-d H:i',$info["create_time"])); ?></span>&nbsp;&nbsp;&nbsp;
+           <span>浏览：<?php echo ($info["view"]); ?></span>
+          </div>
+          <div class='pos_des bg'>
+            <div>
+             <span>职位名称：<?php echo ($info["position"]); ?></span>
+             <span style="margin-left:270px;">月薪：<?php echo ($info["salary"]); ?></span>
+            </div>
+            <div>
+             <span>生活福利：<?php echo ($info["position"]); ?></span>
+             <span style="margin-left:270px;">招聘人数：<?php echo ($info["number"]); ?></span>
+            </div>
+          </div>
+          <div style="margin-top:40px;">
+           <input type="button" value="投递简历"></input>
+          </div>
       </div>
-      <div class="">
-       <ul class="l_con_ul">
-        <?php $__LIST__=lists('1','0,10'); if(is_array($__LIST__)): $i = 0; $__LIST__ = $__LIST__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><div class="triangle-right"></div><a href="<?php echo ($vo["url"]); ?>"><?php echo ($vo["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-        <!--<li><div class="triangle-right"></div><a>资源管理专员(1名)</a></li>
-        <li><div class="triangle-right"></div><a>客服专员(3名)</a></li>
-        <li><div class="triangle-right"></div><a>专题主编(2名)</a></li>
-        <li><div class="triangle-right"></div><a>市场推广专员(1名)</a></li>
-        <li><div class="triangle-right"></div><a>电话销售(5名)</a></li>
-        <li><div class="triangle-right"></div><a>销售主管(2名)</a></li>
-        <li><div class="triangle-right"></div><a>大客户经理(1名)</a></li>
-        <li><div class="triangle-right"></div><a>绩效专员(10名)</a></li>
-        <li><div class="triangle-right"></div><a>IT系统开发工程师(3名)</a></li>-->
-       </ul>
-      </div>
-     </div>
-     <div class="right_con bg">
-      <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i; if(isset($info["cover_path"])): ?><a href="<?php echo ($info["url"]); ?>">
-          <img src="<?php echo (thumb($info["cover_path"],218,180)); ?>"/>
-         </a>
-         <a href="<?php echo ($info["url"]); ?>l"><?php echo ($info["title"]); ?></a>
-         <i class="icon-calendar"></i><?php echo (date('Y-m-d H:i',$info["create_time"])); ?> &nbsp;&nbsp;
-         <i class="icon-eye-open"></i> <?php echo ($info["view"]); ?>
-         <p><?php echo (msubstr($info["description"],0,120)); ?></p>
-         <a href="<?php echo ($info["url"]); ?>" class="btn btn-info">详情</a>
-         <?php else: ?>
-         <div class="rcon_info">
-         <label><a href="<?php echo ($info["url"]); ?>l"><?php echo ($info["title"]); ?></a></label>
-         <span><?php echo (date('Y-m-d H:i',$info["create_time"])); ?></span>
-         <div style="position:relative;">
-          <p><?php echo (msubstr($info["description"],0,120)); ?></p>
-          <img src="/zmjh/Template/zhumeng/asset/img/content/rcon_yj.png"/>&nbsp;
-          <label style="font-size:16px;"><?php echo ($info["view"]); ?></label>
-          <a href="<?php echo ($info["url"]); ?>">查看详情>></a>
-         </div>
-         </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-       <?php else: ?>
-       <h1 style="text-align: center"><?php echo ((isset($tip) && ($tip !== ""))?($tip):'暂时还没有新闻哦~~'); ?></h1><?php endif; ?>
-     </div>
-      <div class="col-md-8 bg list_bnav" >
-      <?php echo ($page); ?>
-      <!--<div class="bnav_l">
-       <span>共47条</span>&nbsp;&nbsp;
-       <span>每页10条</span>&nbsp;&nbsp;
-       <span>页次：1/10</span>
-       </div>
-       <div class="bnav_r">
-       <span>首页</span>&nbsp;&nbsp;
-       <span>上一页</span>&nbsp;&nbsp;
-       <span>下一页</span>&nbsp;&nbsp;
-       <span>尾页</span>
-       </div>-->
+      <div class="consx_r_con2 bg">
+        <div class="l_nav">
+         <span><a id="test">职位描述</a></span>
+         <span><a id="test2">公司介绍</a></span>
+         <span><a>申请记录</a></span>
+         <span><a>公司评价</a></span>
+        </div>
+        <div class="r_nav">
+         <p class="test" style="display:none;"><?php echo ($info["position_des"]); ?></p>
+         <p class="test2" style="display:none;">test2</p>
+        </div>
       </div>
     </div>
-    
   </div>
 
 

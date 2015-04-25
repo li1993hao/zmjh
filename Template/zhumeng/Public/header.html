@@ -2,28 +2,38 @@
 <!--[if lt IE 8]>
 <div class="alert alert-block alert-danger fade in" style="margin-bottom: 0">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a target="_blank" href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
 <![endif]-->
-
-<div class="row bg_ti_color">
-  <div style="width:100%;">
-    <div class="col-md-12 bg" style="position:relative;">
-      <ul class="h_title" id="h_title">
-        <li ><a href="{:U('Home/Index/index')}">主页</a></li>
-        <c:nav root="rootNav"  name="cat">
-          <if condition="$cat['has_child'] neq 0">
-            <li >
-              <div class="btn-group"> <a type="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> {$cat['name']} <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu" style="margin-top:-1px;">
-                  <volist name=":cat($cat['id'],true)" id="cat_child">
-                    <li><a href="{$cat_child['url']}">{$cat_child['name']}</a></li>
-                  </volist>
-                </ul>
-              </div>
-            </li>
-            <else/>
-            <li> <a href="{$cat['url']}"> {$cat['name']} </a> </li>
+<div class="container-fiuld">
+ <div class="row" style="margin:0;">
+  <div class="col-md-12 t_nav bg">
+   <div class="nav_mask"></div>
+   <div class="nav_width">
+    <div class="nav_logo">
+     <img src="__THEME__/img/content/nav_logo2.png"/>
+    </div>
+    <div class="nav_menu">
+     <ul>
+      <li><span><a href="{:U('Home/Index/index')}">首页</a></span></li>
+       <c:nav root="rootNav"  name="cat">
+        <if condition="$cat['has_child'] neq 0">
+         <li>
+          <span><a href="#">{$cat['name']}</a></span>
+          <div>
+           <volist name=":cat($cat['id'],true)" id="cat_child">
+            <a href="{$cat_child['url']}">{$cat_child['name']}</a>
+           </volist>
+           </div>
+          </li>
+         <else/>
+          <li><span><a href="{$cat['url']}"> {$cat['name']} </a></span></li>
           </if>
         </c:nav>
-      </ul>
+      
+     </ul>
     </div>
+    <div class="nav_btn">
+     <a href="#">登录</a>
+     <a href="#">注册</a>
+    </div>
+   </div>
   </div>
-</div>
+ </div>

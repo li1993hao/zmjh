@@ -1,10 +1,85 @@
 <extend name="public/base"/>
+<block name="style">
+	<link href="__THEME__/css/content.css" rel="stylesheet"/>
+</block>
 <block name="content">
-
-
-    <!--main tagline area-->
-    <section class="taglineWrap">
-    <div style="background-color:#EEEEEE;height:70px;">
+  <div class="row" style="margin:0; position:relative;">
+    <div class="col-md-12" style="height:120px;"></div>
+  </div>
+  
+  <div class="row" style="margin:0;">
+    <div class="list_nav">
+    <div class="col-md-12">
+      <volist name="nav" id="av">
+        <if condition="$i eq count($nav)">{$av.name}
+          <else/>
+          <a href="{$av.url}"style="color: #000">您现在的位置：{$av.name}</a>></if>
+      </volist>
+    </div>
+    </div>
+  </div>
+  
+  <div class="row" style="margin:0;">
+    <div class="con_container bg">
+      <div class="con_l_con bg">
+        <div class=""> <img style="margin-top:-12px;" src="__THEME__/img/content/l_con.png"/> <img src="__THEME__/img/content/l_fgx.png"/> </div>
+        <div class="">
+          <ul class="con_con_ul">
+          <c:list who="1" name="vo" limit="0,10">
+         <li><div class="triangle-right"></div><a href="{$vo.url}">{$vo.title}</a></li>
+        </c:list>
+            <!--<li>
+              <div class="triangle-right"></div>
+              <a>资源管理专员(1名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>客服专员(3名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>专题主编(2名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>市场推广专员(1名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>电话销售(5名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>销售主管(2名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>大客户经理(1名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>绩效专员(10名)</a></li>
+            <li>
+              <div class="triangle-right"></div>
+              <a>IT系统开发工程师(3名)</a></li>-->
+          </ul>
+        </div>
+      </div>
+      <div class="con_r_con bg">
+        <if condition="info.title_color eq '#555' ">
+          <h3  style="margin-bottom:10;text-align: center">{$info.title}</h3>
+          <else/>
+          <h3 class="text-center" style="margin-bottom:10px;text-align: center;color:{$info.title_color}">{$info.title}
+          </h3>
+          <div>
+           {$info.content|htmlspecialchars_decode}
+           <!--{:plugin('SocialButton')}-->
+           
+          </div>
+        </if>
+      </div>
+      <div class="col-md-12">
+       <div style="font-family:'Microsoft YaHei'; float:left; margin-left:310px;width:655px;">
+        <include file="block/content_prev_next"/>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!--<section class="taglineWrap">
+    <div style="background-color:#EEEEEE;height:70px;margin-top:62px;">
         <div class="container">
             <div class="row-fluid  tagline">
                 <div class="breadcrumbs">
@@ -20,13 +95,13 @@
                 </div>
             </div>
         </div> 
-        </div><!-- /container -->
+        </div>
     </section>
     <section class="mainContentWrap">
         <div class="container mainContent well" style="height:600px;">
             <div class="row-fluid">
 
-                <!--main content-->
+                
 
                 <div class="span12">
                     <div class="row-fluid">
@@ -36,6 +111,7 @@
                                     <else/>
                                     <h1 class="text-center" style="margin-bottom:10px;text-align: center;color:{$info.title_color}">{$info.title}</h1>
                                 </if>
+                               
                             <div style="margin-bottom: 10px">
                                 <span><i class="icon-calendar"></i>{$info.create_time|date='Y-m-d H:i',###}</span>&nbsp;
                                 <span><i class="icon-pencil"></i>{:get_nickname($info['uid'])}</span>&nbsp;
@@ -59,8 +135,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--> 
 </block>
-
-
-

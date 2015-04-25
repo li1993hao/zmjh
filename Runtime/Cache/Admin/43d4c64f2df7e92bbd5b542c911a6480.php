@@ -203,7 +203,7 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-    分类管理
+    添加单页面
 
                     </h1>
                 </div>
@@ -212,74 +212,110 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    <div class="btn-group">
-        <a class="btn btn-sm btn-primary" href="<?php echo U('add?type=1');?>">添加分类</a>
-        <a class="btn btn-sm btn-primary" href="<?php echo U('add?type=2');?>">添加单页面</a>
-        <a class="btn btn-sm btn-primary"  href="<?php echo U('add?type=3');?>">添加外部链接</a>
-        <a class="btn btn-sm btn-primary"  href="<?php echo U('import');?>">批量添加</a>
-        <!--<a class="btn btn-sm ajax-get btn-primary"  href="<?php echo U('clearCache');?>">更新栏目缓存</a>-->
-    </div>
-    <div class="able-responsive">
-        <table class="table table-striped table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>排序</th>
-                <th>ID</th>
-                <th>分类名称</th>
-                <th>英文名称</th>
-                <th>类型</th>
-                <th>数据模型</th>
-                <th>状态</th>
-                <th>首页显示</th>
-                <th>操作</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php if(!empty($nodeList)): if(is_array($nodeList)): $i = 0; $__LIST__ = $nodeList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$node): $mod = ($i % 2 );++$i;?><tr>
-                    <td class="text-center">
-                        <label>
-                            <input style="width:40px;text-align: center" class="sort_input" type="text" data-id="<?php echo ($node["id"]); ?>" value="<?php echo ($node["sort"]); ?>"/>
-                        </label>
-                        </td>
-                    <td><?php echo ($node["id"]); ?></td>
-                    <td>
-                        <?php $__FOR_START_5325__=0;$__FOR_END_5325__=$node["level"];for($i=$__FOR_START_5325__;$i < $__FOR_END_5325__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>&nbsp;|__
-                                    <?php else: ?>
-                                    |--<?php endif; ?>
-                                <?php else: ?>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; } ?>
-                        <?php echo ($node["name"]); ?></td>
-                    <td><?php echo ($node["symbol"]); ?></td>
-                    <td><?php switch($node["type"]): case "1": ?>分类<?php break;?>
-                        <?php case "2": ?>单页面<?php break;?>
-                        <?php case "3": ?>外部链接<?php break;?>
-                        <?php default: ?>栏目<?php endswitch;?>
-                    </td>
-                    <td><?php echo (get_model_by_id($node["model_id"])); ?></td>
-                    <td>
-                        <?php echo ($node["status_text"]); ?>
-                    </td>
-                    <td>
-                        <?php if($node['index_show'] == 0): ?>否
+    <form class="form-horizontal normal-form" action="<?php echo U(add);?>">
+        <input type="hidden" name="type" value="<?php echo ($type); ?>"/>
+        <?php if(!empty($node)): ?><input type="hidden" name="id" value="<?php echo ($node['id']); ?>"/><?php endif; ?>
+        <div class="form-group">
+            <label  class="item-label">父亲节点</label>
+            <div class="controls">
+                <select  name="pid">
+                    <option value="0">无</option>
+                    <?php if(is_array($pid)): $i = 0; $__LIST__ = $pid;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i; if($p['id'] == $select_id): ?><option value="<?php echo ($p["id"]); ?>" selected><?php echo ($p["name"]); ?></option>
                             <?php else: ?>
-                            是<?php endif; ?>
-                    </td>
-                    <td>
-                        <?php if(($node["status"]) == "1"): ?><a href="<?php echo U('changeStatus?method=forbid&id='.$node['id']);?>" class="ajax-get">禁用</a>
-                            <?php else: ?>
-                            <a href="<?php echo U('changeStatus?method=resume&id='.$node['id']);?>" class="ajax-get">启用</a><?php endif; ?>
-                        <a href="<?php echo U('delete?id='.$node['id']);?>" class="ajax-get confirm">删除</a>
-                        <a href="<?php echo U('edit?id='.$node['id'].'&type='.$node['type']);?>">修改</a>
-                        <?php if(($node["type"]) == "1"): ?><a href="<?php echo U('add?select_id='.$node['id']);?>">添加分类</a><?php endif; ?>
-                    </switch></td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-         <?php else: ?>
-            <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
+                            <option value="<?php echo ($p["id"]); ?>"><?php echo ($p["name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+            </div>
+        </div>
 
-        </tbody>
-    </table>
-    </div>
- 
+        <div class="form-group">
+            <label  class="item-label">栏目名称</label>
+            <div class="controls">
+                <input type="text"  name="name"
+                       placeholder="请输入名称" value="<?php echo ($node['name']); ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="item-label">英文名称</label>
+            <div class="controls">
+                <input type="text" class="text input-large"  name="symbol" value="<?php echo ($node['symbol']); ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="item-label">首页显示</label>
+            <div class="controls">
+                <select name="index_show">
+                    <?php if(isset($node)): if(1 == $node['index_show']): ?><option value="1" selected>是</option>
+                            <?php else: ?>
+                            <option value="1" >是</option><?php endif; ?>
+                        <?php if(0 == $node['index_show']): ?><option value="0" selected>否</option>
+                            <?php else: ?>
+                            <option value="0" >否</option><?php endif; ?>
+                    <?php else: ?>
+                        <option value="1" >是</option>
+                        <option value="0" >否</option><?php endif; ?>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  class="item-label">是否需要审核</label>
+            <div class="controls">
+                <select name="verify">
+                    <?php if(isset($node)): if(1 == $node['verify']): ?><option value="1" selected>是</option>
+                            <?php else: ?>
+                            <option value="1" >是</option><?php endif; ?>
+                        <?php if(0 == $node['verify']): ?><option value="0" selected>否</option>
+                            <?php else: ?>
+                            <option value="0" >否</option><?php endif; ?>
+                        <?php else: ?>
+                        <option value="0" >否</option>
+                        <option value="1" >是</option><?php endif; ?>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  class="item-label">禁用</label>
+            <div class="controls">
+                <select name="status">
+                    <?php if(isset($node)): if(1 == $node['status']): ?><option value="1" selected>否</option>
+                            <?php else: ?>
+                            <option value="1" >否</option><?php endif; ?>
+                        <?php if(0 == $node['status']): ?><option value="0" selected>是</option>
+                            <?php else: ?>
+                            <option value="0" >是</option><?php endif; ?>
+                        <?php else: ?>
+                        <option value="1" >否</option>
+                        <option value="0" >是</option><?php endif; ?>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="item-label">模型</label>
+            <div class="controls">
+                <select  name="model_id">
+                    <?php if(is_array($model)): $i = 0; $__LIST__ = $model;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$m): $mod = ($i % 2 );++$i; if($m['id'] == $node['model_id']): ?><option value="<?php echo ($m["id"]); ?>" selected><?php echo ($m["name"]); ?></option>
+                            <?php else: ?>
+                            <option value="<?php echo ($m["id"]); ?>"><?php echo ($m["name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="item-label">内容模板</label>
+            <div class="controls">
+                <select  name="temp_content">
+                    <?php if(is_array($temp["content"])): $i = 0; $__LIST__ = $temp["content"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$content): $mod = ($i % 2 );++$i; if($content == $node['temp_content']): ?><option value="<?php echo ($content); ?>" selected><?php echo ($content); ?></option>
+                            <?php else: ?>
+                            <option value="<?php echo ($content); ?>"><?php echo ($content); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-sm btn-primary ajax-post" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-sm" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+
                         <!-- /.col -->
                     </div>
                     <!-- /.row -->
@@ -351,24 +387,6 @@
 
 
 
-    <script type="text/javascript">
-        $(".sort_input").on('change',function(){
-            var id = $(this).data('id');
-            var value = $(this).val();
-            if($.isNumeric(value)){
-                $.post("<?php echo U('sort');?>",{'id':id,'value':value},function(data){
-                    if(data.status){
-                    }else{
-                        errorAlert(data.msg);
-                    }
-
-                },'json')
-            }else{
-                errorAlert('输入必须是数字~~');
-                $(this).focus();
-            }
-        });
-    </script>
 
 </body>
 </html>

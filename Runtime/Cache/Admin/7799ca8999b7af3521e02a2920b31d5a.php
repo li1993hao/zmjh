@@ -203,7 +203,7 @@
                 <div class="page-header">
                     <h1 class="page-header-title">
                         
-    分类管理
+    [<?php echo get_model_by_id($model_id);?>] 属性列表
 
                     </h1>
                 </div>
@@ -212,74 +212,53 @@
                 <div class="row">
                     <div class="col-xs-12">
                         
-    <div class="btn-group">
-        <a class="btn btn-sm btn-primary" href="<?php echo U('add?type=1');?>">添加分类</a>
-        <a class="btn btn-sm btn-primary" href="<?php echo U('add?type=2');?>">添加单页面</a>
-        <a class="btn btn-sm btn-primary"  href="<?php echo U('add?type=3');?>">添加外部链接</a>
-        <a class="btn btn-sm btn-primary"  href="<?php echo U('import');?>">批量添加</a>
-        <!--<a class="btn btn-sm ajax-get btn-primary"  href="<?php echo U('clearCache');?>">更新栏目缓存</a>-->
+    <div>
+        <a class="btn btn-sm btn-primary" href="<?php echo U('Attribute/add?model_id='.$model_id);?>">新 增</a>
     </div>
-    <div class="able-responsive">
-        <table class="table table-striped table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>排序</th>
-                <th>ID</th>
-                <th>分类名称</th>
-                <th>英文名称</th>
-                <th>类型</th>
-                <th>数据模型</th>
-                <th>状态</th>
-                <th>首页显示</th>
-                <th>操作</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php if(!empty($nodeList)): if(is_array($nodeList)): $i = 0; $__LIST__ = $nodeList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$node): $mod = ($i % 2 );++$i;?><tr>
-                    <td class="text-center">
-                        <label>
-                            <input style="width:40px;text-align: center" class="sort_input" type="text" data-id="<?php echo ($node["id"]); ?>" value="<?php echo ($node["sort"]); ?>"/>
-                        </label>
-                        </td>
-                    <td><?php echo ($node["id"]); ?></td>
-                    <td>
-                        <?php $__FOR_START_5325__=0;$__FOR_END_5325__=$node["level"];for($i=$__FOR_START_5325__;$i < $__FOR_END_5325__;$i+=1){ if($i == $node['level']-1): if($node['last']): ?>&nbsp;|__
-                                    <?php else: ?>
-                                    |--<?php endif; ?>
-                                <?php else: ?>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; } ?>
-                        <?php echo ($node["name"]); ?></td>
-                    <td><?php echo ($node["symbol"]); ?></td>
-                    <td><?php switch($node["type"]): case "1": ?>分类<?php break;?>
-                        <?php case "2": ?>单页面<?php break;?>
-                        <?php case "3": ?>外部链接<?php break;?>
-                        <?php default: ?>栏目<?php endswitch;?>
-                    </td>
-                    <td><?php echo (get_model_by_id($node["model_id"])); ?></td>
-                    <td>
-                        <?php echo ($node["status_text"]); ?>
-                    </td>
-                    <td>
-                        <?php if($node['index_show'] == 0): ?>否
-                            <?php else: ?>
-                            是<?php endif; ?>
-                    </td>
-                    <td>
-                        <?php if(($node["status"]) == "1"): ?><a href="<?php echo U('changeStatus?method=forbid&id='.$node['id']);?>" class="ajax-get">禁用</a>
-                            <?php else: ?>
-                            <a href="<?php echo U('changeStatus?method=resume&id='.$node['id']);?>" class="ajax-get">启用</a><?php endif; ?>
-                        <a href="<?php echo U('delete?id='.$node['id']);?>" class="ajax-get confirm">删除</a>
-                        <a href="<?php echo U('edit?id='.$node['id'].'&type='.$node['type']);?>">修改</a>
-                        <?php if(($node["type"]) == "1"): ?><a href="<?php echo U('add?select_id='.$node['id']);?>">添加分类</a><?php endif; ?>
-                    </switch></td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-         <?php else: ?>
-            <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
 
-        </tbody>
-    </table>
+    <!-- 数据列表 -->
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th class="center">
+                    <label>
+                        <input type="checkbox" class="ace check-all">
+                        <span class="lbl"></span>
+                    </label>
+                </th>
+                <th class="">编号</th>
+                <th class="">字段</th>
+                <th class="">名称</th>
+                <th class="">数据类型</th>
+                <th class="">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php if(!empty($_list)): if(is_array($_list)): $i = 0; $__LIST__ = $_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td class="center">
+                            <label>
+                                <input type="checkbox" class="ids ace" name="id[]" value="<?php echo ($vo["id"]); ?>">
+                                <span class="lbl"></span>
+                            </label>
+                        </td>
+                        <td><?php echo ($vo["id"]); ?></td>
+                        <td><a href="<?php echo U('Attribute/edit?id='.$vo['id']);?>"><?php echo ($vo["name"]); ?></a></td>
+                        <td><?php echo ($vo["title"]); ?></td>
+                        <td><span><?php echo get_attribute_type($vo['type']);?></span></td>
+                        <td><a href="<?php echo U('Attribute/edit?id='.$vo['id']);?>">编辑</a>
+                            <a class="confirm ajax-get" href="<?php echo U('Attribute/remove?id='.$vo['id']);?>">删除</a>
+                        </td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                <?php else: ?>
+                <td colspan="6" class="text-center"> aOh! 暂时还没有内容!</td><?php endif; ?>
+            </tbody>
+        </table>
     </div>
- 
+    <div class="page">
+        <?php echo ($_page); ?>
+    </div>
+
                         <!-- /.col -->
                     </div>
                     <!-- /.row -->
@@ -351,24 +330,6 @@
 
 
 
-    <script type="text/javascript">
-        $(".sort_input").on('change',function(){
-            var id = $(this).data('id');
-            var value = $(this).val();
-            if($.isNumeric(value)){
-                $.post("<?php echo U('sort');?>",{'id':id,'value':value},function(data){
-                    if(data.status){
-                    }else{
-                        errorAlert(data.msg);
-                    }
-
-                },'json')
-            }else{
-                errorAlert('输入必须是数字~~');
-                $(this).focus();
-            }
-        });
-    </script>
 
 </body>
 </html>

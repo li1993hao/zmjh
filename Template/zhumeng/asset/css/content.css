@@ -1,0 +1,81 @@
+/*.bg
+{
+	border:1px solid #000;
+}*/
+.con_container
+{
+	width:980px;
+	margin:0 auto;
+	position:relative;
+}
+.con_l_con
+{
+	/*position:absolute;*/
+	min-height:400px;
+	background-color:#82b87b;
+	/*margin-top:70px;*/
+	margin-bottom:40px;
+	width:200px;
+	padding-left:10px;
+	padding-right:10px;
+	float:left;
+}
+.con_con_ul
+{
+	margin-top:20px;
+	margin-left:-8px;
+}
+.con_con_ul li
+{
+	padding:5px 0px;
+	
+}
+.con_con_ul li a
+{
+	color:#fff;
+	font-family:"Microsoft YaHei";
+	cursor:pointer;
+}
+.con_r_con
+{
+	margin-left:70px;
+	border-top:1px solid #000;
+	width:695px;
+	padding-left:12px;
+	padding-right:12px;
+	float:left;
+}
+.con_r_con h3
+{
+	font-family:"Microsoft YaHei";
+}
+.triangle-right
+{
+	width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-left: 6px solid #000;
+    border-bottom: 3px solid transparent;
+	
+	width:4px;
+	float:left;
+	margin-top:6px;
+	padding-right:10px;
+}
+.list_nav
+{
+	height:22px;
+	position:relative;
+	margin:0 auto;
+	width:980px;
+}
+.list_nav div
+{
+	position:absolute;
+	width:220px;
+	right:0;
+	font-family:"Microsoft YaHei";
+	font-size:14px;
+	font-weight:bold;
+	/*top:110px;*/
+}

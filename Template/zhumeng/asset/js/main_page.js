@@ -1,24 +1,33 @@
 $(function()
 {
-	$('#d_a a').bind('mouseover',function()
+	$('.c_ctn').bind('mouseover',function()
 	{
-		var i=parseInt($(this).attr('id'))+5;
-		$('#d_a li').removeClass('active');
-		$('#d_table div').hide();
-		$(this).parent().addClass('active');
-		$('#'+i).fadeIn(400);
+		$(this).addClass("bg3");
 	});
-	$('#h_title a[type=button]').bind('mouseenter',function()
+	$('.c_ctn').bind('mouseleave',function()
 	{
-		$(this).click();
+		$(this).removeClass("bg3");
 	});
-	$('#h_title a[type=button]').parent().bind('mouseleave',function()
+	/*$('#more_info').click(function()
 	{
-		$(this).click();
-	});
-	$('.dropdown-menu').bind('mouseleave',function()
+		$("html,body").animate({scrollTop: $(".t_sel").offset().top-90}, 1000);
+	});*/
+	$('.nav_menu span a').bind("mouseover",function()
 	{
-		$(this).prev().click();
+		$(this).parent().parent().addClass('bd_btom');
+		$(this).parent().next('div').show();
 	});
-	/*$('.tongzhigonggao').load('/zmjh/index.php/Home/Index/category/cate/tongzhigonggao');*/
+	$('.nav_menu li').bind("mouseleave",function()
+	{
+		$(this).removeClass('bd_btom');
+		$(this).children('div').hide();
+	});
+	$('#sel_a').click(function()
+	{
+		$("html,body").animate({scrollTop: $("#title_nav").offset().top-90}, 1000);
+	});
+	/*$('.c_ctn').click(function()
+	{
+		location.href="http://211.68.112.117/zmjh/index.php/Home/Index/category/cate/tongzhigonggao/p/1.html";
+	});*/
 });

@@ -99,9 +99,11 @@ $(function()
 	$('#tb li a').click(function()
 	{
 		$('#bt_zwlb').children('label').text($(this).text());
+		$('.zhiwei').hide();
 	});
 	$('.hangye div a').click(function()
 	{
 		$('#bt_hylb').children('label').text($(this).text());
+		$('.hangye').hide();
 	});
 });
